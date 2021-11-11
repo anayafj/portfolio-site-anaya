@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import styles from '../styles/components/Header.module.scss';
 
 export default function Header() {
 	return (
-		<nav>
+		<nav className={styles.nav}>
 			<ul>
 				<li>
 					<Link href="/portfolio">Work</Link>

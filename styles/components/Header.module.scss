@@ -1,0 +1,17 @@
+@use '../util/variables';
+
+.nav {
+	display: flex;
+
+	ul {
+		// list-style-type: none;
+		display: flex;
+		@include variables.reset-list;
+	}
+
+	li {
+		margin: 5px;
+		padding: 10px;
+		background-color: yellowgreen;
+	}
+}

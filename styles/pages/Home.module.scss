@@ -1,33 +1,8 @@
 @use '../util/variables';
 
 .wrapper {
-	// padding: 5rem 0;
-	// flex: 1;
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: center;
-	// align-items: center;
-	display: flex;
 	width: 100%;
 	max-width: 100vw;
 	height: 100vh;
 	background-color: variables.$color-ltGrey;
-
-	// .title {
-	// 	margin: 0;
-	// 	line-height: 1.15;
-	// 	font-size: 4rem;
-	// 	text-align: center;
-
-	// 	a {
-	// 		color: variables.$color-blue;
-	// 		text-decoration: none;
-
-	// 		&:hover,
-	// 		&:focus,
-	// 		&:active {
-	// 			text-decoration: underline;
-	// 		}
-	// 	}
-	// }
 }

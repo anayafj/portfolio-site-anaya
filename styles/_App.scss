@@ -1,0 +1,25 @@
+@use './util/variables';
+
+html,
+body {
+	box-sizing: border-box;
+	font-size: variables.$font-size;
+	font-family: variables.$font-family;
+	background-color: #000;
+	margin: 0;
+	overflow: hidden;
+
+	////@at-root
+	.container {
+		// min-height: 100vh;
+		position: relative;
+		display: flex;
+		// flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100vh;
+		margin: 0 auto;
+		background-color: #fff;
+	}
+}
