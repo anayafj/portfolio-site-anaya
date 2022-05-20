@@ -1,8 +1,91 @@
 @use '../util/variables';
 
 .wrapper {
-	width: 100%;
-	max-width: 100vw;
-	height: 100vh;
-	background-color: variables.$color-ltGrey;
+	width: variables.$desktop-width;
+	height: variables.$desktop-height;
+	background-color: variables.$color-bgGray;
+	margin: 0 auto;
+
+	.header{
+		width: 100%;
+
+		.logoContainer {
+			position: relative;
+			max-width: 864px;
+			height: 164px;
+			margin-top: calc((35px / variables.$desktop-height) * 100%);
+			margin-left: calc((214px /  variables.$desktop-width) * 100%);
+			margin-right: calc((214px /  variables.$desktop-width) * 100%);
+			
+			
+			.logoBorder {
+				width: 100%;
+				height: calc((159px / 164px) * 100%);
+				top: 0;
+				left: 0;;
+				border: 2px solid variables.$color-teal;
+				// z-index: 1;
+			}
+
+			.logo {
+				position: absolute;
+				top: calc((19px / 164px) * 100%);
+				left: calc((22px / 864px) * 100%);
+				width: 100%;
+				margin: 0 auto;
+
+				img {
+					width: 100%;
+					margin: 0 auto;
+				}
+			}
+			
+			.subheaderContainer {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				top:  calc((140px / 164px) * 100%);
+				left: calc((257px / 864px) * 100%);;
+				width: calc((350px / 864px) * 100%);
+				height: 42px;
+				font-family: variables.$font-family-akira;
+				color: #fff;
+				font-size: .31em;
+				background-color: variables.$color-bgGray;
+				padding-left: 5px;
+				padding-right: 5px;
+
+				h1 {
+					margin: auto  5px;
+				}
+				span {
+					width: 3px;
+  					height: 3px;
+  					background: variables.$color-pink;
+  					border-radius: 50%
+				}
+
+				.subheaderEnd {
+					display: flex;
+
+					h1:first-child {
+						margin-right: 0;
+					}
+
+					h1:last-child {
+						margin-left: 0;
+					}
+
+
+					
+					h2 {
+						font-family: variables.$font-family-blankRiver;
+						color: variables.$color-pink;
+						font-size: 3em;
+					}
+				}
+			}
+		}
+	}
 }
