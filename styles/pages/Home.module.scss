@@ -1,89 +1,151 @@
 @use '../util/variables';
 
+$logo-max-width : 820px;
+$logo-max-height : 119px;
+$logoContainer-max-width : 864px;
+$logoContainer-max-height : 165px;
+
+
 .wrapper {
-	width: variables.$desktop-width;
-	height: variables.$desktop-height;
+	width: 100%;
+	height: 100%;
+	max-width: variables.$desktop-width;
+	max-height: variables.$desktop-height;
 	background-color: variables.$color-bgGray;
 	margin: 0 auto;
 
 	.header{
+		position: relative;
 		width: 100%;
+		height: calc(($logoContainer-max-height / $logoContainer-max-width) * 100%);;
+		max-height: $logoContainer-max-height;
+		margin-top: calc((33px / variables.$desktop-height) * 100%);
 
 		.logoContainer {
-			position: relative;
-			max-width: 864px;
-			height: 164px;
-			margin-top: calc((35px / variables.$desktop-height) * 100%);
-			margin-left: calc((214px /  variables.$desktop-width) * 100%);
-			margin-right: calc((214px /  variables.$desktop-width) * 100%);
-			
+
+			display: grid;
+			grid-template-columns: 100% 1fr;
+			grid-template-rows: 100% 1fr;
+			height: 100%;
+			max-width: $logoContainer-max-width;
+			// max-height: $logo-max-height;
+			margin: auto calc((214px /  variables.$desktop-width) * 100%);
 			
 			.logoBorder {
+				grid-area: 1 / 1 / 2 / 2;
 				width: 100%;
-				height: calc((159px / 164px) * 100%);
-				top: 0;
-				left: 0;;
 				border: 2px solid variables.$color-teal;
-				// z-index: 1;
 			}
 
 			.logo {
-				position: absolute;
-				top: calc((19px / 164px) * 100%);
-				left: calc((22px / 864px) * 100%);
-				width: 100%;
-				margin: 0 auto;
+				position: relative;
+				grid-area: 1 / 1 / 2 / 2;
+				justify-self: center;
+				width: calc(($logo-max-width / $logoContainer-max-width) * 100%);
+				height: auto;
+				max-width: $logo-max-width;
+				max-height: $logo-max-height;
+				top : calc((20px / $logoContainer-max-height) * 100%);
 
 				img {
 					width: 100%;
+					height: auto;
 					margin: 0 auto;
+					// padding: 1px;
 				}
 			}
 			
-			.subheaderContainer {
-				position: absolute;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				top:  calc((140px / 164px) * 100%);
-				left: calc((257px / 864px) * 100%);;
-				width: calc((350px / 864px) * 100%);
-				height: 42px;
-				font-family: variables.$font-family-akira;
-				color: #fff;
-				font-size: .31em;
-				background-color: variables.$color-bgGray;
-				padding-left: 5px;
-				padding-right: 5px;
+			// .subheaderContainer {
+			// 	position: absolute;
+			// 	display: flex;
+			// 	align-items: center;
+			// 	justify-content: center;
+			// 	top:  calc((140px / 164px) * 100%);
+			// 	left: calc((257px / 864px) * 100%);;
+			// 	width: calc((350px / 864px) * 100%);
+			// 	height: 42px;
+			// 	font-family: variables.$font-family-akira;
+			// 	color: #fff;
+			// 	font-size: .31em;
+			// 	background-color: variables.$color-bgGray;
+			// 	padding-left: 5px;
+			// 	padding-right: 5px;
 
-				h1 {
-					margin: auto  5px;
-				}
-				span {
-					width: 3px;
-  					height: 3px;
-  					background: variables.$color-pink;
-  					border-radius: 50%
-				}
+			// 	h1 {
+			// 		margin: auto  5px;
+			// 	}
+			// 	span {
+			// 		width: 3px;
+  			// 		height: 3px;
+  			// 		background: variables.$color-pink;
+  			// 		border-radius: 50%
+			// 	}
 
-				.subheaderEnd {
-					display: flex;
+			// 	.subheaderEnd {
+			// 		display: flex;
 
-					h1:first-child {
-						margin-right: 0;
-					}
+			// 		h1:first-child {
+			// 			margin-right: 0;
+			// 		}
 
-					h1:last-child {
-						margin-left: 0;
-					}
+			// 		h1:last-child {
+			// 			margin-left: 0;
+			// 		}
 
 
 					
-					h2 {
-						font-family: variables.$font-family-blankRiver;
-						color: variables.$color-pink;
-						font-size: 3em;
-					}
+			// 		h2 {
+			// 			font-family: variables.$font-family-blankRiver;
+			// 			color: variables.$color-pink;
+			// 			font-size: 3em;
+			// 		}
+			// 	}
+			// }
+		}
+
+		.subheaderContainer {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			top:  calc((140px / 164px) * 100%);
+			left: calc((257px / 864px) * 100%);;
+			width: calc((350px / 864px) * 100%);
+			height: 42px;
+			font-family: variables.$font-family-akira;
+			color: #fff;
+			font-size: .31em;
+			background-color: variables.$color-bgGray;
+			padding-left: 5px;
+			padding-right: 5px;
+
+			h1 {
+				margin: auto  5px;
+			}
+			span {
+				width: 3px;
+				  height: 3px;
+				  background: variables.$color-pink;
+				  border-radius: 50%
+			}
+
+			.subheaderEnd {
+				display: flex;
+
+				h1:first-child {
+					margin-right: 0;
+				}
+
+				h1:last-child {
+					margin-left: 0;
+				}
+
+
+				
+				h2 {
+					font-family: variables.$font-family-blankRiver;
+					color: variables.$color-pink;
+					font-size: 3em;
 				}
 			}
 		}
