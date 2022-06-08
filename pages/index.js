@@ -25,10 +25,8 @@ export default function Home() {
 				<header className={styles.header}>
 					<div className={styles.logoContainer}>
 						<div className={styles.logoBorder}></div>
-						<div className={styles.logo}>
-							<img src="/svg/logo_name.svg" alt="Logo - Francisco Anaya" />
-						</div>
-						{/* <div className={styles.subheaderContainer}>
+						<img src="/svg/logo_name.svg" alt="Logo - Francisco Anaya" />
+						<div className={styles.subheaderContainer}>
 							<h1>Designer</h1>
 							<span></span>
 							<h1>Developer</h1>
@@ -38,17 +36,6 @@ export default function Home() {
 								<h2>&amp;</h2>
 								<h1>Rich Media</h1>
 							</div>
-						</div> */}
-					</div>
-					<div className={styles.subheaderContainer}>
-						<h1>Designer</h1>
-						<span></span>
-						<h1>Developer</h1>
-						<span></span>
-						<div className={styles.subheaderEnd}>
-							<h1>Web</h1>
-							<h2>&amp;</h2>
-							<h1>Rich Media</h1>
 						</div>
 					</div>
 				</header>
