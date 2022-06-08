@@ -19,24 +19,25 @@ $MQ-large-phone-portrait : 576px;
 
 .wrapper {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background-color: variables.$color-bgGray;
 	margin: 0 auto;
 
+	.rightColumn {
+		position: absolute;
+		right: 0;
+		width: 12px;
+		height: 100%;
+		background-color: variables.$color-teal;
+	}
+
 	.header{
+		// border: 1px solid blue;
 		width: 100%;
-		// height: auto;
-		height: calc(($header-max-height / variables.$desktop-height) * 100vh);
 		max-height: $header-max-height;
 
 		.logoContainer {
-			// position: relative;
-			display: grid;
-			grid-template-columns: 100% 1fr;
-			grid-template-rows: 100% 1fr;
 			height: calc(( $logoContainer-max-height / $header-max-height ) * 100%);
-			// height: calc(( 1 - ( $logoContainer-max-height / $logoContainer-max-width )) * 100%);
-			// height: fit-content;
 			max-width: $logoContainer-max-width;
 			max-height: $logoContainer-max-height;
 			min-width: 454px;
@@ -44,112 +45,94 @@ $MQ-large-phone-portrait : 576px;
 			margin: auto calc((214px /  variables.$desktop-width) * 100%);
 			margin-top: calc((33px / variables.$desktop-height) * 100%);
 			margin-bottom: calc((22px / variables.$desktop-height) * 100%);
-			
-			.logoBorder {
-				grid-area: 1 / 1 / 2 / 2;
-				// width: 100%;
-				height: calc(( $border-max-height / $logoContainer-max-height ) * 100%);
-				// height: calc(( $border-max-height / $logo-max-height ) * 100%);
-				// height: calc(( $border-max-height / $logo-max-height ) * 100%);
-				max-height : $border-max-height;
-				border: 2px solid variables.$color-teal;
-			}
 
-			img {
-				grid-area: 1 / 1 / 2 / 2;
-				width: calc(($logo-max-width / $logoContainer-max-width) * 100%);
-				// height: calc(( $logo-max-height / $logoContainer-max-height ) * 100%);
-				max-width: $logo-max-width;
-				max-height: $logo-max-height;
-				margin: 0 auto;
-				margin-top: calc((15px / variables.$desktop-height) * 100%);
+			.logo {
+				display: flex;
+				width: 100%;
+				height: calc((138px / 164px ) * 100%);
+				max-height: 138px;
+				border: 2px solid variables.$color-teal;
+				border-bottom: 0;
+
+
+				img {
+					position: relative;
+					width: calc(($logo-max-width / $logoContainer-max-width) * 100%);
+					max-width: $logo-max-width;
+					max-height: $logo-max-height;
+					margin: 0 auto;
+					margin-top: calc((15px / variables.$desktop-height) * 100%);
+				}
 			}
 
 			.subheaderContainer {
-				grid-area: 1 / 1 / 1 / 1;
-				justify-self: center;
-				align-self: end;
 				display: flex;
-				justify-content: center;
-				width: calc(($subheader-max-width / $logoContainer-max-width) * 100%);
-				height: auto;
-				max-width: $subheader-max-width;
+				justify-content: space-between;
+				width: 100%;
+				height: 16px;
 				max-height: $subheader-max-height;
-				min-width: $subheader-min-width;
 				@include fluid-type($MQ-large-laptop, $MQ-large-desktop, 5.2px, 7px);
 				font-family: variables.$font-family-akira;
 				color: #fff;
-				background-color: variables.$color-bgGray;
 
 				@media screen and (max-width: $MQ-large-laptop) {
-					@include fluid-type($MQ-large-tablet, $MQ-large-laptop, 4px, 5.2px);
+					@include fluid-type($MQ-large-tablet, $MQ-large-laptop, 3.7px, 5.2px);
 				}
 
 				@media screen and (max-width: $MQ-large-tablet) {
-					@include fluid-type($MQ-large-phone-portrait, $MQ-large-tablet, 3.7px, 4px);
+					height: 12px;
+					@include fluid-type($MQ-large-phone-portrait, $MQ-large-tablet, 3.3px, 3.7px);
 				}
 
-				@media screen and (min-width: $MQ-large-phone-portrait) {
-					margin-bottom: 1px;
+				.bottom-border {
+					width: calc(( 215px / $logoContainer-max-width) * 100%);
+					height: auto;
+					border-bottom: 2px solid variables.$color-teal;
 				}
 
-				@media screen and (min-width: $MQ-large-tablet) {
-					margin-bottom: 0;
+				.leftBorder {
+					@extend .bottom-border;
+					border-left: 2px solid variables.$color-teal;
 				}
 
-				h1, span {
-					display: inline-block;
-					align-self: flex-end;
+				.rightBorder {
+					@extend .bottom-border;
+					border-right: 2px solid variables.$color-teal;
 				}
 
-				h1 {
-					margin: 0;
-
-					@media screen and (min-width: $MQ-large-phone-portrait) {
-						margin-bottom: 1px;
-					}
-
-					@media screen and (min-width: $MQ-large-tablet) {
-						margin-bottom: 2px;
-					}
-
-					@media screen and (min-width: 810px) {
-						margin-bottom: 1px;
-					}
-				}
-
-				span {
-					width: 3px;
-					height: 3px;
-					border-radius: 50%;
-					background: variables.$color-pink;
-					margin: auto 5px; // 3px;
-
-					@media screen and (min-width: 810px) {
-						margin-top: 7px;
-						margin-bottom: auto;
-					}
-				}
-
-				.subheaderEnd {
+				.subheaderText {
 					display: flex;
-					margin-top: 2px;
+					justify-content: space-between;
+					align-items: center;
+					margin-top: calc((14px / variables.$desktop-height) * 100%);
 
-					@media screen and (min-width: $MQ-large-phone-portrait) {
-						margin-top: 0;
+					@media screen and (max-width: $MQ-large-laptop) {
+						margin-top: calc((18px / variables.$desktop-height) * 100%);
 					}
 
-					@media screen and (min-width: 810px) {
-						margin-top: 2px;
+					@media screen and (max-width: $MQ-large-tablet) {
+						margin-top: calc((16px / variables.$desktop-height) * 100%);
 					}
 
-					h1, h2 { display: inline-block;}
+					h1, span {
+						margin: 0;
+					}
 
-					h1 {
-						margin: auto 0;
+					span {
+						width: 3px;
+						height: 3px;
+						border-radius: 50%;
+						background: variables.$color-pink;
+						margin: 0 5px;
+					}
+
+					h1, h2 {
+						margin: 0;
 					}
 
 					h2 {
+						display: inline-block;
+						margin: 0;
 						@include fluid-type($MQ-large-phone-portrait, $MQ-large-desktop, 7px, 13px);
 						font-family: variables.$font-family-blankRiver;
 						color: variables.$color-pink;

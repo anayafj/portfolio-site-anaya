@@ -22,23 +22,29 @@ export default function Home() {
 				{/* <Header /> */}
 				{/* <Mavin /> */}
 				{/* <Section /> */}
+				<div className={styles.rightColumn}></div>
 				<header className={styles.header}>
 					<div className={styles.logoContainer}>
-						<div className={styles.logoBorder}></div>
-						<img src="/svg/logo_name.svg" alt="Logo - Francisco Anaya" />
+						<div className={styles.logo}>
+							<img src="/svg/logo_name.svg" alt="Logo - Francisco Anaya" />
+						</div>
 						<div className={styles.subheaderContainer}>
-							<h1>Designer</h1>
-							<span></span>
-							<h1>Developer</h1>
-							<span></span>
-							<div className={styles.subheaderEnd}>
+							<div className={styles.leftBorder}></div>
+							<div className={styles.subheaderText}>
+								<h1>Designer</h1>
+								<span></span>
+								<h1>Developer</h1>
+								<span></span>
 								<h1>Web</h1>
 								<h2>&amp;</h2>
 								<h1>Rich Media</h1>
 							</div>
+							<div className={styles.rightBorder}></div>
 						</div>
 					</div>
 				</header>
+				<main></main>
+				<footer></footer>
 			</div>
 		</div>
 	);
