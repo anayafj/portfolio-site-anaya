@@ -11,13 +11,19 @@ $desktop-height: 800px;
 // COLORS ----------------------------------->
 
 $color-red: red;
-$color-blue: blue;
 $color-teal: #42605c;
 $color-pink: #fa7d81;
+$color-yellow: #f7d54e;
+$color-blue: #8db4b7;
+$color-textGrey: #363636;
+$color-textOffWhite: #f7f7f7;
 
 // Background Colors
-$color-bgGray: #292929;
-$color-white: #fff;
+$color-bodybg   : #262626;
+$color-bgGray   : #292929;
+$color-homeGray : #2e2e2e;
+$color-footerBar: #252525;
+$color-white    : #fff;
 
 // FONTS ------------------------------------>
 
@@ -48,7 +54,9 @@ $font-size: 18px;
 //     font-style: normal;
 // }
 $font-family-akira: 'akira_expandedsuper_bold';
-$font-family-blankRiver: 'Blank River', sans-seri;
+$font-family-blankRiver: 'Blank River', sans-serif;
+$font-family-heavitas: 'Heavitas', sans-serif;
+$font-family-myriad: 'Myriad Pro';
 
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, 'Blank River', sans-serif;

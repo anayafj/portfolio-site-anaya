@@ -13,7 +13,7 @@ body {
 	font-size: variables.$font-size;
 	font-family: variables.$font-family;
 	color: #fff;
-	background-color: #000;
+	background-color: variables.$color-bodybg;
 	margin: 0;
 	overflow: hidden;
 
@@ -23,8 +23,8 @@ body {
 		width: 100%;
 		height: 100vh;
 		max-width: variables.$desktop-width;
-		max-height: variables.$desktop-height;
+		// max-height: variables.$desktop-height;
 		margin: 0 auto;
-		background-color: #000;
+		background-color: variables.$color-bgGray;
 	}
 }
