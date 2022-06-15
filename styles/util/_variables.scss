@@ -19,11 +19,18 @@ $color-textGrey: #363636;
 $color-textOffWhite: #f7f7f7;
 
 // Background Colors
-$color-bodybg   : #262626;
-$color-bgGray   : #292929;
-$color-homeGray : #2e2e2e;
+$color-bodybg: #262626;
+$color-bgGray: #292929;
+$color-homeGray: #2e2e2e;
 $color-footerBar: #252525;
-$color-white    : #fff;
+$color-white: #fff;
+
+// MEDIA QUERIES ----------------------------->
+
+$MQ-large-desktop: 1284px;
+$MQ-large-laptop: 992px;
+$MQ-large-tablet: 768px;
+$MQ-large-phone-portrait: 576px;
 
 // FONTS ------------------------------------>
 
@@ -31,32 +38,19 @@ $color-white    : #fff;
 $font-size: 18px;
 
 @font-face {
-    font-family: 'akira_expandedsuper_bold';
-    src: url('../../public/fonts/akira_expanded_demo-webfont.woff2') format('woff2'),
-         url('../../public/fonts/akira_expanded_demo-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'akira_expandedsuper_bold';
+	src: url('../../public/fonts/akira_expanded_demo-webfont.woff2')
+			format('woff2'),
+		url('../../public/fonts/akira_expanded_demo-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
-// @font-face {
-//     font-family: 'amatic_scbold';
-//     src: url('amaticsc-bold-webfont.woff2') format('woff2'),
-//          url('amaticsc-bold-webfont.woff') format('woff');
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'amatic_scregular';
-//     src: url('amaticsc-regular-webfont.woff2') format('woff2'),
-//          url('amaticsc-regular-webfont.woff') format('woff');
-//     font-weight: normal;
-//     font-style: normal;
-// }
 $font-family-akira: 'akira_expandedsuper_bold';
 $font-family-blankRiver: 'Blank River', sans-serif;
 $font-family-heavitas: 'Heavitas', sans-serif;
 $font-family-myriad: 'Myriad Pro';
 
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, 'Blank River', sans-serif;
+	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, 'Blank River',
+	sans-serif;
