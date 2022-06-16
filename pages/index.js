@@ -17,6 +17,10 @@ export default function Home() {
 					rel="stylesheet"
 				></link>
 				<link href="http://fonts.cdnfonts.com/css/heavitas" rel="stylesheet" />
+				<link
+					href="http://fonts.cdnfonts.com/css/amatic-sc-2"
+					rel="stylesheet"
+				></link>
 			</Head>
 
 			<div className={styles.rightColumn}></div>
