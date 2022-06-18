@@ -38,72 +38,119 @@ $holla-text-height: 273px;
 		margin: calc((34px / $home-maxWidth) * 100%) 31px 0 0;
 		padding-left: 30px;
 
-		.hola {
+		img {
 			width: 100%;
 			height: 100%;
 		}
+	}
 
-		.peep {
+	.peep-container {
+		position: absolute;
+		// top: 100px;
+		width: calc((195px / 567px) * 100%);
+		height: 370px;
+		max-height: 567px;
+		// margin-top: 101px;
+		// margin-left: 419px;
+		margin-top: 7.04%;
+		margin-left: 30.36%;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			max-width: 195px;
 		}
 	}
 
 	.homePage-navigation {
 		display: flex;
-		// justify-content: center;
 		align-self: flex-end;
-		// position: relative;
-		// bottom: 353px;
+		justify-content: center;
 		width: 100%;
 		height: 127px;
 		z-index: 1;
 		margin-left: 11px;
-		// padding-bottom: 4px;
+		padding-left: 12px;
+		padding-right: 25px;
 		margin-bottom: 16px;
 
 		.workLink-container {
-			// display: flex;
-			// flex-flow: wrap;
-			// justify-content: end;
-			// align-items: flex-start;
-			border: 2px solid red;
+			cursor: pointer;
 			width: 213px;
 			height: 100%;
-			// background-color: red;
+
+			* {
+				pointer-events: none;
+			}
 
 			.workLogo {
+				display: flex;
+				justify-content: flex-end;
 				width: 100%;
-				height: 100%;
-				max-width: 168px;
-				max-height: 42px;
 
 				img {
 					width: 100%;
-					height: 100%;
+					max-width: 168px;
+					margin: 0 0 0 auto;
 				}
 			}
 
 			h2 {
+				display: flex;
+				justify-content: flex-end;
 				font-size: 9px;
 				font-weight: 200;
-
 				font-family: variables.$font-family-heavitas;
+				letter-spacing: 0.1px;
 				color: variables.$color-textOffWhite;
-				margin-top: 2px;
-				padding: 0;
+				margin: 5px 0 2px;
+			}
+
+			.buttonLines-work {
+				width: 100%;
+				height: 4px;
+				border-top: 1px solid variables.$color-pink;
+				border-bottom: 1px solid variables.$color-pink;
 			}
 		}
 
 		.aboutLink-container {
-			border: 2px solid red;
-			width: 217px;
+			cursor: pointer;
+			width: 186px;
 			height: 100%;
-			// background-color: green;
 
-			img {
+			* {
+				pointer-events: none;
+			}
+
+			.aboutLogo {
+				display: flex;
+				justify-content: flex-start;
 				width: 100%;
-				height: 100%;
-				max-width: px;
-				max-height: 42px;
+
+				img {
+					width: 100%;
+					max-width: 69px;
+					margin: 0 auto 0 0;
+				}
+			}
+
+			h2 {
+				display: flex;
+				justify-content: flex-start;
+				font-size: 9px;
+				font-weight: 200;
+				font-family: variables.$font-family-heavitas;
+				letter-spacing: 0.1px;
+				color: variables.$color-textOffWhite;
+				margin: 5px 0 2px;
+			}
+
+			.buttonLines-about {
+				width: 100%;
+				height: 4px;
+				border-top: 1px solid variables.$color-pink;
+				border-bottom: 1px solid variables.$color-pink;
 			}
 		}
 
@@ -115,6 +162,7 @@ $holla-text-height: 273px;
 			height: 100%;
 			max-width: $home-cardWidth;
 			background-color: variables.$color-textGrey;
+			margin: 0 30px;
 
 			h1 {
 				@include fluid-type(
