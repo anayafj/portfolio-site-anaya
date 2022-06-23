@@ -2,6 +2,7 @@
 @import '../util/mixins.scss';
 
 .rightColumn {
+	pointer-events: none;
 	position: absolute;
 	width: 100%;
 	max-width: variables.$desktop-width;

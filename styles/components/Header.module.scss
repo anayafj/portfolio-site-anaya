@@ -16,6 +16,8 @@ $subheader-max-height: 16px;
 	max-height: $header-max-height;
 
 	.logoContainer {
+		// cursor: pointer;
+		// pointer-events: none;
 		height: calc(($logoContainer-max-height / $header-max-height) * 100%);
 		max-width: $logoContainer-max-width;
 		max-height: $logoContainer-max-height;

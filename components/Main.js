@@ -1,16 +1,32 @@
 import styles from '../styles/components/Main.module.scss';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Section() {
+	const router = useRouter();
+
+	const handleClick = (e) => {
+		e.preventDefault();
+		switch (e.target.id) {
+			case 'workLink':
+				router.push('/portfolio');
+				console.log('portfolio');
+				break;
+			case 'aboutLink':
+				router.push('/about');
+				console.log('about');
+				break;
+			default:
+				router.push('/');
+				console.log('default');
+		}
+	};
+
 	return (
 		<main className={styles.main}>
 			<div className={styles['bgLines']}></div>
 			<div className={styles['hola-container']}>
 				<img className={styles['hola']} src="/svg/hola.svg" alt="Hola - text" />
-				{/* <img
-					className={styles['peep']}
-					src="/svg/peep_standing.svg"
-					alt="illustrated person"
-				/> */}
 			</div>
 			<div className={styles['peep-container']}>
 				<img
@@ -21,7 +37,11 @@ export default function Section() {
 			</div>
 
 			<nav className={styles['homePage-navigation']}>
-				<section className={styles['workLink-container']}>
+				<section
+					onClick={handleClick}
+					id="workLink"
+					className={styles['workLink-container']}
+				>
 					<div className={styles['workLogo']}>
 						<img src="/svg/homeNav_work.svg" alt="navButton - Work" />
 					</div>
@@ -34,7 +54,11 @@ export default function Section() {
 						of diverse skills and experieces to all projects
 					</h1>
 				</div>
-				<section className={styles['aboutLink-container']}>
+				<section
+					onClick={handleClick}
+					id="aboutLink"
+					className={styles['aboutLink-container']}
+				>
 					<div className={styles['aboutLogo']}>
 						<img src="/svg/homeNav_me.svg" alt="navButton - About" />
 					</div>
