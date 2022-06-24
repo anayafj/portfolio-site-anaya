@@ -1,15 +1,11 @@
 import Head from 'next/head';
 import { Fragment } from 'react';
-import styles from '../styles/pages/Home.module.scss';
-// import Header from '../components/Header';
-// import Footer from '../components/Footer';
-import Main from '../components/Main';
+import HomePage from '../components/HomePage';
 
 export default function Home() {
 	console.log('Index ran');
 	return (
 		<Fragment>
-			{/* <div className="container"> */}
 			<Head>
 				<title>Francisco Anaya Portfolio Site</title>
 				<meta name="description" content="Portfolio website using NextJs" />
@@ -24,16 +20,7 @@ export default function Home() {
 					rel="stylesheet"
 				></link>
 			</Head>
-
-			{/* <div className={styles.rightColumn}></div>
-			<div className={styles.wrapper}>
-				<Header />
-				<Main />
-			</div>
-			<Footer /> */}
-			{/* <h1>Hello World</h1> */}
-			<Main />
-			{/* // </div> */}
+			<HomePage />
 		</Fragment>
 	);
 }

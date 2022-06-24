@@ -1,5 +1,4 @@
-import styles from '../styles/components/Main.module.scss';
-import Link from 'next/link';
+import styles from '../styles/components/HomePage.module.scss';
 import { useRouter } from 'next/router';
 
 export default function Section() {
@@ -10,15 +9,12 @@ export default function Section() {
 		switch (e.target.id) {
 			case 'workLink':
 				router.push('/portfolio');
-				console.log('portfolio');
 				break;
 			case 'aboutLink':
 				router.push('/about');
-				console.log('about');
 				break;
 			default:
 				router.push('/');
-				console.log('default');
 		}
 	};
 

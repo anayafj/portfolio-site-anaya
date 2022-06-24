@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import styles from '../styles/components/Header.module.scss';
+import styles from './Header.module.scss';
 
 export default function Header() {
 	const router = useRouter();

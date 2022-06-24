@@ -1,16 +1,16 @@
-@use '../util/variables';
-// @import '../util/mixins.scss';
+@use '../../styles/util/variables';
 
 .footer {
-	position: absolute;
-	bottom: 0;
+	display: flex;
+	flex-flow: column;
 	width: 100%;
 	height: 53px;
 	max-width: variables.$desktop-width;
+	margin-top: auto;
 
 	.greyBar {
-		position: absolute;
-		top: 3px;
+		position: relative;
+		top: 4px;
 		width: 100%;
 		height: 23px;
 		max-height: 23px;
@@ -88,8 +88,8 @@
 	}
 
 	small {
-		position: absolute;
-		bottom: 2px;
+		position: relative;
+		top: 13px;
 		left: 5px;
 		opacity: 0.25;
 		font-size: 8px;
