@@ -13,9 +13,8 @@ $holla-text-height: 273px;
 	display: flex;
 	flex-flow: wrap;
 	width: calc(($home-maxWidth / variables.$desktop-width) * 100%);
-	height: calc(($home-maxHeight / 220px) * 100%);
+	height: 500px;
 	max-width: $home-maxWidth;
-	max-height: $home-maxHeight;
 	background-color: variables.$color-homeGray;
 	margin-bottom: calc((48px / calc(($home-maxHeight / 220px) * 100%)) * 100%);
 	margin-left: 11px;
@@ -23,7 +22,8 @@ $holla-text-height: 273px;
 	.bgLines {
 		position: absolute;
 		width: 100%;
-		height: 454px;
+		height: 474px;
+		// height: 454px;
 		border-left: 2px solid variables.$color-overlayDrkGray;
 		border-bottom: 2px solid variables.$color-overlayDrkGray;
 		padding-left: 9px;
@@ -38,6 +38,10 @@ $holla-text-height: 273px;
 		margin: calc((34px / $home-maxWidth) * 100%) 31px 0 0;
 		padding-left: 30px;
 
+		@media screen and (max-width: variables.$MQ-large-tablet) {
+			margin-top: 30px;
+		}
+
 		img {
 			width: 100%;
 			height: 100%;
@@ -46,15 +50,20 @@ $holla-text-height: 273px;
 
 	.peep-container {
 		position: absolute;
-		// top: 100px;
 		width: calc((195px / 567px) * 100%);
 		height: 370px;
 		max-height: 567px;
-		// margin-top: 101px;
-		// margin-left: 419px;
 		margin-top: 7.04%;
 		margin-left: 30.36%;
 		overflow: hidden;
+
+		@media screen and (max-width: variables.$MQ-large-laptop) {
+			margin-left: 28.36%;
+		}
+
+		@media screen and (max-width: variables.$MQ-large-tablet) {
+			margin-left: 26.36%;
+		}
 
 		img {
 			width: 100%;
@@ -68,11 +77,20 @@ $holla-text-height: 273px;
 		justify-content: center;
 		width: 100%;
 		height: 127px;
+		max-height: 127px;
 		z-index: 1;
 		margin-left: 11px;
 		padding-left: 12px;
 		padding-right: 25px;
 		margin-bottom: 16px;
+
+		@media screen and (max-width: variables.$MQ-large-tablet) {
+			height: 90px;
+		}
+
+		@media screen and (max-width: variables.$MQ-large-laptop) {
+			height: 100px;
+		}
 
 		.workLink-container {
 			cursor: pointer;
@@ -81,6 +99,11 @@ $holla-text-height: 273px;
 
 			* {
 				pointer-events: none;
+			}
+
+			&:hover h2 {
+				transition: color 0.3s ease-in;
+				color: variables.$color-blue;
 			}
 
 			.workLogo {
@@ -99,10 +122,17 @@ $holla-text-height: 273px;
 				display: flex;
 				justify-content: flex-end;
 				font-size: 9px;
+				@include fluid-type(
+					variables.$MQ-large-tablet,
+					variables.$MQ-large-desktop,
+					7.5px,
+					9px
+				);
 				font-weight: 200;
 				font-family: variables.$font-family-heavitas;
 				letter-spacing: 0.1px;
 				color: variables.$color-textOffWhite;
+				transition: color 0.3s ease-in;
 				margin: 5px 0 2px;
 			}
 
@@ -123,6 +153,11 @@ $holla-text-height: 273px;
 				pointer-events: none;
 			}
 
+			&:hover h2 {
+				transition: color 0.3s ease-in;
+				color: variables.$color-blue;
+			}
+
 			.aboutLogo {
 				display: flex;
 				justify-content: flex-start;
@@ -139,10 +174,17 @@ $holla-text-height: 273px;
 				display: flex;
 				justify-content: flex-start;
 				font-size: 9px;
+				@include fluid-type(
+					variables.$MQ-large-tablet,
+					variables.$MQ-large-desktop,
+					7.5px,
+					9px
+				);
 				font-weight: 200;
 				font-family: variables.$font-family-heavitas;
 				letter-spacing: 0.1px;
 				color: variables.$color-textOffWhite;
+				transition: color 0.3s ease-in;
 				margin: 5px 0 2px;
 			}
 
@@ -163,6 +205,10 @@ $holla-text-height: 273px;
 			max-width: $home-cardWidth;
 			background-color: variables.$color-textGrey;
 			margin: 0 30px;
+
+			@media screen and (max-width: variables.$MQ-large-tablet) {
+				margin: 0 15px;
+			}
 
 			h1 {
 				@include fluid-type(
