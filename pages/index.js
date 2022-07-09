@@ -19,6 +19,8 @@ export default function Home() {
 					href="http://fonts.cdnfonts.com/css/amatic-sc-2"
 					rel="stylesheet"
 				></link>
+				{/* <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/EasePack.min.js"></script> */}
 			</Head>
 			<HomePage />
 		</Fragment>

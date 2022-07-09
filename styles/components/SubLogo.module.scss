@@ -38,7 +38,7 @@ $subheader-max-height: 20px;
 
 	.subheaderContainer {
 		display: flex;
-		justify-content: end;
+		justify-content: flex-end;
 		align-items: center;
 		width: fit-content;
 		height: 16px;

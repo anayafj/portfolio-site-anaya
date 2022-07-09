@@ -17,4 +17,8 @@ body {
 	background-color: variables.$color-bodybg;
 	margin: 0;
 	overflow: hidden;
+
+	.hide {
+		display: none !important;
+	}
 }

@@ -1,0 +1,100 @@
+@use '../../styles/util/variables';
+@import '../../styles/util/mixins.scss';
+
+$nav-col-width: 115px;
+$nav-exp-width: 386px;
+$nav-exp-height: 30px;
+
+.navContainer {
+	margin-right: 40px;
+
+	.expandedNav {
+		display: flex;
+		position: relative;
+		align-items: center;
+		width: $nav-exp-width;
+		height: $nav-exp-height;
+		border-radius: 6px;
+		overflow: hidden;
+
+		.expNavBg {
+			cursor: pointer;
+			display: flex;
+			width: 100%;
+			height: 100%;
+			background-color: variables.$color-pink;
+
+			.shapes {
+				width: 100%;
+				height: 100%;
+				transform: skew(146deg);
+			}
+
+			.work {
+				position: relative;
+				left: 106px;
+				width: 114px;
+
+				.yellow {
+					@extend .shapes;
+					background-color: variables.$color-yellow;
+				}
+			}
+
+			.about {
+				position: relative;
+				left: 106px;
+				width: 114px;
+
+				.blue {
+					@extend .shapes;
+					background-color: variables.$color-blue;
+				}
+			}
+
+			.navMenu {
+				display: flex;
+				position: relative;
+				left: 106px;
+				width: 80px;
+
+				.white {
+					@extend .shapes;
+					background-color: white;
+				}
+
+				.menuCta {
+					display: flex;
+					align-items: center;
+					position: absolute;
+					margin-top: 6px;
+					margin-left: 4px;
+
+					img:first-child {
+						width: 100%;
+						max-width: 16px;
+						max-height: 9px;
+					}
+
+					img {
+						width: 100%;
+						max-width: 31px;
+						max-height: 17px;
+						margin-left: 5px;
+					}
+				}
+
+				.closeXtext {
+					display: flex;
+					align-items: center;
+					position: absolute;
+					margin-top: 4px;
+					margin-left: 22px;
+					font-family: variables.$font-family-blankRiver;
+					font-size: 18px;
+					color: variables.$color-btnTextGrey;
+				}
+			}
+		}
+	}
+}
