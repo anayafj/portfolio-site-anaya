@@ -8,6 +8,7 @@ const myStyles = classNames.bind(styles);
 export default function MainNavigation() {
 	const [menu, setMenu] = useState(null);
 	const [initialLoad, setInitialLoad] = useState(true);
+	const [menuAnimating, setMenuAnimating] = useState(null);
 
 	//gsap
 	const menuContainer = useRef();
@@ -20,8 +21,6 @@ export default function MainNavigation() {
 
 	// Initial setup -----------//
 	useEffect(() => {
-		console.log('useEffect initial setup');
-		// console.log('tl = ', tl);
 		collapseMenu();
 		tl.pause('end');
 		gsap.from(menuContainer.current, {
@@ -34,86 +33,129 @@ export default function MainNavigation() {
 		});
 	}, []);
 
+	// Menu state updated
 	useEffect(() => {
-		console.log('useEffect menu updated');
-
 		toggleMenu();
 	}, [menu]);
 
+	// Menu exp/col button hit
+	const menuExpColBtnHandler = (e) => {
+		e.preventDefault();
+
+		console.log('menuAnimating = ', menuAnimating);
+		if (menuAnimating) return;
+		setMenuAnimating(true);
+		if (menu === null) {
+			setMenu(false);
+		} else {
+			setMenu(!menu);
+		}
+	};
+
 	const toggleMenu = () => {
-		console.log('toggleMenu -- menu = ', menu);
-		console.log('initialLoad  = ', initialLoad);
 		if (initialLoad && menu != null) {
 			setInitialLoad(false);
 			return;
 		}
-		// collapseMenu();
+
 		switch (menu) {
 			case true:
-				console.log('Menu - true');
-				console.log('tl = ', tl);
 				expandMenu();
 				tl.play('start');
-				// tl.reverse('end');
 				break;
 			case false:
-				console.log('Menu - false');
 				collapseMenu();
 				tl.play();
-				// tl.reverse('end');
 				break;
 			case null:
-				console.log('Menu - null');
 				break;
 		}
 	};
 
+	// Collapse Animation for Nav Menu Bar
 	const collapseMenu = () => {
 		tl.addLabel('start', 0);
-		tl.addLabel('showText', 1);
+		tl.addLabel('showText', 0.6);
 		tl.addLabel('end', 2);
-		tl.to(menuContainer.current, { width: 115, duration: 1 }, 'start');
-		tl.to(closeX.current, { autoAlpha: 0, duration: 0.3 }, 'start');
+		tl.to(closeX.current, { autoAlpha: 0, duration: 0 }, 'start');
+		tl.to(
+			menuContainer.current,
+			{ width: 115, ease: 'expo.InOut', duration: 0.4 },
+			'start',
+		);
+		tl.to(
+			white.current,
+			{ width: 120, ease: 'expo.Out', duration: 0.2 },
+			'start',
+		);
 		tl.to(
 			yellow.current,
-			{ width: 4, x: '-= 74', duration: 0.6 },
+			{ width: 4, x: '-= 74', ease: 'expo.InOut', duration: 0.4 },
 			'start += 0.2',
 		);
 		tl.to(
 			blue.current,
-			{ width: 4, x: '-= 74', duration: 0.6 },
+			{ width: 4, x: '-= 74', ease: 'expo.InOut', duration: 0.3 },
 			'start += 0.2',
 		);
 		tl.to(
 			white.current,
-			{ width: 90, x: '-= 74', duration: 0.6 },
+			{ x: '-= 74', ease: 'expo.InOut', duration: 0.3 },
 			'start += 0.2',
 		);
-		tl.to(menuTxt.current, { autoAlpha: 1, duration: 0.5 }, 'showText');
+		tl.to(
+			menuTxt.current,
+			{
+				autoAlpha: 1,
+				ease: 'circ.In',
+				duration: 0.3,
+				onComplete: () => {
+					setMenuAnimating(false);
+				},
+			},
+			'showText',
+		);
 	};
 
+	// Expand Animation for Nav Menu Bar
 	const expandMenu = () => {
 		tl.addLabel('start', 0);
-		tl.addLabel('showText', 1);
+		tl.addLabel('showText', 0.8);
 		tl.addLabel('end', 2);
-		tl.to(menuTxt.current, { autoAlpha: 0, duration: 0.3 }, 'start');
-		tl.to(menuContainer.current, { width: 386, duration: 1 }, 'start');
+		tl.to(menuTxt.current, { autoAlpha: 0, duration: 0 }, 'start');
+		tl.to(
+			menuContainer.current,
+			{ width: 386, ease: 'expo.InOut', duration: 0.5 },
+			'start',
+		);
 		tl.to(
 			yellow.current,
-			{ width: 114, x: '+= 74', duration: 0.6 },
+			{ width: 114, x: '+= 74', ease: 'expo.Out', duration: 0.3 },
 			'start += 0.2',
 		);
 		tl.to(
 			blue.current,
-			{ width: 114, x: '+= 74', duration: 0.6 },
+			{ width: 114, x: '+= 74', ease: 'expo.Out', duration: 0.3 },
 			'start += 0.2',
 		);
 		tl.to(
 			white.current,
-			{ width: 80, x: '+= 74', duration: 0.6 },
+			{ x: '+= 74', ease: 'expo.In', duration: 0.3 },
 			'start += 0.2',
 		);
-		tl.to(closeX.current, { autoAlpha: 1, duration: 0.5 }, 'showText');
+		tl.to(white.current, { width: 80, duration: 0.3 }, 'showText -= 0.4');
+		tl.to(
+			closeX.current,
+			{
+				autoAlpha: 1,
+				ease: 'circ.In',
+				duration: 0.3,
+				onComplete: () => {
+					setMenuAnimating(false);
+				},
+			},
+			'showText',
+		);
 	};
 
 	// Styles ----------------------------------------------------------------------->>
@@ -128,18 +170,18 @@ export default function MainNavigation() {
 				<div className={styles.expNavBg}>
 					<div className={styles.work} ref={yellow}>
 						<div className={styles.yellow}></div>
+						<div className={styles.yellowTxt}>
+							<img src="/svg/txt_work.svg" alt="Work tab txt" />
+						</div>
 					</div>
 					<div className={styles.about} ref={blue}>
 						<div className={styles.blue}></div>
+						<div className={styles.blueTxt}>
+							<img src="/svg/txt_about.svg" alt="About tab txt" />
+						</div>
 					</div>
 					<div
-						onClick={() => {
-							if (menu === null) {
-								setMenu(false);
-							} else {
-								setMenu(!menu);
-							}
-						}}
+						onClick={menuExpColBtnHandler}
 						className={styles.navMenu}
 						ref={white}
 					>
