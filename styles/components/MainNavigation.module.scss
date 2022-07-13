@@ -144,6 +144,12 @@ $nav-exp-height: 30px;
 					}
 				}
 
+				.aboutSelected {
+					.blue {
+						background-color: black;
+					}
+				}
+
 				.blue {
 					@extend .shapes;
 					background-color: variables.$color-blue;
@@ -162,6 +168,17 @@ $nav-exp-height: 30px;
 						width: 100%;
 						max-width: 75px;
 						max-height: 18px;
+					}
+
+					h1 {
+						visibility: hidden;
+						font-family: variables.$font-family-blankRiver;
+						font-size: 18px;
+						color: white;
+
+						span {
+							font-size: 22px;
+						}
 					}
 				}
 

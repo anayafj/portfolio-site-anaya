@@ -2,11 +2,15 @@ import styles from '../styles/components/MainNavigation.module.scss';
 import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import classNames from 'classnames/bind';
+import { useRouter } from 'next/router';
 
 const myStyles = classNames.bind(styles);
 
 export default function MainNavigation() {
+	const router = useRouter();
+	console.log('pathname ---- ', router.pathname);
 	const [menu, setMenu] = useState(null);
+	const [tab, setTab] = useState(null);
 	const [initialLoad, setInitialLoad] = useState(true);
 	const [menuAnimating, setMenuAnimating] = useState(null);
 
@@ -25,6 +29,7 @@ export default function MainNavigation() {
 
 	// Initial setup -----------//
 	useEffect(() => {
+		setNavigation();
 		collapseMenu();
 		tl.pause('end');
 		gsap.from(menuContainer.current, {
@@ -36,6 +41,9 @@ export default function MainNavigation() {
 			},
 		});
 	}, []);
+
+	////
+	//// MENU -------------------------------------------//
 
 	// Menu state updated
 	useEffect(() => {
@@ -204,6 +212,37 @@ export default function MainNavigation() {
 		);
 	};
 
+	////
+	//// TAB NAVIGATION -------------------------------------------//
+
+	// Tab state updated
+	// This should be just the appearance ???
+	useEffect(() => {
+		switch (tab) {
+			case 'home':
+				console.log('Home tab');
+				router.push('/');
+				break;
+			case 'work':
+				console.log('Work tab');
+				router.push('/portfolio');
+				break;
+			case 'about':
+				console.log('About tab');
+				router.push('/about');
+				break;
+			case null:
+				console.log('NULL');
+				break;
+		}
+
+		return () => {
+			console.log('Cleanup -- enable last tab');
+		};
+	}, [tab]);
+
+	// Tab clicked on ----------------------------
+	// This should change tab state and router ???
 	const navigationHandler = (e) => {
 		// console.log('navigationHandler --- e = ', e.target.id);
 		e.preventDefault();
@@ -211,12 +250,30 @@ export default function MainNavigation() {
 		switch (e.target.id) {
 			case 'home':
 				console.log('Home tab hit');
+				// router.push('/');
+				setTab('home');
 				break;
 			case 'work':
 				console.log('Work tab hit');
+				// router.push('/portfolio');
+				setTab('portfolio');
 				break;
 			case 'about':
 				console.log('About tab hit');
+				// router.push('/about');
+				setTab('about');
+				break;
+		}
+	};
+
+	// Default setup for navigation tab buttons
+	const setNavigation = () => {
+		switch (router.pathname) {
+			case '/about':
+				console.log('setNavigation - about');
+				break;
+			case '/portfolio':
+				console.log('setNavigation - portfolio');
 				break;
 		}
 	};
@@ -226,6 +283,8 @@ export default function MainNavigation() {
 	let mainNavContainer = myStyles({ expandedNav: true });
 	let menuExpand = myStyles({ menuCta: true });
 	let menuCollapse = myStyles({ closeXtext: true });
+
+	let navAboutText = myStyles({ blueTxt: true }, ``);
 
 	return (
 		<nav className={styles.navContainer}>
@@ -251,6 +310,7 @@ export default function MainNavigation() {
 						<div className={styles.yellow}></div>
 						<div className={styles.yellowTxt} ref={yellowTxt}>
 							<img src="/svg/txt_work.svg" alt="Work tab txt" />
+							<span>work &#62;&#62;</span>
 						</div>
 						<hr></hr>
 					</div>
@@ -261,8 +321,11 @@ export default function MainNavigation() {
 						ref={blue}
 					>
 						<div className={styles.blue}></div>
-						<div className={styles.blueTxt} ref={blueTxt}>
+						<div className={navAboutText} ref={blueTxt}>
 							<img src="/svg/txt_about.svg" alt="About tab txt" />
+							<h1>
+								About <span>&#62;&#62;</span>
+							</h1>
 						</div>
 						<hr></hr>
 					</div>
