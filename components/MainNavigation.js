@@ -8,7 +8,6 @@ const myStyles = classNames.bind(styles);
 
 export default function MainNavigation() {
 	const router = useRouter();
-	console.log('pathname ---- ', router.pathname);
 	const [menu, setMenu] = useState(null);
 	const [tab, setTab] = useState(null);
 	const [initialLoad, setInitialLoad] = useState(true);
@@ -54,7 +53,7 @@ export default function MainNavigation() {
 	const menuExpColBtnHandler = (e) => {
 		e.preventDefault();
 
-		console.log('menuAnimating = ', menuAnimating);
+		// console.log('menuAnimating = ', menuAnimating);
 		if (menuAnimating) return;
 		setMenuAnimating(true);
 		if (menu === null) {
@@ -94,27 +93,19 @@ export default function MainNavigation() {
 		tl.to(blueTxt.current, { autoAlpha: 0, duration: 0 }, 'start');
 		tl.to(pink.current, { width: 0, autoAlpha: 0, duration: 0 }, 'start');
 		tl.to(
-			yellow.current,
-			{ width: 4, x: '+=21', ease: 'expo.InOut', duration: 0.4 },
-			'start',
-		);
-		tl.to(
-			blue.current,
-			{ width: 4, x: '+=21', ease: 'expo.InOut', duration: 0.2 },
-			'start',
-		);
-		tl.to(
 			whiteShape.current,
 			{
-				borderRightWidth: '320px',
+				borderRightWidth: '200px',
 				duration: 0,
 			},
 			'start',
 		);
+		tl.to(yellow.current, { x: '+=21', duration: 0 }, 'start');
+		tl.to(blue.current, { width: 86, duration: 0 }, 'start');
 		tl.to(
 			menuContainer.current,
-			{ width: 115, ease: 'expo.Out', duration: 0.6 },
-			'start += 0.1',
+			{ width: 115, ease: 'expo.Out', duration: 0.5 },
+			'start',
 		);
 		tl.to(
 			white.current,
@@ -122,18 +113,24 @@ export default function MainNavigation() {
 				width: 86,
 				x: '+=21',
 				ease: 'expo.Out',
-				duration: 0.5,
+				duration: 0.4,
 			},
-			'start += 0.1',
+			'start+=.2',
 		);
 		tl.to(
-			whiteShape.current,
-			{
-				borderRightWidth: '76px',
-				ease: 'expo.Out',
-				duration: 1,
-			},
-			'start += 0.1',
+			yellow.current,
+			{ width: 4, ease: 'expo.Out', duration: 0.4 },
+			'start+=.2',
+		);
+		tl.to(
+			blue.current,
+			{ width: 4, ease: 'expo.Out', duration: 0.4 },
+			'start+=.2',
+		);
+		tl.to(
+			blue.current,
+			{ x: '+=21', ease: 'expo.Out', duration: 0.4 },
+			'start+=.2',
 		);
 		tl.to(
 			menuTxt.current,
@@ -216,66 +213,70 @@ export default function MainNavigation() {
 	//// TAB NAVIGATION -------------------------------------------//
 
 	// Tab state updated
-	// This should be just the appearance ???
 	useEffect(() => {
+		console.log('Tab state updated = ', tab);
 		switch (tab) {
-			case 'home':
-				console.log('Home tab');
+			case pink:
+				// console.log('Home tab --------------');
 				router.push('/');
 				break;
-			case 'work':
-				console.log('Work tab');
+			case yellow:
+				// console.log('Work tab --------------');
 				router.push('/portfolio');
 				break;
-			case 'about':
-				console.log('About tab');
+			case blue:
+				// console.log('About tab --------------');
 				router.push('/about');
 				break;
 			case null:
-				console.log('NULL');
+				console.log('NULL ----------------');
 				break;
 		}
-
-		return () => {
-			console.log('Cleanup -- enable last tab');
-		};
 	}, [tab]);
 
 	// Tab clicked on ----------------------------
-	// This should change tab state and router ???
 	const navigationHandler = (e) => {
-		// console.log('navigationHandler --- e = ', e.target.id);
 		e.preventDefault();
+		if (e.target.id != 'home') {
+			e.target.removeEventListener('click', navigationHandler);
+		}
 
 		switch (e.target.id) {
 			case 'home':
-				console.log('Home tab hit');
-				// router.push('/');
-				setTab('home');
+				setTab(pink);
 				break;
 			case 'work':
-				console.log('Work tab hit');
-				// router.push('/portfolio');
-				setTab('portfolio');
+				setTab(yellow);
+				blue.current.addEventListener('click', navigationHandler);
 				break;
 			case 'about':
-				console.log('About tab hit');
-				// router.push('/about');
-				setTab('about');
+				setTab(blue);
+				yellow.current.addEventListener('click', navigationHandler);
 				break;
 		}
 	};
 
 	// Default setup for navigation tab buttons
 	const setNavigation = () => {
+		setTabEventListener();
 		switch (router.pathname) {
 			case '/about':
-				console.log('setNavigation - about');
+				console.log('removeEventListener  - about');
+				blue.current.removeEventListener('click', navigationHandler);
+				setTab(blue);
 				break;
 			case '/portfolio':
-				console.log('setNavigation - portfolio');
+				console.log('removeEventListener - portfolio');
+				yellow.current.removeEventListener('click', navigationHandler);
+				setTab(yellow);
 				break;
 		}
+	};
+
+	const setTabEventListener = () => {
+		pink.current.addEventListener('click', navigationHandler);
+		yellow.current.addEventListener('click', navigationHandler);
+		blue.current.addEventListener('click', navigationHandler);
 	};
 
 	// Styles ----------------------------------------------------------------------->>
@@ -285,47 +286,41 @@ export default function MainNavigation() {
 	let menuCollapse = myStyles({ closeXtext: true });
 
 	let navAboutText = myStyles({ blueTxt: true }, ``);
+	let homeTab = myStyles({ home: true }, `${tab === pink ? '' : 'homeTab'}`);
+	let workTab = myStyles(
+		{ work: true },
+		`${tab == yellow ? 'workTabActive' : 'workTab'}`,
+		`${menu === true ? '' : 'open'}`,
+	);
+	let aboutTab = myStyles(
+		{ about: true },
+		`${tab == blue ? 'aboutTabActive' : 'aboutTab'}`,
+		`${menu === true ? '' : 'open'}`,
+	);
 
 	return (
 		<nav className={styles.navContainer}>
 			<div className={mainNavContainer} ref={menuContainer}>
 				<div className={styles.expNavBg}>
-					<div
-						onClick={navigationHandler}
-						id="home"
-						className={styles.home}
-						ref={pink}
-					>
+					<div id="home" className={homeTab} ref={pink}>
 						<div className={styles.pinkTxt}>
 							<img src="/svg/txt_home.svg" alt="Home tab txt" />
 						</div>
 						<hr></hr>
 					</div>
-					<div
-						onClick={navigationHandler}
-						id="work"
-						className={styles.work}
-						ref={yellow}
-					>
+					<div id="work" className={workTab} ref={yellow}>
 						<div className={styles.yellow}></div>
 						<div className={styles.yellowTxt} ref={yellowTxt}>
 							<img src="/svg/txt_work.svg" alt="Work tab txt" />
-							<span>work &#62;&#62;</span>
+							<span>Work</span>
 						</div>
 						<hr></hr>
 					</div>
-					<div
-						onClick={navigationHandler}
-						id="about"
-						className={styles.about}
-						ref={blue}
-					>
+					<div id="about" className={aboutTab} ref={blue}>
 						<div className={styles.blue}></div>
 						<div className={navAboutText} ref={blueTxt}>
 							<img src="/svg/txt_about.svg" alt="About tab txt" />
-							<h1>
-								About <span>&#62;&#62;</span>
-							</h1>
+							<span>About Me</span>
 						</div>
 						<hr></hr>
 					</div>

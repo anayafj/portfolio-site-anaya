@@ -3,10 +3,8 @@ import { useRouter } from 'next/router';
 
 export default function SubLogo() {
 	const router = useRouter();
-	console.log('Sublogo component');
 
 	const homeClick = (e) => {
-		console.log('homeClick');
 		e.preventDefault();
 		router.push('/');
 	};

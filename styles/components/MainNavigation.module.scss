@@ -30,23 +30,23 @@ $nav-exp-height: 30px;
 				transform: skew(146deg);
 			}
 
+			.homeTab:hover {
+				.pinkTxt {
+					top: 4px;
+					transition: top 0.3s ease-out;
+				}
+
+				hr {
+					visibility: visible;
+					width: 70%;
+					transition: width 0.3s ease-out;
+				}
+			}
+
 			.home {
 				position: relative;
 				width: 106px;
 				height: 100%;
-
-				&:hover {
-					.pinkTxt {
-						top: 4px;
-						transition: top 0.3s ease-out;
-					}
-
-					hr {
-						visibility: visible;
-						width: 70%;
-						transition: width 0.3s ease-out;
-					}
-				}
 
 				.pinkTxt {
 					position: absolute;
@@ -76,20 +76,41 @@ $nav-exp-height: 30px;
 				}
 			}
 
+			.workTab:hover {
+				.yellowTxt {
+					top: 2px;
+					transition: top 0.3s ease-out;
+				}
+
+				hr {
+					visibility: visible;
+					width: 70%;
+					transition: width 0.3s ease-out;
+				}
+			}
+
 			.work {
 				position: relative;
 				width: 114px;
 
-				&:hover {
-					.yellowTxt {
-						top: 2px;
-						transition: top 0.3s ease-out;
+				&.workTabActive .yellow {
+					background-color: black;
+					transition: background-color 0.2s ease-out;
+				}
+				&.workTabActive.open .yellow {
+					background-color: variables.$color-yellow;
+					transition: background-color 0.3s ease-in 0.3s;
+				}
+
+				&.workTabActive .yellowTxt {
+					left: 35px;
+
+					img {
+						display: none;
 					}
 
-					hr {
-						visibility: visible;
-						width: 70%;
-						transition: width 0.3s ease-out;
+					span {
+						display: block;
 					}
 				}
 
@@ -112,6 +133,14 @@ $nav-exp-height: 30px;
 						max-width: 53px;
 						max-height: 16px;
 					}
+
+					span {
+						display: none;
+						font-size: 19px;
+						font-family: variables.$font-family-blankRiver;
+						letter-spacing: 1.5px;
+						color: white;
+					}
 				}
 
 				hr {
@@ -127,26 +156,42 @@ $nav-exp-height: 30px;
 				}
 			}
 
+			.aboutTab:hover {
+				.blueTxt {
+					top: 4px;
+					transition: top 0.3s ease-out;
+				}
+
+				hr {
+					visibility: visible;
+					width: 80%;
+					transition: width 0.3s ease-out;
+				}
+			}
+
 			.about {
 				position: relative;
 				width: 114px;
 
-				&:hover {
-					.blueTxt {
-						top: 4px;
-						transition: top 0.3s ease-out;
-					}
-
-					hr {
-						visibility: visible;
-						width: 80%;
-						transition: width 0.3s ease-out;
-					}
+				&.aboutTabActive .blue {
+					background-color: black;
+					transition: background-color 0.2s ease-out;
+				}
+				&.aboutTabActive.open .blue {
+					background-color: variables.$color-blue;
+					transition: background-color 0.2s ease-out;
 				}
 
-				.aboutSelected {
-					.blue {
-						background-color: black;
+				&.aboutTabActive .blueTxt {
+					top: 3px;
+					left: 23px;
+
+					img {
+						display: none;
+					}
+
+					span {
+						display: block;
 					}
 				}
 
@@ -170,15 +215,12 @@ $nav-exp-height: 30px;
 						max-height: 18px;
 					}
 
-					h1 {
-						visibility: hidden;
+					span {
+						display: none;
+						font-size: 19px;
 						font-family: variables.$font-family-blankRiver;
-						font-size: 18px;
+						letter-spacing: 1.1px;
 						color: white;
-
-						span {
-							font-size: 22px;
-						}
 					}
 				}
 

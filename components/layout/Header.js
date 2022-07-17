@@ -11,7 +11,6 @@ export default function Header() {
 	console.log('Current Route Path = ', router.pathname);
 
 	const renderLogo = () => {
-		console.log('renderLogo -- Current Route Path = ', router.pathname);
 		if (router.pathname === '/') {
 			return (
 				<header className={styles.header}>
