@@ -11,6 +11,10 @@
 	margin: 0 auto;
 	background-color: variables.$color-bgGray;
 
+	&.onPath {
+		background-color: variables.$color-overlayDrkGray;
+	}
+
 	@media screen and (max-height: variables.$desktop-height) {
 		height: unset;
 	}
