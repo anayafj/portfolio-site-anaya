@@ -19,14 +19,27 @@ export default function Layout(props) {
 	console.log('Layout --- route = ', router.pathname);
 	console.log('Layout --- path = ', path);
 
+	if (path != null) {
+		console.log(' on path = ', path.slice(1));
+	}
+
 	let container = myStyles(
 		{ container: true },
-		`${path === '/about' ? 'onPath' : ''}`,
+		// `${path === '/about' ? 'onPath' : ''}`,
+		`${path != null ? path.slice(1) : ''}`,
+	);
+
+	let bust = myStyles(
+		{ guyBust: true },
+		`${path === '/portfolio' ? '' : 'hide'}`,
 	);
 
 	return (
 		<Fragment>
 			<div className={container}>
+				<div className={bust}>
+					<img src="/svg/peep_bust.svg" alt="illustrated person" />
+				</div>
 				<div className={styles.rightColumn}></div>
 				<div className={styles.wrapper}>
 					<Header />

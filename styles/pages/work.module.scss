@@ -1,0 +1,116 @@
+@use '../../styles/util/variables';
+@import '../../styles/util/mixins.scss';
+
+$page_height: 709px;
+$infoBox_width: 1269px;
+$infoBox_height: 578px;
+
+.workPage {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-height: $page_height;
+	background-color: variables.$color-homeGray;
+
+	.workContent {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		.top {
+			display: flex;
+			position: relative;
+			align-items: baseline;
+			justify-content: space-between;
+			// max-width: 1000px;
+			height: 30px;
+			margin: 20px 42px 10px;
+
+			.subheader {
+				display: flex;
+				// justify-content: center;
+				align-items: center;
+				// width: 100%;
+				height: 100%;
+				// margin: 0 30px;
+
+				h1 {
+					@include fluid-type(
+						variables.$MQ-large-laptop,
+						variables.$MQ-large-desktop,
+						16px,
+						22px
+					);
+					font-size: 22px;
+					text-align: center;
+					font-weight: 400;
+					font-family: variables.$font-family-amatic;
+					color: variables.$color-pink;
+				}
+			}
+
+			.tabLogo {
+				width: 99px;
+				height: 100%;
+				// margin-left: 42px;
+
+				img {
+					max-width: 99px;
+					margin: 0 auto;
+				}
+			}
+		}
+
+		.workThumb {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 370px;
+			height: 232px;
+
+			.thumbImage {
+				width: 100%;
+				height: 100%;
+				max-height: 200px;
+				border: 2px solid variables.$color-teal;
+				background-color: black;
+			}
+
+			h1 {
+				font-size: 16px;
+				font-family: variables.$font-family-amatic;
+				color: variables.$color-pink;
+				margin: 0;
+			}
+
+			p {
+				font-size: 9px;
+				font-family: variables.$font-family-heavitas;
+				color: variables.$color-textOffWhite;
+				margin: 10px 0 0;
+			}
+		}
+
+		.background {
+			height: $infoBox_height;
+			max-width: $infoBox_width;
+			background-color: variables.$color-textGrey;
+			margin-left: 10px;
+			padding-left: 11px;
+			padding-bottom: 4px;
+
+			.infoBorder {
+				width: 100%;
+				height: 100%;
+				border-left: 2px solid variables.$color-overlayDrkGray;
+				border-bottom: 2px solid variables.$color-overlayDrkGray;
+			}
+		}
+
+		.bottom {
+			display: flex;
+			margin-top: 10px;
+			margin-left: 180px;
+		}
+	}
+}

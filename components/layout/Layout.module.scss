@@ -11,12 +11,30 @@
 	margin: 0 auto;
 	background-color: variables.$color-bgGray;
 
-	&.onPath {
+	&.about {
 		background-color: variables.$color-overlayDrkGray;
+	}
+
+	&.portfolio {
+		background-color: variables.$color-footerDark;
 	}
 
 	@media screen and (max-height: variables.$desktop-height) {
 		height: unset;
+	}
+
+	.guyBust {
+		pointer-events: none;
+		position: absolute;
+		bottom: -40px;
+		right: -30px;
+
+		img {
+			width: 100%;
+			max-width: 173px;
+			max-height: 274px;
+			transform: scaleX(-1);
+		}
 	}
 
 	.rightColumn {

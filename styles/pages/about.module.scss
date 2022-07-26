@@ -103,6 +103,7 @@ $infoBox_height: 430px;
 
 			@media screen and (max-width: 900px) {
 				// background-color: red;
+				// overflow-y: scroll;
 			}
 
 			.aboutText {
@@ -111,9 +112,15 @@ $infoBox_height: 430px;
 				padding-left: 50px;
 				padding-right: 25px;
 				margin-top: 30px;
-				overflow: hidden;
+				overflow: auto;
 
-				p {
+				@media screen and (max-width: 900px) {
+					// overflow-y: scroll;
+				}
+
+				.textContent {
+					// cursor: pointer;
+					// overflow-y: scroll;
 					@include fluid-type(
 						variables.$MQ-large-laptop,
 						variables.$MQ-large-desktop,
