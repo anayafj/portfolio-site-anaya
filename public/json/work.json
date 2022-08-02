@@ -1,0 +1,54 @@
+{
+    "projects": {
+       "projectItems": [
+            {
+                "id": 1,
+                "selected": false,
+                "type": "Website",
+                "title": "Project 1",
+                "description": "Website for client",
+                "thumb": "project1.png"
+            },
+            {
+                "id": 2,
+                "selected": false,
+                "type": "Ads",
+                "title": "Project 2",
+                "description": "Banner for client",
+                "thumb": "project2.png"
+            },
+            {
+                "id": 3,
+                "selected": false,
+                "type": "Website",
+                "title": "Project 3",
+                "description": "Website for client",
+                "thumb": "project1.png"
+            },
+            {
+                "id": 4,
+                "selected": false,
+                "type": "Ads",
+                "title": "Project 4",
+                "description": "Banner for client",
+                "thumb": "project2.png"
+            },
+            {
+                "id": 5,
+                "selected": false,
+                "type": "Website",
+                "title": "Project 5",
+                "description": "Website for client",
+                "thumb": "project1.png"
+            },
+            {
+                "id": 6,
+                "selected": false,
+                "type": "Ads",
+                "title": "Project 6",
+                "description": "Banner for client",
+                "thumb": "project2.png"
+            }
+        ]
+    }
+}

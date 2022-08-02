@@ -3,11 +3,50 @@ import classNames from 'classnames/bind';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
+import PortfolioThumbCard from '../../components/PortfolioThumbCard';
+
 const myStyles = classNames.bind(styles);
 
 export default function PortfolioPage() {
+	const [projects, setProjects] = useState([]);
 	const router = useRouter();
-	console.log(router.pathname);
+
+	const getProjects = () => {
+		fetch('json/work.json', {
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json',
+			},
+		})
+			.then(function (response) {
+				return response.json();
+			})
+			.then(function (myJson) {
+				setProjects(myJson);
+			});
+	};
+
+	useEffect(() => {
+		getProjects();
+	}, []);
+
+	const renderProjects = () => {
+		// console.log(' The Projects to render - ', projects);
+		if (projects.length != 0) {
+			return projects.projects.projectItems.map(({ id, type, description }) => {
+				return (
+					<PortfolioThumbCard
+						className={styles.project}
+						key={id}
+						title={type}
+						description={description}
+					/>
+				);
+			});
+		} else {
+			return <div className={styles.projectLoading}>Projects Loading</div>;
+		}
+	};
 
 	return (
 		<div className={styles.workPage}>
@@ -23,13 +62,9 @@ export default function PortfolioPage() {
 						</h1>
 					</div>
 				</div>
-				<div className={styles.workThumb}>
-					<h1>Website</h1>
-					<div className={styles.thumbImage}></div>
-					<p>Project 1</p>
-				</div>
 				<div className={styles.background}>
 					<div className={styles.infoBorder}></div>
+					<div className={styles.projects}>{renderProjects()}</div>
 				</div>
 				{/* <div className={styles.bottom}></div> */}
 			</div>

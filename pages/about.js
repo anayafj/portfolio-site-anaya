@@ -8,7 +8,7 @@ export default function AboutPage() {
 	const [data, setData] = useState([]);
 
 	const getData = () => {
-		fetch('aboutMe.json', {
+		fetch('json/aboutMe.json', {
 			headers: {
 				'Content-Type': 'application/json',
 				Accept: 'application/json',
