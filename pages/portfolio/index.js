@@ -1,4 +1,5 @@
 import styles from '../../styles/pages/work.module.scss';
+// import styled from 'styled-components';
 import classNames from 'classnames/bind';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
@@ -6,6 +7,26 @@ import { useState, useEffect } from 'react';
 import PortfolioThumbCard from '../../components/PortfolioThumbCard';
 
 const myStyles = classNames.bind(styles);
+
+// Custom variables for Style properties
+const TitleColor = '';
+
+// const Button = styled.button`
+// 	cursor: pointer;
+// 	border: 5px red solid;
+// `;
+
+// const CardStyle = styled.div.attrs(props => ({
+// 	border: props.border
+// }))`
+// 	border: 10px green solid;
+// `;
+
+////
+////
+//// - https://github.com/vercel/next.js/tree/canary/examples/with-styled-components-babel
+////
+////
 
 export default function PortfolioPage() {
 	const [projects, setProjects] = useState([]);
@@ -36,10 +57,10 @@ export default function PortfolioPage() {
 			return projects.projects.projectItems.map(({ id, type, description }) => {
 				return (
 					<PortfolioThumbCard
-						className={styles.project}
 						key={id}
 						title={type}
 						description={description}
+						titleColor={TitleColor}
 					/>
 				);
 			});
@@ -64,6 +85,7 @@ export default function PortfolioPage() {
 				</div>
 				<div className={styles.background}>
 					<div className={styles.infoBorder}></div>
+
 					<div className={styles.projects}>{renderProjects()}</div>
 				</div>
 				{/* <div className={styles.bottom}></div> */}

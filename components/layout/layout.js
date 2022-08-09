@@ -34,13 +34,18 @@ export default function Layout(props) {
 		`${path === '/portfolio' ? '' : 'hide'}`,
 	);
 
+	let rightColumn = myStyles(
+		{ rightColumn: true },
+		`${path === '/' ? '' : 'hide'}`,
+	);
+
 	return (
 		<Fragment>
 			<div className={container}>
 				<div className={bust}>
 					<img src="/svg/peep_bust.svg" alt="illustrated person" />
 				</div>
-				<div className={styles.rightColumn}></div>
+				<div className={rightColumn}></div>
 				<div className={styles.wrapper}>
 					<Header />
 					<section>{props.children}</section>

@@ -41,7 +41,6 @@ $infoBox_height: 578px;
 						16px,
 						22px
 					);
-					font-size: 22px;
 					text-align: center;
 					font-weight: 400;
 					font-family: variables.$font-family-amatic;
@@ -93,8 +92,9 @@ $infoBox_height: 578px;
 
 		.background {
 			position: relative;
+			width: calc((1270px / 1280px) * 100%);
 			height: $infoBox_height;
-			max-width: $infoBox_width;
+			// max-width: $infoBox_width;
 			background-color: variables.$color-textGrey;
 			margin-left: 10px;
 			padding-left: 11px;
@@ -109,12 +109,40 @@ $infoBox_height: 578px;
 			}
 
 			.projects {
-				display: grid;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
 
-				.project {
-					width: 100%;
-				}
+				// 	display: grid;
+				// 	// width: calc((variables.$desktop-width / 1258px) * 100%);
+				// 	// margin-right: 24px;
+				// 	// grid: auto 1fr / auto-flow;
+				// 	grid: 1fr auto / auto-flow;
+				// 	grid-gap: 25px;
+				// 	margin: 25px 25px 0;
+				// 	// grid-template-columns: 1fr auto 1fr;
+				// 	// grid-auto-rows: auto;
+				// 	// gap: 25px;
+				// 	// padding-left: 24px;
+
+				// .workThumb {
+				// 	border: 10px solid magenta;
+				// }
 			}
+
+			// .gridContainer {
+			// 	display: grid;
+			// 	.rowContainer {
+			// 		display: flex;
+			// 		.col1 {
+			// 			flex: 1;
+			// 		}
+
+			// 		.col2 {
+			// 			flex: 2;
+			// 		}
+			// 	}
+			// }
 		}
 
 		.bottom {

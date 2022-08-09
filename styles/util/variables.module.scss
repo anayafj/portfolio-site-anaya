@@ -3,7 +3,9 @@
 //////////////////////////////////////////////////////////////////////
 //// VARIABLES ///////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
-
+///
+///
+///
 // Desktop
 $desktop-width: 1280px;
 $desktop-height: 800px;
@@ -26,10 +28,6 @@ $color-bgGray: #292929;
 $color-homeGray: #2e2e2e;
 $color-overlayDrkGray: #252525;
 $color-white: #fff;
-
-:export {
-	Color-pink: $color-pink;
-}
 
 // MEDIA QUERIES ----------------------------->
 
@@ -60,5 +58,10 @@ $font-family-montserrat: 'Montserrat', sans-serif;
 $font-family-amatic: 'Amatic SC', sans-serif;
 
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, 'Blank River',
+	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Blank River,
 	sans-serif;
+
+:export {
+	ColorPink: $color-pink;
+	FfAmatic: $font-family-amatic;
+}
