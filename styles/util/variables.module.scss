@@ -3,9 +3,7 @@
 //////////////////////////////////////////////////////////////////////
 //// VARIABLES ///////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
-///
-///
-///
+
 // Desktop
 $desktop-width: 1280px;
 $desktop-height: 800px;
@@ -61,7 +59,11 @@ $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Blank River,
 	sans-serif;
 
+// Exports for Styled-Components ------------------------//
 :export {
 	ColorPink: $color-pink;
 	FfAmatic: $font-family-amatic;
+	FfHeavitas: $font-family-heavitas;
+	ColorOffWhite: $color-textOffWhite;
+	ColorTeal: $color-teal;
 }

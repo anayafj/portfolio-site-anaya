@@ -10,23 +10,8 @@ const myStyles = classNames.bind(styles);
 
 // Custom variables for Style properties
 const TitleColor = '';
-
-// const Button = styled.button`
-// 	cursor: pointer;
-// 	border: 5px red solid;
-// `;
-
-// const CardStyle = styled.div.attrs(props => ({
-// 	border: props.border
-// }))`
-// 	border: 10px green solid;
-// `;
-
-////
-////
-//// - https://github.com/vercel/next.js/tree/canary/examples/with-styled-components-babel
-////
-////
+const ImageBorderColor = '';
+const DescriptionColor = '';
 
 export default function PortfolioPage() {
 	const [projects, setProjects] = useState([]);
@@ -59,8 +44,10 @@ export default function PortfolioPage() {
 					<PortfolioThumbCard
 						key={id}
 						title={type}
-						description={description}
 						titleColor={TitleColor}
+						imgBorderColor={ImageBorderColor}
+						description={description}
+						descriptionColor={DescriptionColor}
 					/>
 				);
 			});
