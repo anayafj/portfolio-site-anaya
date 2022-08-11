@@ -8,16 +8,19 @@ import {
 import styled from 'styled-components';
 
 const CardContainer = styled.div`
+	cursor: pointer;
 	display: inline-flex;
 	flex-direction: column;
 	align-items: flex-start;
 	width: 370px;
 	height: 232px;
+	margin-bottom: 20px;
 `;
 
 const Title = styled.h1.attrs((props) => ({
 	color: props.color || ColorPink,
 }))`
+	pointer-events: none;
 	font-size: 16px;
 	font-family: ${FfAmatic};
 	letter-spacing: 0.5px;
@@ -28,6 +31,7 @@ const Title = styled.h1.attrs((props) => ({
 const Image = styled.div.attrs((props) => ({
 	color: props.borderColor || ColorTeal,
 }))`
+	pointer-events: none;
 	width: 100%;
 	height: 100%;
 	max-height: 200px;
@@ -38,6 +42,7 @@ const Image = styled.div.attrs((props) => ({
 const Description = styled.p.attrs((props) => ({
 	color: props.color || ColorOffWhite,
 }))`
+	pointer-events: none;
 	font-size: 9px;
 	font-family: ${FfHeavitas};
 	letter-spacing: 0.5px;
@@ -46,6 +51,8 @@ const Description = styled.p.attrs((props) => ({
 `;
 
 export default function PorfolioThumbCard({
+	handleClick,
+	id,
 	title,
 	titleColor,
 	imgBorderColor,
@@ -53,7 +60,7 @@ export default function PorfolioThumbCard({
 	descriptionColor,
 }) {
 	return (
-		<CardContainer>
+		<CardContainer onClick={(e) => handleClick(id, e)}>
 			<Title color={titleColor}>{title}</Title>
 			<Image borderColor={imgBorderColor} />
 			<Description color={descriptionColor}>{description}</Description>

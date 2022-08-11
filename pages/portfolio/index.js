@@ -1,5 +1,4 @@
 import styles from '../../styles/pages/work.module.scss';
-// import styled from 'styled-components';
 import classNames from 'classnames/bind';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
@@ -12,6 +11,8 @@ const myStyles = classNames.bind(styles);
 const TitleColor = '';
 const ImageBorderColor = '';
 const DescriptionColor = '';
+
+//cursor: pointer;
 
 export default function PortfolioPage() {
 	const [projects, setProjects] = useState([]);
@@ -36,13 +37,20 @@ export default function PortfolioPage() {
 		getProjects();
 	}, []);
 
+	const handleClick = (id, evt) => {
+		console.log('Parent - Card ID = ', id);
+		console.log('Parent - Card evt =  ', evt.target);
+		// e.preventDefault();
+	};
+
 	const renderProjects = () => {
-		// console.log(' The Projects to render - ', projects);
 		if (projects.length != 0) {
 			return projects.projects.projectItems.map(({ id, type, description }) => {
 				return (
 					<PortfolioThumbCard
+						handleClick={handleClick}
 						key={id}
+						id={id}
 						title={type}
 						titleColor={TitleColor}
 						imgBorderColor={ImageBorderColor}
@@ -72,8 +80,9 @@ export default function PortfolioPage() {
 				</div>
 				<div className={styles.background}>
 					<div className={styles.infoBorder}></div>
-
-					<div className={styles.projects}>{renderProjects()}</div>
+					<div className={styles.projectContainer}>
+						<div className={styles.projects}>{renderProjects()}</div>
+					</div>
 				</div>
 				{/* <div className={styles.bottom}></div> */}
 			</div>
