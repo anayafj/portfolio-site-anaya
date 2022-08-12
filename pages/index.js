@@ -28,8 +28,6 @@ export default function Home() {
 					href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
 					rel="stylesheet"
 				></link>
-				{/* <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/EasePack.min.js"></script> */}
 			</Head>
 			<HomePage />
 		</Fragment>

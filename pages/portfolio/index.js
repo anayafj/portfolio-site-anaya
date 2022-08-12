@@ -1,9 +1,10 @@
 import styles from '../../styles/pages/work.module.scss';
 import classNames from 'classnames/bind';
-import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
 import PortfolioThumbCard from '../../components/PortfolioThumbCard';
+import ProjectModal from '../../components/ProjectModal';
+import Modal from '../../components/Modal';
 
 const myStyles = classNames.bind(styles);
 
@@ -12,11 +13,9 @@ const TitleColor = '';
 const ImageBorderColor = '';
 const DescriptionColor = '';
 
-//cursor: pointer;
-
 export default function PortfolioPage() {
 	const [projects, setProjects] = useState([]);
-	const router = useRouter();
+	const [modalOpen, setModalOpen] = useState(false);
 
 	const getProjects = () => {
 		fetch('json/work.json', {
@@ -40,7 +39,7 @@ export default function PortfolioPage() {
 	const handleClick = (id, evt) => {
 		console.log('Parent - Card ID = ', id);
 		console.log('Parent - Card evt =  ', evt.target);
-		// e.preventDefault();
+		setModalOpen(true);
 	};
 
 	const renderProjects = () => {
@@ -86,6 +85,9 @@ export default function PortfolioPage() {
 				</div>
 				{/* <div className={styles.bottom}></div> */}
 			</div>
+			<Modal isOpen={modalOpen}>
+				<ProjectModal onCloseModal={() => setModalOpen(false)} />
+			</Modal>
 		</div>
 	);
 }

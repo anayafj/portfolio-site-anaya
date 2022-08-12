@@ -1,0 +1,46 @@
+@use '../util/variables.module.scss';
+
+$width: 1080px;
+$height: 610px;
+
+.mainContainer {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: calc(($width / variables.$desktop-width) * 100%);
+	height: $height;
+	max-width: $width;
+	// border-radius: 6px 6px 0 0;
+	// background-color: white;
+
+	.header {
+		width: 100%;
+		height: 55px;
+		background-color: variables.$color-bgGray;
+		border-radius: 6px 6px 0 0;
+
+		button {
+			cursor: pointer;
+			width: 40px;
+			height: 40px;
+			font-size: 22px;
+			font-family: variables.$font-family-blankRiver;
+			text-decoration: none;
+			border: none;
+			color: variables.$color-textOffWhite;
+			background-color: transparent;
+			padding: 0;
+
+			&:hover {
+				color: variables.$color-yellow;
+			}
+		}
+	}
+
+	.content {
+		width: 100%;
+		height: calc((($height - 55px) / $height) * 100%);
+		background-color: variables.$color-white;
+	}
+}
