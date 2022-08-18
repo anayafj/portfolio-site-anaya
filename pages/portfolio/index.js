@@ -15,6 +15,7 @@ const DescriptionColor = '';
 
 export default function PortfolioPage() {
 	const [projects, setProjects] = useState([]);
+	const [selectedProject, setSelectedProject] = useState(null);
 	const [modalOpen, setModalOpen] = useState(false);
 
 	const getProjects = () => {
@@ -36,9 +37,8 @@ export default function PortfolioPage() {
 		getProjects();
 	}, []);
 
-	const handleClick = (id, evt) => {
-		console.log('Parent - Card ID = ', id);
-		console.log('Parent - Card evt =  ', evt.target);
+	const handleClick = (id) => {
+		setSelectedProject(projects.projects.projectItems[id - 1]);
 		setModalOpen(true);
 	};
 
@@ -85,8 +85,15 @@ export default function PortfolioPage() {
 				</div>
 				{/* <div className={styles.bottom}></div> */}
 			</div>
-			<Modal isOpen={modalOpen}>
-				<ProjectModal onCloseModal={() => setModalOpen(false)} />
+			<Modal
+				id="modalContainer"
+				isOpen={modalOpen}
+				bgCloseModal={() => setModalOpen(false)}
+			>
+				<ProjectModal
+					onCloseModal={() => setModalOpen(false)}
+					project={selectedProject}
+				/>
 			</Modal>
 		</div>
 	);

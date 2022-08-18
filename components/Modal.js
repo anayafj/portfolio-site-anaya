@@ -11,10 +11,17 @@ const ModalContainer = styled.div`
 	z-index: 1000;
 `;
 
-export default function Modal({ isOpen, children }) {
+export default function Modal({ isOpen, children, id, bgCloseModal }) {
 	if (!isOpen) return null;
+
+	const closeModal = (e) => {
+		if (e.target.id === id) bgCloseModal();
+	};
+
 	return createPortal(
-		<ModalContainer>{children}</ModalContainer>,
+		<ModalContainer id={id} onClick={(e) => closeModal(e)}>
+			{children}
+		</ModalContainer>,
 		document.body,
 	);
 }

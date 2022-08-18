@@ -16,12 +16,12 @@ export default function Layout(props) {
 		setPath(router.pathname);
 	}, [router.pathname]);
 
-	console.log('Layout --- route = ', router.pathname);
-	console.log('Layout --- path = ', path);
+	// console.log('Layout --- route = ', router.pathname);
+	// console.log('Layout --- path = ', path);
 
-	if (path != null) {
-		console.log(' on path = ', path.slice(1));
-	}
+	// if (path != null) {
+	// 	console.log(' on path = ', path.slice(1));
+	// }
 
 	let container = myStyles(
 		{ container: true },

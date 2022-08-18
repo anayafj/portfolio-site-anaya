@@ -4,32 +4,60 @@
             {
                 "id": 1,
                 "selected": false,
-                "type": "Website",
+                "type": "Motion",
                 "title": "Project 1",
+                "client": "Client",
                 "description": "Website for client",
-                "thumb": "project1.png"
+                "thumb": "project1.png",
+                "media": {
+                    "mediaType": "image",
+                    "source": "image.jpg"
+                },
+                "modal": {
+                    "headline": "Ad to promote new season",
+                    "details": "- No Framework\n- New Cast"
+                }
             },
             {
                 "id": 2,
                 "selected": false,
                 "type": "Ads",
                 "title": "Project 2",
+                "client": "Client",
                 "description": "Banner for client",
-                "thumb": "project2.png"
+                "thumb": "project2.png",
+                "media": {
+                    "mediaType": "video",
+                    "source": "video.mp4"
+                },
+                "modal": {
+                    "headline": "Ad to promote new season",
+                    "details": "- No Framework\n- New Cast"
+                }
             },
             {
                 "id": 3,
                 "selected": false,
                 "type": "Website",
                 "title": "Project 3",
+                "client": "Client",
                 "description": "Website for client",
-                "thumb": "project1.png"
+                "thumb": "project1.png",
+                "media": {
+                    "mediaType": "banner",
+                    "source": "iframe"
+                },
+                "modal": {
+                    "headline": "Ad to promote new season",
+                    "details": "- No Framework\n- New Cast"
+                }
             },
             {
                 "id": 4,
                 "selected": false,
                 "type": "Ads",
                 "title": "Project 4",
+                "client": "Client",
                 "description": "Banner for client",
                 "thumb": "project2.png"
             },
@@ -38,6 +66,7 @@
                 "selected": false,
                 "type": "Website",
                 "title": "Project 5",
+                "client": "Client",
                 "description": "Website for client",
                 "thumb": "project1.png"
             },
@@ -46,6 +75,7 @@
                 "selected": false,
                 "type": "Ads",
                 "title": "Project 6",
+                "client": "Client",
                 "description": "Banner for client",
                 "thumb": "project2.png"
             },
@@ -53,7 +83,8 @@
                 "id": 7,
                 "selected": false,
                 "type": "Ads",
-                "title": "Project 4",
+                "title": "Project 7",
+                "client": "Client",
                 "description": "Banner for client",
                 "thumb": "project2.png"
             },
@@ -61,7 +92,8 @@
                 "id": 8,
                 "selected": false,
                 "type": "Website",
-                "title": "Project 5",
+                "title": "Project 8",
+                "client": "Client",
                 "description": "Website for client",
                 "thumb": "project1.png"
             },
@@ -69,7 +101,8 @@
                 "id": 9,
                 "selected": false,
                 "type": "Ads",
-                "title": "Project 6",
+                "title": "Project 9",
+                "client": "Client",
                 "description": "Banner for client",
                 "thumb": "project2.png"
             },
@@ -77,7 +110,8 @@
                 "id": 10,
                 "selected": false,
                 "type": "Ads",
-                "title": "Project 4",
+                "title": "Project 10",
+                "client": "Client",
                 "description": "Banner for client",
                 "thumb": "project2.png"
             },
@@ -85,7 +119,8 @@
                 "id": 11,
                 "selected": false,
                 "type": "Website",
-                "title": "Project 5",
+                "title": "Project 11",
+                "client": "Client",
                 "description": "Website for client",
                 "thumb": "project1.png"
             },
@@ -93,7 +128,8 @@
                 "id": 12,
                 "selected": false,
                 "type": "Ads",
-                "title": "Project 6",
+                "title": "Project 12",
+                "client": "Client",
                 "description": "Banner for client",
                 "thumb": "project2.png"
             }

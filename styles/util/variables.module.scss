@@ -54,6 +54,7 @@ $font-family-heavitas: 'Heavitas', sans-serif;
 $font-family-myriad: 'Myriad Pro';
 $font-family-montserrat: 'Montserrat', sans-serif;
 $font-family-amatic: 'Amatic SC', sans-serif;
+$font-family-avenir: 'Avenir', sans-serif;
 
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Blank River,
@@ -62,8 +63,10 @@ $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 // Exports for Styled-Components ------------------------//
 :export {
 	ColorPink: $color-pink;
+	FfAkira: $font-family-akira;
 	FfAmatic: $font-family-amatic;
 	FfHeavitas: $font-family-heavitas;
+	FfBlank: $font-family-blankRiver;
 	ColorOffWhite: $color-textOffWhite;
 	ColorTeal: $color-teal;
 }

@@ -28,6 +28,10 @@ export default function Home() {
 					href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
 					rel="stylesheet"
 				></link>
+				<link
+					href="http://fonts.cdnfonts.com/css/avenir"
+					rel="stylesheet"
+				></link>
 			</Head>
 			<HomePage />
 		</Fragment>
