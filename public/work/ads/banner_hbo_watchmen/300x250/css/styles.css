@@ -1,0 +1,295 @@
+#videoContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 250px;
+  width: 300px;
+  z-index: 11;
+  background-color: black; }
+
+#videoPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1; }
+
+#vidControls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  height: 26px;
+  width: 280px;
+  z-index: 3;
+  display: none; }
+
+#playButton {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  height: 14px;
+  width: 7px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 2; }
+  #playButton svg, #playButton path {
+    fill: #fae000; }
+  #playButton:hover svg, #playButton:hover path {
+    fill: #FFF; }
+
+#pauseButton {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  height: 14px;
+  width: 9px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 2;
+  display: none; }
+  #pauseButton svg, #pauseButton path {
+    fill: #fae000; }
+  #pauseButton:hover svg, #pauseButton:hover path {
+    fill: #FFF; }
+
+#soundOnButton {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  height: 16px;
+  width: 18px;
+  cursor: pointer;
+  z-index: 2; }
+  #soundOnButton svg, #soundOnButton path {
+    fill: #fae000; }
+  #soundOnButton:hover svg, #soundOnButton:hover path {
+    fill: #FFF; }
+
+#soundOffButton {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  height: 16px;
+  width: 18px;
+  cursor: pointer;
+  z-index: 2;
+  display: none; }
+  #soundOffButton svg, #soundOffButton path {
+    fill: #fae000; }
+  #soundOffButton:hover svg, #soundOffButton:hover path {
+    fill: #FFF; }
+
+#videoScrubber {
+  position: absolute;
+  width: 220px;
+  height: inherit;
+  left: 25px;
+  top: 1px;
+  z-index: 3; }
+
+#scrubHandle {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: 8px;
+  width: 8px;
+  z-index: 6;
+  cursor: pointer;
+  background: #FFF; }
+
+.endControlScrubber {
+  width: 190px !important; }
+
+#scrubTrack {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 4px;
+  width: inherit;
+  background: #206599;
+  z-index: 5;
+  cursor: pointer; }
+
+#scrubProgress {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: #fae000;
+  z-index: 5;
+  pointer-events: none; }
+
+#vidControlBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  border-radius: 4px;
+  background-color: black;
+  opacity: 0.5; }
+
+#snd-icon {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  z-index: 2; }
+  #snd-icon svg, #snd-icon path {
+    fill: #fae000; }
+
+#videoClick {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  cursor: pointer; }
+
+#video-tt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 46px;
+  background: url("../images/introLockup.png") no-repeat; }
+
+#replay-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  z-index: 11;
+  cursor: pointer; }
+  #replay-container:hover #replayBtn {
+    transition: all 0.5s ease-out;
+    -ms-transform: rotate(-360deg);
+    transform: rotate(-360deg); }
+
+#replayBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 15px;
+  width: 15px; }
+  #replayBtn svg, #replayBtn path {
+    fill: #fae000; }
+
+.user-video#videoContainer {
+  width: 300px !important;
+  height: 250px !important; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body, body * {
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+#adContainer {
+  height: 250px;
+  width: 300px;
+  display: none;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  z-index: 1;
+  transition: all 0.3s ease-out; }
+  #adContainer.ready {
+    display: block; }
+
+#border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  border: 1px solid #000;
+  z-index: 100;
+  pointer-events: none; }
+
+.bg-exit {
+  z-index: 10;
+  cursor: pointer; }
+  .bg-exit.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+
+#endframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px; }
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  background: url("../images/endframeImg.jpg") no-repeat; }
+
+.anim-elem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  z-index: 11;
+  cursor: pointer;
+  pointer-events: none; }
+
+#cta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 26px;
+  width: 300px;
+  background: url("../images/cta-trailer.png") no-repeat; }
+
+.cta2 {
+  background: url("../images/cta-now.png") no-repeat !important; }
+
+#date {
+  position: absolute;
+  bottom: 40px;
+  left: 73px;
+  height: 58px;
+  width: 155px;
+  background: url("../images/date1.png") no-repeat; }
+
+.date2 {
+  background: url("../images/date2.png") no-repeat !important; }
+
+.date3 {
+  background: url("../images/date3.png") no-repeat !important; }
+
+.date4 {
+  background: url("../images/date4.png") no-repeat !important; }
+
+.date5 {
+  background: url("../images/date5.png") no-repeat !important; }
+
+.date6 {
+  background: url("../images/date6.png") no-repeat !important; }

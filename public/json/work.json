@@ -22,17 +22,17 @@
                 "id": 2,
                 "selected": false,
                 "type": "Ads",
-                "title": "Project 2",
-                "client": "Client",
-                "description": "Banner for client",
+                "title": "Watchmen",
+                "client": "HBO",
+                "description": "New series digital banner campaign",
                 "thumb": "project2.png",
                 "media": {
-                    "mediaType": "video",
-                    "source": "video.mp4"
+                    "mediaType": "banner",
+                    "source": "/banner_hbo_watchmen/300x250/index.html"
                 },
                 "modal": {
-                    "headline": "Ad to promote new season",
-                    "details": "- No Framework\n- New Cast"
+                    "headline": "300x250 video banner",
+                    "details": "- MP4 videos\n- Tune-in date coded"
                 }
             },
             {
