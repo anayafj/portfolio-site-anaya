@@ -18,6 +18,10 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@iconify-icons/cib": "^1.2.3",
+    "@iconify/icons-logos": "^1.2.15",
+    "@iconify/icons-vscode-icons": "^1.2.12",
+    "@iconify/react": "^3.2.2",
     "babel-plugin-styled-components": "^2.0.7",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2"
