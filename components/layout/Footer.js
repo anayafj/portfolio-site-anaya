@@ -28,18 +28,21 @@ export default function Footer() {
 
 	return (
 		<footer className={footerStyles}>
-			<div className={styles.greyBar}></div>
-			<div className={styles.ctaContent}>
-				{renderContactHeader()}
-				<div onClick={handleContactClick} className={styles.cta}>
-					<div className={styles.ctaBg}>
-						<div className={styles.blue}></div>
-						<div className={styles.yellow}></div>
-						<div className={styles.pink}></div>
+			<div className={styles.bottomGrey}></div>
+			<div className={styles.footerMain}>
+				<div className={styles.greyBar}></div>
+				<div className={styles.ctaContent}>
+					{renderContactHeader()}
+					<div onClick={handleContactClick} className={styles.cta}>
+						<div className={styles.ctaBg}>
+							<div className={styles.blue}></div>
+							<div className={styles.yellow}></div>
+							<div className={styles.pink}></div>
+						</div>
+						<h2>
+							Contact Me <span>&#187;</span>
+						</h2>
 					</div>
-					<h2>
-						Contact Me <span>&#187;</span>
-					</h2>
 				</div>
 			</div>
 			<small>

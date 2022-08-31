@@ -1,5 +1,5 @@
 import styles from '../styles/components/ProjectModal.module.scss';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 
 import MainContent from './Ad';
 
@@ -13,18 +13,18 @@ export default function ProjectModal({
 		modal: { headline, details },
 	},
 }) {
-	const router = useRouter();
+	// const router = useRouter();
 
-	const homeClick = () => {
-		console.log('HomeClick');
-		router.push('/');
-	};
+	// const homeClick = () => {
+	// 	console.log('HomeClick');
+	// 	router.push('/');
+	// };
 
 	return (
 		<div className={styles.mainContainer}>
 			<header>
 				<div className={styles.logoContainer}>
-					<div onClick={homeClick} className={styles.logo}>
+					<div className={styles.logo}>
 						<img src="/svg/logo_initials.svg" alt="Logo initials" />
 					</div>
 					<div className={styles.subheaderContainer}>

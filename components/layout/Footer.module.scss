@@ -1,121 +1,155 @@
 @use '../../styles/util/variables';
 
 .footer {
-	display: flex;
-	flex-flow: column;
+	// display: flex;
+	// flex-flow: column;
+	// position: relative;
 	width: 100%;
-	height: 53px;
+	// height: 53px;
 	max-width: variables.$desktop-width;
-	margin-top: auto;
+	// margin-top: auto;
 
 	&.shift {
-		height: 31px;
+		// height: 31px;
+		// background-color: variables.$color-bgGray;
+
+		.footerMain {
+			justify-content: flex-start;
+
+			.greyBar {
+				display: none;
+			}
+
+			.ctaContent {
+				display: block;
+				position: relative;
+				align-items: unset;
+				justify-content: unset;
+				top: 0;
+
+				.cta {
+					margin-left: 14px;
+				}
+			}
+		}
+
+		&.work {
+			.bottomGrey {
+				display: block;
+			}
+
+			small {
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+
+	.bottomGrey {
+		display: none;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 25px;
 		background-color: variables.$color-bgGray;
+	}
+
+	.footerMain {
+		display: flex;
+		position: relative;
+		justify-content: center;
+		top: 10px;
 
 		.greyBar {
-			display: none;
+			position: relative;
+			width: 100%;
+			height: 24px;
+			max-height: 24px;
+			background-color: variables.$color-overlayDrkGray;
 		}
 
 		.ctaContent {
-			justify-content: start;
-		}
-
-		.cta {
-			margin-left: 14px;
-			bottom: 20px;
-		}
-	}
-
-	.greyBar {
-		position: relative;
-		top: 4px;
-		width: 100%;
-		height: 23px;
-		max-height: 23px;
-		background-color: variables.$color-overlayDrkGray;
-	}
-
-	.ctaContent {
-		display: flex;
-		position: absolute;
-		width: 100%;
-		align-items: center;
-		justify-content: center;
-
-		h1 {
-			font-family: variables.$font-family-heavitas;
-			font-size: 10px;
-			color: variables.$color-textOffWhite;
-		}
-
-		.cta {
-			cursor: pointer;
 			display: flex;
-			position: relative;
+			position: absolute;
 			align-items: center;
-			width: 170px;
-			height: 30px;
-			border-radius: 6px;
-			margin-left: 20px;
-			overflow: hidden;
+			justify-content: center;
+			top: -2px;
 
-			.ctaBg {
-				width: 100%;
-				height: 100%;
-				background-color: white;
-				pointer-events: none;
-
-				.pink {
-					float: right;
-					display: inline-block;
-					width: 0;
-					height: 0;
-					border-top: 30px solid variables.$color-pink;
-					border-right: 12px solid variables.$color-pink;
-					border-left: 20px solid transparent;
-				}
-				.yellow {
-					display: inline-block;
-					position: relative;
-					left: 144px;
-					width: 4px;
-					height: 30px;
-					background-color: variables.$color-yellow;
-					transform: skew(34deg);
-				}
-
-				.blue {
-					display: inline-block;
-					position: relative;
-					left: 144px;
-					width: 4px;
-					height: 30px;
-					background-color: variables.$color-blue;
-					transform: skew(34deg);
-				}
+			h1 {
+				display: inline-block;
+				position: relative;
+				font-family: variables.$font-family-heavitas;
+				font-size: 10px;
+				color: variables.$color-textOffWhite;
 			}
 
-			h2 {
-				position: absolute;
-				right: 54px;
-				font-family: variables.$font-family-blankRiver;
-				font-size: 20px;
-				font-weight: normal;
-				color: variables.$color-textGrey;
-				margin: 0;
+			.cta {
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				width: 170px;
+				height: 30px;
+				margin-left: 6px;
+
+				.ctaBg {
+					position: absolute;
+					top: 0;
+					width: 170px;
+					height: 30px;
+					border-radius: 6px;
+					overflow: hidden;
+					background-color: white;
+					pointer-events: none;
+
+					.pink {
+						float: right;
+						width: 0;
+						height: 0;
+						border-top: 30px solid variables.$color-pink;
+						border-right: 12px solid variables.$color-pink;
+						border-left: 20px solid transparent;
+					}
+					.yellow {
+						display: inline-block;
+						position: relative;
+						left: 144px;
+						width: 4px;
+						height: 30px;
+						background-color: variables.$color-yellow;
+						transform: skew(34deg);
+					}
+
+					.blue {
+						display: inline-block;
+						position: relative;
+						left: 144px;
+						width: 4px;
+						height: 30px;
+						background-color: variables.$color-blue;
+						transform: skew(34deg);
+					}
+				}
+
+				h2 {
+					position: absolute;
+					transform: translate(30px, 3px);
+					font-family: variables.$font-family-blankRiver;
+					font-size: 20px;
+					font-weight: normal;
+					color: variables.$color-textGrey;
+					margin: 0;
+				}
 			}
 		}
 	}
 
 	small {
-		position: relative;
-		top: 15px;
-		left: 5px;
 		opacity: 0.25;
 		font-size: 8px;
 		font-weight: 700;
 		letter-spacing: 1px;
 		font-family: variables.$font-family-myriad;
 		color: #686868;
+		margin-left: 6px;
 	}
 }

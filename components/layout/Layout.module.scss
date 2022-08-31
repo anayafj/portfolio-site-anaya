@@ -12,6 +12,7 @@
 	margin: 0 auto;
 	background-color: variables.$color-bgGray;
 	overflow: hidden;
+	user-select: none;
 
 	&.about {
 		background-color: variables.$color-overlayDrkGray;
@@ -21,9 +22,9 @@
 		background-color: variables.$color-footerDark;
 	}
 
-	@media screen and (max-height: variables.$desktop-height) {
-		height: unset;
-	}
+	// @media screen and (max-height: variables.$desktop-height) {
+	// 	height: unset;
+	// }
 
 	.guyBust {
 		pointer-events: none;
@@ -53,7 +54,8 @@
 
 	.wrapper {
 		width: 100%;
-		height: 100%;
+		// height: 100%;
+		height: calc((31px - 100vh) * 100%);
 		background-color: variables.$color-bgGray;
 		margin: 0 auto;
 		overflow: hidden;
