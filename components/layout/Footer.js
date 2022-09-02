@@ -7,10 +7,14 @@ const myStyles = classNames.bind(styles);
 
 export default function Footer() {
 	const [home, setHome] = useState(null);
+	const [footerCtaPos, setFooterCtaPos] = useState('shift');
 	const router = useRouter();
 
 	useEffect(() => {
 		setHome(router.pathname === '/' ? true : false);
+		if (home === false) {
+			onWork(router.pathname);
+		}
 	}, [router.pathname]);
 
 	const renderContactHeader = () => {
@@ -24,7 +28,13 @@ export default function Footer() {
 		console.log('Contact button Hit');
 	};
 
-	let footerStyles = myStyles({ footer: true }, `${home ? '' : 'shift'}`);
+	const onWork = (path) => {
+		console.log(' = ', router.pathname);
+		setFooterCtaPos(router.pathname === '/portfolio' ? 'shift work' : 'shift');
+		// return path;
+	};
+
+	let footerStyles = myStyles({ footer: true }, `${home ? '' : footerCtaPos}`);
 
 	return (
 		<footer className={footerStyles}>

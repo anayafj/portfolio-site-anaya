@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import PortfolioThumbCard from '../../components/PortfolioThumbCard';
 import ProjectModal from '../../components/ProjectModal';
 import Modal from '../../components/Modal';
+// import Clients from '../../components/Clients';
 
 const myStyles = classNames.bind(styles);
 
@@ -83,7 +84,7 @@ export default function PortfolioPage() {
 						<div className={styles.projects}>{renderProjects()}</div>
 					</div>
 				</div>
-				{/* <div className={styles.bottom}></div> */}
+				{/* <Clients /> */}
 			</div>
 			<Modal
 				id="modalContainer"
