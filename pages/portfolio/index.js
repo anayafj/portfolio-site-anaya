@@ -70,6 +70,7 @@ export default function PortfolioPage() {
 				<div className={styles.top}>
 					<div className={styles.tabLogo}>
 						<img src="/svg/homeNav_work.svg" alt="About Me Logo" />
+						<div className={styles.lines}></div>
 					</div>
 					<div className={styles.subheader}>
 						<h1>
@@ -78,12 +79,22 @@ export default function PortfolioPage() {
 						</h1>
 					</div>
 				</div>
-				<div className={styles.background}>
+				<div className={styles.mainContainer}>
 					<div className={styles.infoBorder}></div>
 					<div className={styles.projectContainer}>
 						<div className={styles.projects}>{renderProjects()}</div>
 					</div>
+					{/* <div className={styles.background}>
+						<div className={styles.infoBorder}></div>
+					</div> */}
 				</div>
+
+				{/* <div className={styles.background}>
+					<div className={styles.infoBorder}></div>
+					<div className={styles.projectContainer}>
+						<div className={styles.projects}>{renderProjects()}</div>
+					</div>
+				</div> */}
 				{/* <Clients /> */}
 			</div>
 			<Modal

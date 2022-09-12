@@ -10,9 +10,11 @@ import styled from 'styled-components';
 const CardContainer = styled.div`
 	cursor: pointer;
 	display: inline-flex;
+	flex: 1 0 300px;
 	flex-direction: column;
 	align-items: flex-start;
-	width: 370px;
+	/* width: 370px; */
+	max-width: 370px;
 	height: 232px;
 	margin-bottom: 20px;
 `;

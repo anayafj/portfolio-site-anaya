@@ -7,12 +7,14 @@ const myStyles = classNames.bind(styles);
 
 export default function Footer() {
 	const [home, setHome] = useState(null);
+	const [pageName, setPageName] = useState(null);
 	const [footerCtaPos, setFooterCtaPos] = useState('shift');
 	const router = useRouter();
 
 	useEffect(() => {
 		setHome(router.pathname === '/' ? true : false);
 		if (home === false) {
+			if (router.pathname === '/portfolio') setPageName(router.pathname);
 			onWork(router.pathname);
 		}
 	}, [router.pathname]);
@@ -29,16 +31,21 @@ export default function Footer() {
 	};
 
 	const onWork = (path) => {
-		console.log(' = ', router.pathname);
+		console.log('path = ', router.pathname);
 		setFooterCtaPos(router.pathname === '/portfolio' ? 'shift work' : 'shift');
 		// return path;
 	};
 
 	let footerStyles = myStyles({ footer: true }, `${home ? '' : footerCtaPos}`);
 
+	let portfolioGreyBar = myStyles(
+		{ bottomGrey: true },
+		`bottomGrey ${pageName === '/portfolio' ? 'show' : 'hide'}`,
+	);
+
 	return (
 		<footer className={footerStyles}>
-			<div className={styles.bottomGrey}></div>
+			<div className={portfolioGreyBar}></div>
 			<div className={styles.footerMain}>
 				<div className={styles.greyBar}></div>
 				<div className={styles.ctaContent}>

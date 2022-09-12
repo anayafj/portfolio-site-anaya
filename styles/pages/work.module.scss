@@ -19,11 +19,11 @@ $infoBox_height: 578px;
 
 		.top {
 			display: flex;
-			position: relative;
+			// position: relative;
 			align-items: baseline;
 			justify-content: space-between;
-			height: 30px;
-			margin: 20px 42px 10px;
+			// height: 30px;
+			margin: 25px 31px 10px 42px;
 
 			.subheader {
 				display: flex;
@@ -41,47 +41,85 @@ $infoBox_height: 578px;
 					font-weight: 400;
 					font-family: variables.$font-family-amatic;
 					color: variables.$color-pink;
+					margin: 0;
 				}
 			}
 
 			.tabLogo {
-				width: 99px;
-				height: 100%;
+				display: flex;
+				flex-direction: column;
+				width: calc((97px / 100px) * 100%);
+				max-width: 100px;
+				// height: 100%;
 
 				img {
-					max-width: 99px;
-					margin: 0 auto;
+					max-width: 97px;
+					margin-left: auto;
+					// margin: 0 auto;
+				}
+
+				.lines {
+					width: 100%;
+					max-width: 100px;
+					border-top: 1px solid variables.$color-pink;
+					margin-top: 4px;
 				}
 			}
 		}
 
-		.background {
+		.mainContainer {
 			position: relative;
-			width: calc((1270px / 1280px) * 100%);
+			display: flex;
+			align-self: flex-end;
+			width: calc((1265px / 1280px) * 100%);
 			height: $infoBox_height;
 			background-color: variables.$color-textGrey;
-			margin-left: 10px;
-			padding-left: 11px;
-			padding-bottom: 4px;
+			padding: 0 0 4px 13px;
+			height: $infoBox_height;
 
 			.infoBorder {
 				pointer-events: none;
 				position: absolute;
 				width: 100%;
 				height: calc(100% - 4px);
-				border-left: 2px solid variables.$color-overlayDrkGray;
-				border-bottom: 2px solid variables.$color-overlayDrkGray;
+				border-left: 2px solid rgba($color: #000000, $alpha: 0.2);
+				border-bottom: 2px solid rgba($color: #000000, $alpha: 0.2);
 			}
+
+			// .background {
+			// 	// position: relative;
+			// 	// display: flex;
+			// 	// align-self: flex-end;
+			// 	// width: calc((1265px / 1280px) * 100%);
+			// 	// height: $infoBox_height;
+			// 	// width: 100%;
+			// 	// background-color: variables.$color-textGrey;
+			// 	// margin-left: 10px;
+			// 	// padding-left: 13px;
+			// 	// padding-bottom: 4px;
+			// 	padding: 0 0 4px 13px;
+			// 	height: 100%;
+
+			// 	// .infoBorder {
+			// 	// 	// pointer-events: none;
+			// 	// 	// position: absolute;
+			// 	// 	// width: 100%;
+			// 	// 	height: calc(100% - 4px);
+			// 	// 	border-left: 2px solid rgba($color: #000000, $alpha: 0.2);
+			// 	// 	border-bottom: 2px solid rgba($color: #000000, $alpha: 0.2);
+			// 	// }
+			// }
 
 			.projectContainer {
 				display: flex;
 				flex-flow: column wrap;
-				width: 100%;
-				height: 100%;
+				width: 98%;
+				height: 94%;
 				overflow: auto;
 				scroll-behavior: smooth;
 				-ms-overflow-style: none; /* IE and Edge */
 				scrollbar-width: none;
+				padding: 10px 20px 10px 30px;
 
 				&::-webkit-scrollbar {
 					display: none;
@@ -89,12 +127,57 @@ $infoBox_height: 578px;
 
 				.projects {
 					display: flex;
-					justify-content: space-evenly;
+					justify-content: center;
+					column-gap: 30px;
+					row-gap: 20px;
 					flex-flow: row wrap;
 					margin-top: 20px;
 				}
 			}
 		}
+
+		// .background {
+		// 	position: relative;
+		// 	display: flex;
+		// 	align-self: flex-end;
+		// 	width: calc((1265px / 1280px) * 100%);
+		// 	height: $infoBox_height;
+		// 	background-color: variables.$color-textGrey;
+		// 	// margin-left: 10px;
+		// 	padding-left: 13px;
+		// 	padding-bottom: 4px;
+
+		// 	.infoBorder {
+		// 		pointer-events: none;
+		// 		position: absolute;
+		// 		width: 100%;
+		// 		height: calc(100% - 4px);
+		// 		border-left: 2px solid rgba($color: #000000, $alpha: 0.2);
+		// 		border-bottom: 2px solid rgba($color: #000000, $alpha: 0.2);
+		// 	}
+
+		// 	.projectContainer {
+		// 		display: flex;
+		// 		flex-flow: column wrap;
+		// 		width: 100%;
+		// 		height: 100%;
+		// 		overflow: auto;
+		// 		scroll-behavior: smooth;
+		// 		-ms-overflow-style: none; /* IE and Edge */
+		// 		scrollbar-width: none;
+
+		// 		&::-webkit-scrollbar {
+		// 			display: none;
+		// 		}
+
+		// 		.projects {
+		// 			display: flex;
+		// 			justify-content: space-evenly;
+		// 			flex-flow: row wrap;
+		// 			margin-top: 20px;
+		// 		}
+		// 	}
+		// }
 
 		.bottom {
 			display: flex;
