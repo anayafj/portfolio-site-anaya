@@ -2,16 +2,35 @@
 
 .footer {
 	display: flex;
-	align-items: center;
+	// align-items: center;
 	position: absolute;
-	bottom: 20px;
+	bottom: 0;
 	width: 100%;
-	flex-direction: column;
-	max-width: variables.$desktop-width;
+	height: calc((45px / 790px) * 100%);
+	// flex-direction: column;
+	// max-width: variables.$desktop-width;
+
+	flex-wrap: wrap;
+
+	.bottomGrey {
+		display: none;
+		position: absolute;
+		// bottom: 0;
+		top: 25px;
+		width: 100%;
+		// height: 30px;
+		height: 100%;
+		background-color: variables.$color-bgGray;
+
+		&.showBar {
+			display: block;
+		}
+	}
 
 	&.shift {
-		align-items: flex-start;
-		bottom: 0;
+		flex-direction: column;
+		// align-items: flex-start;
+		// bottom: 0;
 
 		.footerMain {
 			align-items: flex-start;
@@ -30,71 +49,6 @@
 				}
 			}
 		}
-
-		&.work {
-			// @extend .shift;
-
-			.bottomGrey {
-				display: block;
-			}
-
-			small {
-				position: absolute;
-				bottom: 0;
-			}
-		}
-	}
-
-	// &.shift &.work {
-	// 	// @extend .shift;
-
-	// 	// align-items: flex-start;
-	// 	// bottom: 0;
-
-	// 	// .footerMain {
-	// 	// 	// align-items: flex-start;
-	// 	// 	flex-direction: column;
-
-	// 	// 	.greyBar {
-	// 	// 		display: none;
-	// 	// 	}
-
-	// 	// 	// .ctaContent {
-	// 	// 	// 	display: inline-flex;
-	// 	// 	// 	position: relative;
-	// 	// 	// 	align-items: center;
-
-	// 	// 	// 	.cta {
-	// 	// 	// 		margin-left: 14px;
-	// 	// 	// 	}
-	// 	// 	// }
-	// 	// }
-
-	// 	.bottomGrey {
-	// 		display: block;
-	// 	}
-
-	// 	small {
-	// 		position: absolute;
-	// 		bottom: 0;
-	// 	}
-	// }
-
-	.bottomGrey {
-		display: none;
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		height: 30px;
-		background-color: variables.$color-bgGray;
-
-		&.show {
-			display: block;
-		}
-
-		&.hide {
-			display: none;
-		}
 	}
 
 	.footerMain {
@@ -102,7 +56,7 @@
 		position: relative;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 8px;
+		// margin-bottom: 6px;
 		width: 100%;
 
 		.greyBar {
@@ -195,7 +149,8 @@
 		letter-spacing: 1px;
 		font-family: variables.$font-family-myriad;
 		color: #686868;
-		margin: 2px 0 4px 6px;
+		margin: 20px 0 0 10px;
+		// margin: 2px 0 4px 6px;
 		// margin-left: 6px;
 		// margin-bottom: 6px;
 	}

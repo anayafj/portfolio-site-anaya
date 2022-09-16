@@ -6,41 +6,33 @@ import classNames from 'classnames/bind';
 const myStyles = classNames.bind(styles);
 
 export default function Footer() {
-	const [home, setHome] = useState(null);
 	const [pageName, setPageName] = useState(null);
-	const [footerCtaPos, setFooterCtaPos] = useState('shift');
 	const router = useRouter();
 
+	// check to see what page user is on and set state to that page
 	useEffect(() => {
-		setHome(router.pathname === '/' ? true : false);
-		if (home === false) {
-			if (router.pathname === '/portfolio') setPageName(router.pathname);
-			onWork(router.pathname);
-		}
+		setPageName(router.pathname === '/' ? null : router.pathname.slice(1));
 	}, [router.pathname]);
 
 	const renderContactHeader = () => {
-		if (home) {
-			console.log('Path is root');
+		if (pageName === null)
 			return <h1>Got a project or just want to reach out</h1>;
-		}
 	};
 
 	const handleContactClick = () => {
 		console.log('Contact button Hit');
+		console.log(' pageName = ', pageName);
 	};
 
-	const onWork = (path) => {
-		console.log('path = ', router.pathname);
-		setFooterCtaPos(router.pathname === '/portfolio' ? 'shift work' : 'shift');
-		// return path;
-	};
-
-	let footerStyles = myStyles({ footer: true }, `${home ? '' : footerCtaPos}`);
+	// styles --------------------------------------------------------------
+	let footerStyles = myStyles(
+		{ footer: true },
+		`${pageName === null ? '' : 'shift'}`,
+	);
 
 	let portfolioGreyBar = myStyles(
 		{ bottomGrey: true },
-		`bottomGrey ${pageName === '/portfolio' ? 'show' : 'hide'}`,
+		`${pageName === 'portfolio' ? 'showBar' : ''}`,
 	);
 
 	return (

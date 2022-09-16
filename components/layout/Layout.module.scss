@@ -2,15 +2,18 @@
 @import '../../styles/util/mixins';
 
 .container {
-	position: relative;
+	// position: relative;
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	height: 100vh;
-	min-height: 100vh;
-	max-width: variables.$desktop-width;
-	margin: 0 auto;
-	background-color: variables.$color-bgGray;
+	// align-items: center;
+	// width: 100%;
+	// height: 100vh;
+	// min-height: 100vh;
+	// max-width: variables.$desktop-width;
+	max-height: 100vh;
+	// max-width: 90%;
+	// margin: 0 auto;
+	// background-color: variables.$color-bgGray;
 	overflow: hidden;
 	user-select: none;
 
@@ -55,7 +58,8 @@
 	.wrapper {
 		width: 100%;
 		// height: 100%;
-		height: calc((31px - 100vh) * 100%);
+		height: calc((745px / 790px) * 100%);
+
 		background-color: variables.$color-bgGray;
 		margin: 0 auto;
 		overflow: hidden;

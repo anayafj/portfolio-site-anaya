@@ -88,14 +88,6 @@ export default function PortfolioPage() {
 						<div className={styles.infoBorder}></div>
 					</div> */}
 				</div>
-
-				{/* <div className={styles.background}>
-					<div className={styles.infoBorder}></div>
-					<div className={styles.projectContainer}>
-						<div className={styles.projects}>{renderProjects()}</div>
-					</div>
-				</div> */}
-				{/* <Clients /> */}
 			</div>
 			<Modal
 				id="modalContainer"
