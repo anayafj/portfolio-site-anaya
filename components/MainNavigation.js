@@ -214,22 +214,17 @@ export default function MainNavigation() {
 
 	// Tab state updated
 	useEffect(() => {
-		// console.log('Tab state updated = ', tab);
 		switch (tab) {
 			case pink:
-				// console.log('Home tab --------------');
 				router.push('/');
 				break;
 			case yellow:
-				// console.log('Work tab --------------');
 				router.push('/portfolio');
 				break;
 			case blue:
-				// console.log('About tab --------------');
 				router.push('/about');
 				break;
 			case null:
-				// console.log('NULL ----------------');
 				break;
 		}
 	}, [tab]);
@@ -261,12 +256,10 @@ export default function MainNavigation() {
 		setTabEventListener();
 		switch (router.pathname) {
 			case '/about':
-				// console.log('removeEventListener  - about');
 				blue.current.removeEventListener('click', navigationHandler);
 				setTab(blue);
 				break;
 			case '/portfolio':
-				// console.log('removeEventListener - portfolio');
 				yellow.current.removeEventListener('click', navigationHandler);
 				setTab(yellow);
 				break;

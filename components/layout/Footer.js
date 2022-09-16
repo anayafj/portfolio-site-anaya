@@ -3,10 +3,14 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import classNames from 'classnames/bind';
 
+import Modal from '../Modal';
+import ContactModal from '../ContactModal';
+
 const myStyles = classNames.bind(styles);
 
 export default function Footer() {
 	const [pageName, setPageName] = useState(null);
+	const [modalOpen, setModalOpen] = useState(false);
 	const router = useRouter();
 
 	// check to see what page user is on and set state to that page
@@ -22,6 +26,8 @@ export default function Footer() {
 	const handleContactClick = () => {
 		console.log('Contact button Hit');
 		console.log(' pageName = ', pageName);
+		// setSelectedProject(projects.projects.projectItems[id - 1]);
+		setModalOpen(true);
 	};
 
 	// styles --------------------------------------------------------------
@@ -57,6 +63,14 @@ export default function Footer() {
 			<small>
 				<span>&copy;</span>2022 Anayadev.com. All rights reserved.
 			</small>
+
+			<Modal
+				id="modalContainer"
+				isOpen={modalOpen}
+				bgCloseModal={() => setModalOpen(false)}
+			>
+				<ContactModal onCloseModal={() => setModalOpen(false)} />
+			</Modal>
 		</footer>
 	);
 }
