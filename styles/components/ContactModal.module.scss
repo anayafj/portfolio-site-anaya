@@ -1,6 +1,7 @@
 @use '../util/variables.module.scss';
 
 $width: 900px;
+$width-max: 766px;
 $height: 650px;
 $logo-max-width: 23px;
 $logo-max-height: 31px;
@@ -14,7 +15,8 @@ $logo-max-height: 31px;
 	transform: translate(-50%, -50%);
 	width: calc(($width / variables.$desktop-width) * 100%);
 	height: $height;
-	max-width: $width;
+	// max-height: 766px;
+	max-width: $width-max;
 	background-color: transparent;
 
 	header {
@@ -136,9 +138,9 @@ $logo-max-height: 31px;
 			align-items: center;
 			// width: calc((960px / $width) * 100%);
 			width: 90%;
-			height: 400px;
+			height: 480px;
 			// height: fit-content;
-			max-height: 400px;
+			// max-height: 400px;
 			background-color: variables.$color-homeGray;
 			// margin-top: 15px;
 		}
