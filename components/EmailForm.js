@@ -24,6 +24,7 @@ export default function EmailForm() {
 					defaultValue=""
 					placeholder="First Name"
 					{...register('FirstName', {
+						required: 'this is required',
 						maxLength: {
 							value: 80,
 							message: 'First name is too long',
@@ -39,6 +40,7 @@ export default function EmailForm() {
 					defaultValue=""
 					placeholder="Last Name"
 					{...register('LastName', {
+						required: 'this is required',
 						maxLength: {
 							value: 80,
 							message: 'Last name is too long',
@@ -54,6 +56,7 @@ export default function EmailForm() {
 					defaultValue=""
 					placeholder="Email"
 					{...register('Email', {
+						required: 'this is required',
 						pattern: {
 							value: emailPattern,
 							message: 'Not a valid Email',
@@ -69,6 +72,7 @@ export default function EmailForm() {
 					defaultValue=""
 					placeholder="Message"
 					{...register('Message', {
+						required: 'this is required',
 						maxLength: {
 							value: 300,
 							message: 'Message is too long',
