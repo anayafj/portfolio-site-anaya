@@ -17,13 +17,8 @@ export default function ContactModal({ onCloseModal }) {
 						<div className={styles.logo}>
 							<img src="/svg/logo_initials.svg" alt="Logo initials" />
 						</div>
-						<div className={styles.subheaderContainer}>
-							{/* <h1>{client}</h1>
-						<span></span>
-						<h1>{title}</h1> */}
-						</div>
+						<div className={styles.subheaderContainer}></div>
 					</div>
-					{/* <h1>{type}</h1> */}
 					<button onClick={onCloseModal}>X</button>
 				</header>
 				<div className={styles.content}>

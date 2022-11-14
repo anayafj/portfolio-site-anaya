@@ -7,18 +7,20 @@ import {
 } from '../styles/util/variables.module.scss';
 import styled from 'styled-components';
 
+const pathToThumbs = '/work/_thumbs/';
+
 const CardContainer = styled.div`
 	cursor: pointer;
 	display: inline-flex;
-	flex: 1 0 300px;
+	flex: 1 0 450px;
 	flex-direction: column;
 	align-items: flex-start;
-	max-width: 370px;
-	height: 232px;
+	max-width: 450px;
+	height: 300px;
 	margin-bottom: 20px;
 `;
 
-const Title = styled.h1.attrs((props) => ({
+const Type = styled.h1.attrs((props) => ({
 	color: props.color || ColorPink,
 }))`
 	pointer-events: none;
@@ -29,18 +31,18 @@ const Title = styled.h1.attrs((props) => ({
 	margin: 0 0 2px;
 `;
 
-const Image = styled.div.attrs((props) => ({
+const Image = styled.img.attrs((props) => ({
 	color: props.borderColor || ColorTeal,
 }))`
 	pointer-events: none;
 	width: 100%;
 	height: 100%;
-	max-height: 200px;
+	max-height: 280px;
 	border: 2px solid ${(props) => props.color};
 	background-color: black;
 `;
 
-const Description = styled.p.attrs((props) => ({
+const Title = styled.p.attrs((props) => ({
 	color: props.color || ColorOffWhite,
 }))`
 	pointer-events: none;
@@ -55,16 +57,24 @@ export default function PorfolioThumbCard({
 	handleClick,
 	id,
 	title,
+	client,
+	type,
 	titleColor,
 	imgBorderColor,
+	thumbnail,
 	description,
 	descriptionColor,
 }) {
+	const thumbnailPath = pathToThumbs + thumbnail;
+	const titleText = client + ' - ' + title;
+
+	console.log('thumbnailPath = ', thumbnailPath);
+
 	return (
 		<CardContainer onClick={(e) => handleClick(id, e)}>
-			<Title color={titleColor}>{title}</Title>
-			<Image borderColor={imgBorderColor} />
-			<Description color={descriptionColor}>{description}</Description>
+			<Type color={titleColor}>{type}</Type>
+			<Image borderColor={imgBorderColor} src={thumbnailPath} alt={title} />
+			<Title color={descriptionColor}>{titleText}</Title>
 		</CardContainer>
 	);
 }

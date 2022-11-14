@@ -45,20 +45,26 @@ export default function PortfolioPage() {
 
 	const renderProjects = () => {
 		if (projects.length != 0) {
-			return projects.projects.projectItems.map(({ id, type, description }) => {
-				return (
-					<PortfolioThumbCard
-						handleClick={handleClick}
-						key={id}
-						id={id}
-						title={type}
-						titleColor={TitleColor}
-						imgBorderColor={ImageBorderColor}
-						description={description}
-						descriptionColor={DescriptionColor}
-					/>
-				);
-			});
+			return projects.projects.projectItems.map(
+				({ id, type, title, client, description, thumb }) => {
+					console.log('thumb = ', thumb);
+					return (
+						<PortfolioThumbCard
+							handleClick={handleClick}
+							key={id}
+							id={id}
+							type={type}
+							title={title}
+							client={client}
+							titleColor={TitleColor}
+							imgBorderColor={ImageBorderColor}
+							thumbnail={thumb}
+							description={description}
+							descriptionColor={DescriptionColor}
+						/>
+					);
+				},
+			);
 		} else {
 			return <div className={styles.projectLoading}>Projects Loading</div>;
 		}

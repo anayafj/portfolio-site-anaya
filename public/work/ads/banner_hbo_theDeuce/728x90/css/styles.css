@@ -1,0 +1,203 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body, body * {
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+
+.hidden {
+  display: none; }
+
+.bg-exit {
+  z-index: 10;
+  cursor: pointer; }
+  .bg-exit.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+
+#adContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px; }
+
+#border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  border: 1px solid black; }
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/background.jpg") no-repeat; }
+
+#filmGrain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px; }
+
+#film1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/filmGrain_1.png") no-repeat; }
+
+#film2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/filmGrain_2.png") no-repeat; }
+
+#film3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/filmGrain_3.png") no-repeat; }
+
+#film4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/filmGrain_4.png") no-repeat; }
+
+#filmStrip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 526px; }
+
+#filmStripLong {
+  position: absolute;
+  top: 0;
+  left: 274px;
+  height: 90px;
+  width: 504px; }
+
+#fs1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 252px; }
+
+#fs2 {
+  position: absolute;
+  top: 0;
+  left: 248px;
+  height: 90px;
+  width: 252px; }
+
+.film, #fs1, #fs2 {
+  background: url("../images/filmStrip_white.png") no-repeat; }
+
+#fsPink1 {
+  position: absolute;
+  top: 0;
+  left: 274px;
+  height: 90px;
+  width: 85px;
+  background: url("../images/filmStrip_pink.png") no-repeat; }
+
+#fsPink2 {
+  position: absolute;
+  top: 0;
+  left: 359px;
+  height: 90px;
+  width: 83px;
+  background: url("../images/filmStrip_pink.png") no-repeat;
+  background-position: bottom left -85px; }
+
+#fsPink3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 90px;
+  width: 84px;
+  background: url("../images/filmStrip_pink.png") no-repeat;
+  background-position: bottom right; }
+
+#header {
+  position: absolute;
+  bottom: 21px;
+  left: 21px;
+  height: 48px;
+  width: 238px; }
+
+#head1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 238px;
+  background: url("../images/tagline.png") no-repeat; }
+
+#head2 {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  height: 18px;
+  width: 238px;
+  background-position: left bottom -15px;
+  background-image: url("../images/tagline.png"); }
+
+#head3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 15px;
+  width: 238px;
+  background-position: bottom left;
+  background-image: url("../images/tagline.png"); }
+
+#TT {
+  position: absolute;
+  top: 3px;
+  right: 15px;
+  height: 59px;
+  width: 192px;
+  background: url("../images/TT.png") no-repeat; }
+
+#tuneIn {
+  position: absolute;
+  right: 34px;
+  bottom: 8px;
+  height: 15px;
+  width: 158px;
+  background: url("../images/date1.png") no-repeat; }
+
+.Date_tonight {
+  width: 156px !important;
+  height: 14px !important;
+  background: url("../images/date2.png") no-repeat !important; }
+
+.Date_post {
+  height: 12px !important;
+  background: url("../images/date3.png") no-repeat !important; }

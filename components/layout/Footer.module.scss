@@ -49,6 +49,12 @@
 				}
 			}
 		}
+
+		small {
+			justify-content: unset;
+			align-items: unset;
+			margin: 4px 0 0 10px;
+		}
 	}
 
 	.footerMain {
@@ -142,16 +148,16 @@
 	}
 
 	small {
-		align-self: baseline;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: flex-end;
 		opacity: 0.25;
 		font-size: 8px;
 		font-weight: 700;
 		letter-spacing: 1px;
 		font-family: variables.$font-family-myriad;
 		color: #686868;
-		margin: 20px 0 0 10px;
-		// margin: 2px 0 4px 6px;
-		// margin-left: 6px;
-		// margin-bottom: 6px;
+		// margin: 4px 0 0 10px;
 	}
 }

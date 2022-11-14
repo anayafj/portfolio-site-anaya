@@ -4,14 +4,14 @@
             {
                 "id": 1,
                 "selected": false,
-                "type": "Motion",
-                "title": "Project 1",
-                "client": "Client",
-                "description": "Website for client",
-                "thumb": "project1.png",
+                "type": "Ads",
+                "title": "Transparent",
+                "client": "Amazon Prime",
+                "description": "Season Final",
+                "thumb": "amz_transparent_thumb.jpg",
                 "media": {
-                    "mediaType": "image",
-                    "source": "image.jpg"
+                    "mediaType": "video",
+                    "source": "/banner_amazon_transparent/az_transparent.mp4"
                 },
                 "modal": {
                     "headline": "Ad to promote new season",
@@ -25,7 +25,7 @@
                 "title": "Watchmen",
                 "client": "HBO",
                 "description": "New series digital banner campaign",
-                "thumb": "project2.png",
+                "thumb": "hbo_watchmen_thumb.jpg",
                 "media": {
                     "mediaType": "banner",
                     "source": "/banner_hbo_watchmen/300x250/index.html"

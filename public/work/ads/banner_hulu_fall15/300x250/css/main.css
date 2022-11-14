@@ -1,0 +1,424 @@
+/* ===============================================================
+ * ~~~~~~~~~~~~~~~~~~~~~~ Sense 8 | Banners ~~~~~~~~~~~~~~~~~~~~~~
+ * ===============================================================
+ */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+#ad {
+  width: 300px;
+  height: 250px;
+  display: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+#ad.ready {
+  display: block;
+}
+
+.bg_image {
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  -webkit-backface-visibility: hidden;
+}
+
+.border-frame {
+  position: absolute;
+  background-color: #CCCCCC;
+  z-index: 100;
+}
+.border-frame.left {
+  left: 0;
+}
+.border-frame.right {
+  right: 0;
+}
+.border-frame.left, .border-frame.right {
+  top: 0;
+  width: 1px;
+  height: 100%;
+}
+.border-frame.top {
+  top: 0;
+}
+.border-frame.bottom {
+  bottom: 0;
+}
+.border-frame.top, .border-frame.bottom {
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.bg-exit {
+  cursor: pointer;
+}
+.bg-exit.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#ad {
+  background-color: #222222;
+}
+
+#hulu-logo {
+  position: absolute;
+  top: 212px;
+  left: 216px;
+  width: 67px;
+  height: 22px;
+  z-index: 6;
+}
+#hulu-logo.end-card {
+  left: 34px;
+  top: 209px;
+  width: 83px;
+  height: 28px;
+}
+#hulu-logo .logo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  fill: #66AA33;
+}
+
+.cta-button {
+  position: absolute;
+  top: 212px;
+  left: 131px;
+  width: 133px;
+  height: 26px;
+}
+.cta-button .text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  fill: #FFF;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.cta-button .background {
+  fill: #6A3;
+}
+.cta-button:hover .text {
+  fill: #222;
+}
+.cta-button:hover .background {
+  fill: #CCC;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 250px;
+  background-color: #222222;
+  pointer-events: none;
+}
+.card .show-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  z-index: 0;
+}
+
+#card1 .show-card {
+  background-image: url(../img/bg_1.jpg);
+}
+
+#card3 .show-card {
+  background-image: url(../img/bg_2.jpg);
+}
+
+#card6 .show-card {
+  background-image: url(../img/bg_3.jpg);
+}
+
+.storyboard-text,
+.storyboard-image {
+  position: absolute;
+  margin: auto;
+}
+
+.card,
+.storyboard-text,
+.storyboard-image {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.card svg {
+  display: block;
+  fill: #FFF;
+}
+
+/* == Modern Family == */
+.card-one .logo {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 118px;
+  height: 23px;
+}
+.card-one .studio {
+  position: absolute;
+  top: 10px;
+  left: 277px;
+  width: 14px;
+  height: 14px;
+  opacity: 0.36;
+}
+
+/* == FALL PREMIERES ARE NOW ON HULU == */
+.card-two .textblock-one {
+  top: 97px;
+  left: 49px;
+  width: 201px;
+  height: 18px;
+}
+.card-two .textblock-one svg {
+  fill: #66AA33;
+}
+.card-two .textblock-two {
+  opacity: 0.59;
+  top: 129px;
+  left: 30px;
+  width: 239px;
+  height: 21px;
+}
+.card-two .textblock-two svg {
+  fill: #FFF;
+}
+
+/* == LAST MAN ON EARTH == */
+.card-three .logo {
+  position: absolute;
+  top: 11px;
+  left: 17px;
+  width: 119px;
+  height: 19px;
+}
+.card-three .studio {
+  position: absolute;
+  top: 12px;
+  left: 273px;
+  width: 19px;
+  height: 8px;
+  opacity: 0.36;
+}
+
+/* == ALL-NEW SEASONS / ALL-NEW SERIES == */
+.card-four .textblock-one {
+  top: 60px;
+  left: 84px;
+  width: 129px;
+  height: 47px;
+}
+.card-four .textblock-two {
+  top: 141px;
+  left: 88px;
+  width: 123px;
+  height: 46px;
+}
+.card-four svg {
+  margin: 0 auto;
+}
+.card-four .all-new {
+  fill: #FFF;
+  width: 123px;
+  height: 20px;
+  margin-bottom: 7px;
+}
+.card-four .series,
+.card-four .seasons {
+  fill: #66AA33;
+  height: 19px;
+}
+.card-four .series {
+  width: 96px;
+}
+.card-four .seasons {
+  width: 129px;
+}
+
+/* == ALL IN ONE PLACE == */
+.card-five .textblock-one {
+  top: 96px;
+  left: 76px;
+  width: 148px;
+  height: 57px;
+}
+.card-five svg {
+  margin: 0 auto;
+}
+.card-five .all-in-one {
+  fill: #FFF;
+  width: 148px;
+  height: 20px;
+  margin-bottom: 13px;
+}
+.card-five .place {
+  fill: #66AA33;
+  width: 103px;
+  height: 23px;
+}
+
+/* == LAW AND ORDER SVU == */
+.card-six .logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 92px;
+  height: 27px;
+}
+.card-six .studio {
+  position: absolute;
+  top: 11px;
+  left: 272px;
+  width: 16px;
+  height: 14px;
+  opacity: 0.36;
+}
+
+/* == END FRAME) == */
+.card-seven .textblock-one {
+  top: 9px;
+  left: 34px;
+  width: 229px;
+  height: 19px;
+}
+.card-seven .textblock-one svg {
+  fill: #66AA33;
+}
+.card-seven .textblock-two {
+  top: 36px;
+  left: 34px;
+  width: 230px;
+  height: 18px;
+}
+.card-seven .storyboard-image .storyboard-image {
+  position: absolute;
+  top: 62px;
+  height: 118px;
+  overflow: visible;
+  font-size: 0;
+}
+.card-seven .storyboard-image .details {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 122px;
+  left: 0;
+}
+.card-seven .storyboard-image .image {
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.card-seven .storyboard-image svg {
+  display: inline;
+  vertical-align: top;
+}
+.card-seven .storyboard-image .pipe {
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  background-color: rgba(255, 255, 255, 0.38);
+  margin: -1px 5px 0 4px;
+}
+.card-seven .image-one {
+  left: 0;
+  width: 113px;
+  z-index: 3;
+}
+.card-seven .image-one .image {
+  background-image: url(./../img/endframe/bg_1.png);
+}
+.card-seven .image-one .details {
+  padding-left: 5px;
+}
+.card-seven .image-one .logo {
+  width: 47px;
+  height: 9px;
+}
+.card-seven .image-one .studio {
+  width: 9px;
+  height: 9px;
+}
+.card-seven .image-two {
+  left: 77px;
+  width: 145px;
+  z-index: 2;
+}
+.card-seven .image-two .image {
+  background-image: url(./../img/endframe/bg_2.png);
+}
+.card-seven .image-two .details {
+  padding-left: 17px;
+}
+.card-seven .image-two .logo {
+  width: 55px;
+  height: 8px;
+}
+.card-seven .image-two .studio {
+  width: 15px;
+  height: 6px;
+}
+.card-seven .image-three {
+  width: 114px;
+  left: 186px;
+  z-index: 1;
+}
+.card-seven .image-three .image {
+  background-image: url(./../img/endframe/bg_3.png);
+}
+.card-seven .image-three .details {
+  padding-left: 19px;
+}
+.card-seven .image-three .logo {
+  width: 54px;
+  height: 16px;
+}
+.card-seven .image-three .studio {
+  width: 9px;
+  height: 8px;
+}

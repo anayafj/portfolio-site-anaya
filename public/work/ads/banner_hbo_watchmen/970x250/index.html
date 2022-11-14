@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title></title>
+
+        <!-- DOUBLECLICK -->
+        <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+
+        <!-- GREENSOCK -->
+        <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenlite_1.19.0_422f021fad4c20f20cf3640a06ac39e9_min.js"></script>
+        <script src="https://s0.2mdn.net/ads/studio/cached_libs/timelinelite_1.19.0_13e3bd0e510d63fd5e5ef9bf9dac7017_min.js"></script>
+        <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssplugin_1.19.0_cfbff7d208ccfdbe176b9855af1eb1fa_min.js"></script>
+        <script src="https://s0.2mdn.net/ads/studio/cached_libs/easepack_1.19.0_be87087c08fcec83e2b64c70571fe91f_min.js"></script>
+
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <div id="adContainer">
+            <div id="border"></div>
+
+            <!-- VIDEO CONTAINER -->
+            <div id="videoContainer">
+                <video id="videoPlayer"></video>
+                <div id="vidControls">
+                    <div id="vidControlBg"></div>
+                    <div id="playButton">
+                        <svg xmlns="http://www.w3.org/2000/svg">
+                            <path class="a" d="M170.6,285.95l-7.13,7.13V278.82Z" transform="translate(-163.46 -278.82)"/>
+                        </svg>
+                    </div>
+                    <div id="pauseButton">
+                        <svg xmlns="http://www.w3.org/2000/svg">
+                            <path class="a" d="M166.74,263.38h-2.85V249.11h2.85v14.27Zm5.71,0H169.6V249.11h2.85v14.27Z" transform="translate(-163.89 -249.11)"/>
+                        </svg>
+                    </div>
+                    <div id="soundOnButton">
+                        <svg xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                            <path class="a" d="M442.06,294.06l-5.24-4.84H433.5v-6.53h3.32l5.24-4.85v16.22Z" transform="translate(-433.5 -277.84)"/>
+                            <path class="a" d="M451.43,279.48a0.52,0.52,0,0,1-.29.47l-2.37,1.43a11,11,0,0,1-2.25,1.16A0.5,0.5,0,0,1,446,282a0.53,0.53,0,0,1,.29-0.48l2.37-1.43a11,11,0,0,1,2.25-1.16A0.5,0.5,0,0,1,451.43,279.48Zm0.66,6.52a0.49,0.49,0,0,1-.56.56h-5a0.56,0.56,0,0,1,0-1.11h5A0.49,0.49,0,0,1,452.09,286Zm-0.66,6.61a0.5,0.5,0,0,1-.56.58,10.93,10.93,0,0,1-2.25-1.17l-2.37-1.43a0.52,0.52,0,0,1-.29-0.47,0.5,0.5,0,0,1,.56-0.58,10.93,10.93,0,0,1,2.25,1.17l2.37,1.43A0.52,0.52,0,0,1,451.43,292.61Z" transform="translate(-433.5 -277.84)"/>
+                          </g>
+                        </svg>
+
+                    </div>
+                    <div id="soundOffButton">
+                        <svg xmlns="http://www.w3.org/2000/svg">
+                          <path class="a" d="M442.06,263.38l-5.24-4.84H433.5V252h3.32l5.24-4.85v16.22Z" transform="translate(-433.5 -247.16)"/>
+                        </svg>
+                    </div>
+                    <div id="videoScrubber">
+                        <div id="scrubHandle"></div>
+                        <div id="scrubTrack"></div>
+                        <div id="scrubProgress"></div>
+                    </div>
+                </div>
+                <div id="videoClick">
+                    <div id="snd-icon">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 16 16">
+                            <path d="M11.243 12.993c-0.192 0-0.384-0.073-0.53-0.22-0.293-0.293-0.293-0.768 0-1.061 2.047-2.047 2.047-5.378 0-7.425-0.293-0.293-0.293-0.768 0-1.061s0.768-0.293 1.061 0c1.275 1.275 1.977 2.97 1.977 4.773s-0.702 3.498-1.977 4.773c-0.146 0.146-0.338 0.22-0.53 0.22v0zM8.578 11.578c-0.192 0-0.384-0.073-0.53-0.22-0.293-0.293-0.293-0.768 0-1.061 1.267-1.267 1.267-3.329 0-4.596-0.293-0.293-0.293-0.768 0-1.061s0.768-0.293 1.061 0c1.852 1.852 1.852 4.865 0 6.718-0.146 0.146-0.338 0.22-0.53 0.22z"></path><path d="M6.5 15c-0.13 0-0.258-0.051-0.354-0.146l-3.854-3.854h-1.793c-0.276 0-0.5-0.224-0.5-0.5v-5c0-0.276 0.224-0.5 0.5-0.5h1.793l3.854-3.854c0.143-0.143 0.358-0.186 0.545-0.108s0.309 0.26 0.309 0.462v13c0 0.202-0.122 0.385-0.309 0.462-0.062 0.026-0.127 0.038-0.191 0.038z"></path>
+                        </svg>
+                    </div>
+                    <div id="video-tt"></div>
+                </div>
+            </div>
+
+            <div id="replay-container">
+                <div id="replayBtn">
+                    <!-- <svg viewBox="0 0 17 17">
+                        <path d="M284,6.6a8.432,8.432,0,0,0-5.938,2.462L275.6,6.6v7.2h7.2l-3.041-3.041A6,6,0,1,1,278.8,18l-2.078,1.2A8.4,8.4,0,1,0,284,6.6Z" transform="translate(-275.594 -6.594)"/>
+                    </svg> -->
+                    
+                </div>
+            </div>
+
+            <div id="endframe">
+                <!-- Exit -->
+                <div class="bg-exit fill"></div>
+                <div id="background">
+                    <div id="default-img"></div>
+                    <div id="date-img"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MAIN SCRIPTS -->
+        <script type="text/javascript" src="scripts/main.min.js"></script>
+    </body>
+</html>

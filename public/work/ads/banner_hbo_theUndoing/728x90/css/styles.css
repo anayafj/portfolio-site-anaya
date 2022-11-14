@@ -1,0 +1,162 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body, body * {
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0; }
+
+.hidden {
+  display: none; }
+
+#adContainer {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background-color: black;
+  cursor: pointer; }
+
+#border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  border: 1px solid black; }
+
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/bg.jpg") no-repeat;
+  -ms-transform-origin: center left;
+  transform-origin: center left; }
+
+#tt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/TT.png") no-repeat;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  opacity: 0; }
+
+#ttBlur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/TT_blur.png") no-repeat;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  opacity: 0; }
+
+#tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/tagline.png") no-repeat; }
+
+#rainBG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 350px;
+  width: 728px;
+  background: url("../images/rainBG.jpg") no-repeat; }
+
+#drop1 {
+  position: absolute;
+  top: 90px;
+  left: 260px;
+  height: 52px;
+  width: 23px;
+  background: url("../images/dropLong.png") no-repeat;
+  opacity: .8; }
+
+#drop2 {
+  position: absolute;
+  top: 120px;
+  left: 500px;
+  height: 21px;
+  width: 19px;
+  background: url("../images/drop.png") no-repeat; }
+
+#drop3 {
+  position: absolute;
+  top: 120px;
+  left: 300px;
+  height: 21px;
+  width: 19px;
+  background: url("../images/drop.png") no-repeat; }
+
+#card1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/card1.png") no-repeat; }
+
+#card2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/card2.png") no-repeat; }
+
+#dateLockup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  cursor: pointer;
+  pointer-events: none;
+  z-index: 11; }
+
+#divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/divider.png") no-repeat; }
+
+#hbomax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/hbomax.png") no-repeat; }
+
+#date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 728px;
+  background: url("../images/date1.png") no-repeat; }
+
+.date2 {
+  background: url("../images/date2.png") no-repeat !important; }
+
+.date3 {
+  background: url("../images/date3.png") no-repeat !important; }

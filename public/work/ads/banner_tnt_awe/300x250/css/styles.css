@@ -1,0 +1,90 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body, body * {
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+
+.hidden {
+  display: none; }
+
+.bg-exit {
+  z-index: 10;
+  cursor: pointer; }
+  .bg-exit.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+
+#adContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  background-color: black; }
+
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  border: 1px black solid;
+  z-index: 1; }
+
+.endframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px; }
+
+.powder {
+  position: absolute;
+  top: -100px;
+  left: -170px;
+  height: 550px;
+  width: 650px;
+  background: url(../images/powder.jpg) no-repeat; }
+
+.wrestlers {
+  position: absolute;
+  top: -26px;
+  left: 0;
+  height: 300px;
+  width: 300px;
+  background: url(../images/wrestler.png) no-repeat; }
+
+.logo {
+  position: absolute;
+  top: 110px;
+  left: 70px;
+  height: 78px;
+  width: 157px;
+  background: url(../images/logo.png) no-repeat; }
+
+.lockup {
+  position: absolute;
+  bottom: 12px;
+  left: 82px;
+  height: 39px;
+  width: 133px;
+  background: url(../images/date1.png) no-repeat; }
+
+.date2 {
+  background: url(../images/date2.png) no-repeat !important; }
+
+.date3 {
+  width: 152px !important;
+  left: 75px !important;
+  background: url(../images/date3.png) no-repeat !important; }

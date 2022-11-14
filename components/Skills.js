@@ -20,10 +20,11 @@ const SkillsContainer = styled.div`
 	display: flex;
 	justify-content: space-around;
 	width: 100%;
-	height: 30px;
+	height: 25px;
 `;
 
 const SkillIcon = styled(Icon)`
+	opacity: 0.8;
 	width: auto;
 	height: 100%;
 `;
