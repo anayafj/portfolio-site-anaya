@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import PortfolioThumbCard from '../../components/PortfolioThumbCard';
 import ProjectModal from '../../components/ProjectModal';
 import Modal from '../../components/Modal';
-// import Clients from '../../components/Clients';
 
 const myStyles = classNames.bind(styles);
 
@@ -48,6 +47,7 @@ export default function PortfolioPage() {
 			return projects.projects.projectItems.map(
 				({ id, type, title, client, description, thumb }) => {
 					console.log('thumb = ', thumb);
+					console.log('id = ', id);
 					return (
 						<PortfolioThumbCard
 							handleClick={handleClick}
@@ -72,27 +72,22 @@ export default function PortfolioPage() {
 
 	return (
 		<div className={styles.workPage}>
-			<div className={styles.workContent}>
-				<div className={styles.top}>
-					<div className={styles.tabLogo}>
-						<img src="/svg/homeNav_work.svg" alt="About Me Logo" />
-						<div className={styles.lines}></div>
-					</div>
-					<div className={styles.subheader}>
-						<h1>
-							I design, animate, <span>&amp;</span> code. Bringing a mixture of
-							diverse skills and experieces to all projects.
-						</h1>
-					</div>
+			<div className={styles.top}>
+				<div className={styles.tabLogo}>
+					<img src="/svg/homeNav_work.svg" alt="About Me Logo" />
+					<div className={styles.lines}></div>
 				</div>
-				<div className={styles.mainContainer}>
-					<div className={styles.infoBorder}></div>
-					<div className={styles.projectContainer}>
-						<div className={styles.projects}>{renderProjects()}</div>
-					</div>
-					{/* <div className={styles.background}>
-						<div className={styles.infoBorder}></div>
-					</div> */}
+				<div className={styles.subheader}>
+					<h1>
+						I design, animate, <span>&amp;</span> code. Bringing a mixture of
+						diverse skills and experieces to all projects.
+					</h1>
+				</div>
+			</div>
+			<div className={styles.mainContainer}>
+				<div className={styles.infoBorder}></div>
+				<div className={styles.projectContainer}>
+					<div className={styles.projects}>{renderProjects()}</div>
 				</div>
 			</div>
 			<Modal
