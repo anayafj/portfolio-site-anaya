@@ -1,6 +1,4 @@
 import styles from '../styles/components/ProjectModal.module.scss';
-// import { useRouter } from 'next/router';
-
 import MainContent from './Ad';
 
 export default function ProjectModal({
@@ -13,13 +11,6 @@ export default function ProjectModal({
 		modal: { headline, details },
 	},
 }) {
-	// const router = useRouter();
-
-	// const homeClick = () => {
-	// 	console.log('HomeClick');
-	// 	router.push('/');
-	// };
-
 	return (
 		<div className={styles.mainContainer}>
 			<header>
@@ -31,6 +22,7 @@ export default function ProjectModal({
 						<h1>{client}</h1>
 						<span></span>
 						<h1>{title}</h1>
+						<span></span>
 					</div>
 				</div>
 				<h1>{type}</h1>

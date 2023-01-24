@@ -12,13 +12,11 @@ const pathToThumbs = '/work/_thumbs/';
 const CardContainer = styled.div`
 	cursor: pointer;
 	display: inline-flex;
-	/* flex: 1 0 450px; */
 	flex: 0.5 0 250px;
 	flex-direction: column;
 	align-items: flex-start;
 	max-width: 450px;
-	/* height: 300px; */
-	/* margin-bottom: 20px; */
+	margin-bottom: 30px;
 `;
 
 const Type = styled.h1.attrs((props) => ({
