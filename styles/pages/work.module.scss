@@ -14,23 +14,29 @@ $infoBox_height: 578px;
 
 	.top {
 		display: flex;
-		align-items: baseline;
-		justify-content: space-between;
-		margin: 25px 31px 10px 42px;
+		align-items: flex-end;
+		align-self: flex-end;
+		padding-bottom: 1vw;
+		height: 6vw;
+		width: 97vw;
+		max-height: 63px;
+		min-height: 40px;
 
 		.subheader {
 			display: flex;
-			align-items: center;
+			align-items: flex-end;
 			height: 100%;
+			margin-left: 1.5vw;
 
 			h1 {
 				@include fluid-type(
 					variables.$MQ-large-laptop,
 					variables.$MQ-large-desktop,
-					16px,
-					22px
+					14px,
+					20px
 				);
-				text-align: center;
+				// text-align: center;
+				padding-bottom: 2px;
 				font-weight: 400;
 				font-family: variables.$font-family-amatic;
 				color: variables.$color-pink;
@@ -41,8 +47,9 @@ $infoBox_height: 578px;
 		.tabLogo {
 			display: flex;
 			flex-direction: column;
-			width: calc((97px / 100px) * 100%);
+			// width: calc((97px / 100px) * 100%);
 			max-width: 100px;
+			margin-left: 3vw;
 
 			img {
 				max-width: 97px;
@@ -62,20 +69,18 @@ $infoBox_height: 578px;
 		position: relative;
 		display: flex;
 		align-self: flex-end;
-		width: calc((1265px / 1280px) * 100%);
-		height: 77vh;
+		width: 97vw;
+		height: 79vh;
 		background-color: variables.$color-textGrey;
-		padding-top: 30px;
-		padding-bottom: 20px;
+		overflow: hidden;
 
 		.infoBorder {
 			pointer-events: none;
 			position: absolute;
-			top: 0;
-			left: 13px;
+			left: 1vw;
+			bottom: 2vw;
 			width: 100%;
-			// height: calc(100% - 4px);
-			height: 74vh;
+			height: 100%;
 			border-left: 2px solid rgba($color: #000000, $alpha: 0.2);
 			border-bottom: 2px solid rgba($color: #000000, $alpha: 0.2);
 		}
@@ -83,13 +88,14 @@ $infoBox_height: 578px;
 		.projectContainer {
 			display: flex;
 			flex-flow: column wrap;
-			width: 98%;
-			height: 97%;
 			overflow: auto;
 			scroll-behavior: smooth;
 			-ms-overflow-style: none; /* IE and Edge */
 			scrollbar-width: none;
-			padding-left: 30px;
+			margin-left: 4vw;
+			margin-right: 3vw;
+			margin-top: 2vw;
+			margin-bottom: 2.2vw;
 
 			&::-webkit-scrollbar {
 				display: none;
@@ -97,9 +103,8 @@ $infoBox_height: 578px;
 
 			.projects {
 				display: flex;
-				justify-content: center;
-				column-gap: 30px;
-				row-gap: 20px;
+				column-gap: 4vw;
+				row-gap: 4vw;
 				flex-flow: row wrap;
 			}
 		}

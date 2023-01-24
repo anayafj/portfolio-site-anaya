@@ -18,18 +18,18 @@ const CardContainer = styled.div`
 	align-items: flex-start;
 	max-width: 450px;
 	/* height: 300px; */
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
 `;
 
 const Type = styled.h1.attrs((props) => ({
 	color: props.color || ColorPink,
 }))`
 	pointer-events: none;
-	font-size: 16px;
+	font-size: 15px;
 	font-family: ${FfAmatic};
-	letter-spacing: 0.5px;
+	letter-spacing: 0.6px;
 	color: ${(props) => props.color};
-	margin: 0 0 2px;
+	margin: 0;
 `;
 
 const Image = styled.img.attrs((props) => ({
@@ -47,11 +47,12 @@ const Title = styled.p.attrs((props) => ({
 	color: props.color || ColorOffWhite,
 }))`
 	pointer-events: none;
-	font-size: 9px;
+	font-size: 8px;
 	font-family: ${FfHeavitas};
-	letter-spacing: 0.5px;
+	letter-spacing: 0.8px;
 	color: ${(props) => props.color};
-	margin: 10px 0 0;
+	margin: 5px 0 0 10px;
+	/* margin: 0; */
 `;
 
 export default function PorfolioThumbCard({
@@ -68,8 +69,6 @@ export default function PorfolioThumbCard({
 }) {
 	const thumbnailPath = pathToThumbs + thumbnail;
 	const titleText = client + ' - ' + title;
-
-	console.log('thumbnailPath = ', thumbnailPath);
 
 	return (
 		<CardContainer onClick={(e) => handleClick(id, e)}>

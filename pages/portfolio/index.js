@@ -46,8 +46,6 @@ export default function PortfolioPage() {
 		if (projects.length != 0) {
 			return projects.projects.projectItems.map(
 				({ id, type, title, client, description, thumb }) => {
-					console.log('thumb = ', thumb);
-					console.log('id = ', id);
 					return (
 						<PortfolioThumbCard
 							handleClick={handleClick}

@@ -3,9 +3,12 @@
 
 .container {
 	display: flex;
-	position: relative;
+	// position: relative;
 	flex-direction: column;
-	// max-height: 100vh;
+	height: 100vh;
+	// max-width: 1280px;
+	// max-height: 800px;
+	background-color: variables.$color-bgGray;
 	overflow: hidden;
 	user-select: none;
 
@@ -49,9 +52,10 @@
 
 	.wrapper {
 		width: 100%;
-		height: calc((745px / 790px) * 100%);
+		// height: 100%;
+		// height: calc((745px / 790px) * 100%);
 
-		background-color: variables.$color-bgGray;
+		// background-color: variables.$color-bgGray;
 		margin: 0 auto;
 		overflow: hidden;
 
