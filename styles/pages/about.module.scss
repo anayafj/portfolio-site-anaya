@@ -9,42 +9,44 @@ $infoBox_height: 430px;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	height: calc((636px / 800px) * 100%);
-	max-height: $page_height;
+	height: 66vw;
+	max-height: 720px;
 	background-color: variables.$color-homeGray;
 
 	hr {
 		width: 100%;
 		border-width: 1px;
 		border-color: variables.$color-overlayDrkGray;
-		margin-bottom: 25px;
+		margin-top: auto;
+		margin-bottom: 2%;
 	}
 
 	.background {
-		height: $infoBox_height;
+		// height: $infoBox_height;
+		height: 70%;
 		background-color: variables.$color-textGrey;
 		display: inline-flex;
-		margin: 0 50px 0 160px;
+		margin: 0 50px 0 15vw;
 	}
 
 	.top {
 		display: inline-flex;
 		justify-content: space-between;
-		margin: 20px 50px 11px 230px;
+		margin: 25px 50px 10px 22vw;
 
 		.lockup {
 			display: flex;
-			align-items: center;
+			align-items: flex-end;
 			max-width: 530px;
 
 			.photo {
 				background-color: white;
-				border-radius: 67px;
+				border-radius: 55px;
 
 				img {
 					width: 100%;
-					max-width: 67px;
-					max-height: 67px;
+					max-width: 55px;
+					max-height: 55px;
 					min-width: 35px;
 					margin: auto;
 				}
@@ -52,7 +54,8 @@ $infoBox_height: 430px;
 
 			.name {
 				position: relative;
-				padding: 0 14px;
+				padding: 0 12px;
+				max-width: 370px;
 
 				img {
 					width: 100%;
@@ -65,9 +68,14 @@ $infoBox_height: 430px;
 
 		.linkedIn {
 			cursor: pointer;
-			display: flex;
-			align-self: flex-end;
-			margin-bottom: 2.5%;
+			// display: flex;
+			// align-self: flex-end;
+			// margin-bottom: 2.5%;
+
+			height: fit-content;
+			max-width: 60px;
+			margin-top: auto;
+			margin-left: auto;
 
 			img {
 				width: 100%;
@@ -114,7 +122,7 @@ $infoBox_height: 430px;
 	.bottom {
 		display: inline-flex;
 		justify-content: flex-end;
-		margin: 10px 30px 0 200px;
+		margin: 2% 50px 0 200px;
 
 		.subheader {
 			display: inline-flex;
@@ -127,8 +135,8 @@ $infoBox_height: 430px;
 				@include fluid-type(
 					variables.$MQ-large-tablet,
 					variables.$MQ-large-laptop,
-					16px,
-					22px
+					14px,
+					20px
 				);
 				text-align: center;
 				font-weight: 400;
@@ -141,18 +149,21 @@ $infoBox_height: 430px;
 		.tabLogo {
 			display: flex;
 			flex-direction: column;
-			width: calc((70px / 90px) * 100%);
-			max-width: 90px;
-			min-width: 56px;
+			// width: calc((70px / 90px) * 100%);
+			width: 9%;
+			max-height: 42px;
+			// min-width: 56px;
 
 			img {
-				max-width: 70px;
-				margin-left: auto;
+				// max-width: 70px;
+				// margin-left: auto;
+				width: 100%;
+				padding-left: 20px;
 			}
 
 			.lines {
 				width: 100%;
-				max-width: 90px;
+				// max-width: 90px;
 				border-top: 1px solid variables.$color-pink;
 				margin-top: 4px;
 			}

@@ -10,12 +10,16 @@ const myStyles = classNames.bind(styles);
 
 const StandingGuyContainer = styled.img`
 	position: absolute;
-	width: 100%;
-	margin-top: 5%;
+	/* width: 100%; */
+	/* margin-top: 5%;
 	margin-left: 1.5%;
-	max-width: 195px;
+	max-width: 195px; */
 	/* height: 70%; */
-	max-height: 567px;
+	/* max-height: 567px; */
+	width: 20vw;
+	margin-top: 7%;
+	margin-left: 2vw;
+	max-width: 205px;
 `;
 
 export default function AboutPage() {
