@@ -12,17 +12,22 @@ $holla-text-height: 273px;
 .main {
 	display: flex;
 	flex-flow: wrap;
-	width: calc(($home-maxWidth / variables.$desktop-width) * 100%);
-	height: 500px;
-	max-width: $home-maxWidth;
+	// width: calc(($home-maxWidth / variables.$desktop-width) * 100%);
+	width: 97vw;
+	height: 64vw;
+	max-height: 580px;
+	// max-width: $home-maxWidth;
 	background-color: variables.$color-homeGray;
-	margin-bottom: calc((48px / calc(($home-maxHeight / 220px) * 100%)) * 100%);
-	margin-left: 11px;
+	// margin-bottom: calc((48px / calc(($home-maxHeight / 220px) * 100%)) * 100%);
+	// margin-left: 11px;
+	margin-left: auto;
+	padding-right: 20px;
 
 	.bgLines {
 		position: absolute;
 		width: 100%;
-		height: 474px;
+		height: 62vh;
+		max-height: 570px;
 		// height: 454px;
 		border-left: 2px solid variables.$color-overlayDrkGray;
 		border-bottom: 2px solid variables.$color-overlayDrkGray;
@@ -33,14 +38,13 @@ $holla-text-height: 273px;
 	.hola-container {
 		width: calc(($holla-text-width / $home-maxHeight) * 100%);
 		height: max-content;
-		max-width: $holla-text-width;
-		max-height: $holla-text-height;
-		margin: calc((34px / $home-maxWidth) * 100%) 31px 0 0;
-		padding-left: 30px;
+		// max-width: $holla-text-width;
+		// max-height: $holla-text-height;
+		margin: 4vh 1vh 0 2vw;
 
-		@media screen and (max-width: variables.$MQ-large-tablet) {
-			margin-top: 30px;
-		}
+		// @media screen and (max-width: variables.$MQ-large-tablet) {
+		// 	margin-top: 30px;
+		// }
 
 		img {
 			width: 100%;
@@ -57,13 +61,13 @@ $holla-text-height: 273px;
 		margin-left: 30.36%;
 		overflow: hidden;
 
-		@media screen and (max-width: variables.$MQ-large-laptop) {
-			margin-left: 28.36%;
-		}
+		// @media screen and (max-width: variables.$MQ-large-laptop) {
+		// 	margin-left: 28.36%;
+		// }
 
-		@media screen and (max-width: variables.$MQ-large-tablet) {
-			margin-left: 26.36%;
-		}
+		// @media screen and (max-width: variables.$MQ-large-tablet) {
+		// 	margin-left: 26.36%;
+		// }
 
 		img {
 			width: 100%;
@@ -76,21 +80,21 @@ $holla-text-height: 273px;
 		align-self: flex-end;
 		justify-content: center;
 		width: 100%;
-		height: 127px;
-		max-height: 127px;
+		height: 10vw;
+		// max-height: 127px;
 		z-index: 1;
 		margin-left: 11px;
 		padding-left: 12px;
 		padding-right: 25px;
 		margin-bottom: 16px;
 
-		@media screen and (max-width: variables.$MQ-large-tablet) {
-			height: 90px;
-		}
+		// @media screen and (max-width: variables.$MQ-large-tablet) {
+		// 	height: 90px;
+		// }
 
-		@media screen and (max-width: variables.$MQ-large-laptop) {
-			height: 100px;
-		}
+		// @media screen and (max-width: variables.$MQ-large-laptop) {
+		// 	height: 10vw;
+		// }
 
 		.workLink-container {
 			cursor: pointer;
@@ -200,11 +204,14 @@ $holla-text-height: 273px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: calc(($home-cardWidth / $home-maxWidth) * 100%);
-			height: 100%;
-			max-width: $home-cardWidth;
+			// width: calc(($home-cardWidth / $home-maxWidth) * 100%);
+			width: 48vw;
+			// height: 100%;
+			// max-width: $home-cardWidth;
 			background-color: variables.$color-textGrey;
-			margin: 0 30px;
+			// margin: 0 30px;
+			padding: 0 4vw;
+			margin: 0 2vw;
 
 			@media screen and (max-width: variables.$MQ-large-tablet) {
 				margin: 0 15px;

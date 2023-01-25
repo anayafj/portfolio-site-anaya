@@ -42,11 +42,12 @@
 	.rightColumn {
 		pointer-events: none;
 		position: fixed;
-		width: 100%;
-		max-width: variables.$desktop-width;
+		right: 0;
+		// width: 100%;
+		// max-width: variables.$desktop-width;
 		height: 100%;
-		border-right: 12px solid variables.$color-teal;
-		margin: 0 auto;
+		border-right: 20px solid variables.$color-teal;
+		// margin: 0 auto;
 		z-index: 1;
 	}
 
