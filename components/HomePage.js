@@ -41,7 +41,8 @@ export default function Section() {
 					<div className={styles['workLogo']}>
 						<img src="/svg/homeNav_work.svg" alt="navButton - Work" />
 					</div>
-					<h2>Check out the projects, it's what i do</h2>
+					{/* <h2>Check out the projects, it's what i do</h2> */}
+					<h2>Check out my projects</h2>
 					<div className={styles['buttonLines-work']}></div>
 				</section>
 				<div className={styles['homeCard']}>
@@ -58,7 +59,8 @@ export default function Section() {
 					<div className={styles['aboutLogo']}>
 						<img src="/svg/homeNav_me.svg" alt="navButton - About" />
 					</div>
-					<h2>Please let me introduce myself</h2>
+					{/* <h2>Please let me introduce myself</h2> */}
+					<h2>Let me introduce myself</h2>
 					<div className={styles['buttonLines-about']}></div>
 				</section>
 			</nav>

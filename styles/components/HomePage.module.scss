@@ -12,23 +12,19 @@ $holla-text-height: 273px;
 .main {
 	display: flex;
 	flex-flow: wrap;
-	// width: calc(($home-maxWidth / variables.$desktop-width) * 100%);
 	width: 97vw;
 	height: 64vw;
+	--height: 64vw;
 	max-height: 580px;
-	// max-width: $home-maxWidth;
 	background-color: variables.$color-homeGray;
-	// margin-bottom: calc((48px / calc(($home-maxHeight / 220px) * 100%)) * 100%);
-	// margin-left: 11px;
 	margin-left: auto;
 	padding-right: 20px;
 
 	.bgLines {
 		position: absolute;
 		width: 100%;
-		height: 62vh;
-		max-height: 570px;
-		// height: 454px;
+		height: calc(var(--height) - 30px);
+		max-height: 560px;
 		border-left: 2px solid variables.$color-overlayDrkGray;
 		border-bottom: 2px solid variables.$color-overlayDrkGray;
 		padding-left: 9px;
@@ -38,8 +34,6 @@ $holla-text-height: 273px;
 	.hola-container {
 		width: calc(($holla-text-width / $home-maxHeight) * 100%);
 		height: max-content;
-		// max-width: $holla-text-width;
-		// max-height: $holla-text-height;
 		margin: 4vh 1vh 0 2vw;
 
 		// @media screen and (max-width: variables.$MQ-large-tablet) {
@@ -57,8 +51,8 @@ $holla-text-height: 273px;
 		width: calc((195px / 567px) * 100%);
 		height: 370px;
 		max-height: 567px;
-		margin-top: 7.04%;
-		margin-left: 30.36%;
+		margin-top: 9.04%;
+		margin-left: 28.36%;
 		overflow: hidden;
 
 		// @media screen and (max-width: variables.$MQ-large-laptop) {
@@ -80,8 +74,8 @@ $holla-text-height: 273px;
 		align-self: flex-end;
 		justify-content: center;
 		width: 100%;
-		height: 10vw;
-		// max-height: 127px;
+		height: 14vw;
+		max-height: 130px;
 		z-index: 1;
 		margin-left: 11px;
 		padding-left: 12px;
@@ -98,22 +92,26 @@ $holla-text-height: 273px;
 
 		.workLink-container {
 			cursor: pointer;
-			width: 213px;
-			height: 100%;
+			width: 17vw;
+			max-width: 213px;
+			min-width: 132px;
+			height: fit-content;
+			margin-top: 4vw;
+			overflow: hidden;
 
 			* {
 				pointer-events: none;
 			}
 
 			&:hover h2 {
-				transition: color 0.3s ease-in;
-				color: variables.$color-blue;
+				transition: color 0.2s ease-out;
+				color: variables.$color-pink;
 			}
 
 			.workLogo {
-				display: flex;
-				justify-content: flex-end;
-				width: 100%;
+				width: 15vw;
+				margin-left: auto;
+				padding: 0 2px 0 3vw;
 
 				img {
 					width: 100%;
@@ -129,43 +127,45 @@ $holla-text-height: 273px;
 				@include fluid-type(
 					variables.$MQ-large-tablet,
 					variables.$MQ-large-desktop,
-					7.5px,
+					7px,
 					9px
 				);
 				font-weight: 200;
 				font-family: variables.$font-family-heavitas;
-				letter-spacing: 0.1px;
+				letter-spacing: 0.8px;
 				color: variables.$color-textOffWhite;
 				transition: color 0.3s ease-in;
-				margin: 5px 0 2px;
+				margin: 0 0 2px;
 			}
 
 			.buttonLines-work {
-				width: 100%;
+				width: 90%;
+				min-width: 144px;
+				margin-left: auto;
 				height: 4px;
 				border-top: 1px solid variables.$color-pink;
-				border-bottom: 1px solid variables.$color-pink;
 			}
 		}
 
 		.aboutLink-container {
 			cursor: pointer;
-			width: 186px;
-			height: 100%;
+			width: 17vw;
+			height: fit-content;
+			margin-top: 3vw;
+			overflow: hidden;
 
 			* {
 				pointer-events: none;
 			}
 
 			&:hover h2 {
-				transition: color 0.3s ease-in;
-				color: variables.$color-blue;
+				transition: color 0.2s ease-out;
+				color: variables.$color-pink;
 			}
 
 			.aboutLogo {
-				display: flex;
-				justify-content: flex-start;
-				width: 100%;
+				width: 8.3vw;
+				padding: 0 2.5vw 0 2px;
 
 				img {
 					width: 100%;
@@ -181,22 +181,22 @@ $holla-text-height: 273px;
 				@include fluid-type(
 					variables.$MQ-large-tablet,
 					variables.$MQ-large-desktop,
-					7.5px,
+					7px,
 					9px
 				);
 				font-weight: 200;
 				font-family: variables.$font-family-heavitas;
-				letter-spacing: 0.1px;
+				letter-spacing: 0.6px;
 				color: variables.$color-textOffWhite;
 				transition: color 0.3s ease-in;
-				margin: 5px 0 2px;
+				margin: 0 0 2px 2px;
 			}
 
 			.buttonLines-about {
-				width: 100%;
+				width: 90%;
 				height: 4px;
 				border-top: 1px solid variables.$color-pink;
-				border-bottom: 1px solid variables.$color-pink;
+				margin-left: 2px;
 			}
 		}
 
@@ -204,14 +204,10 @@ $holla-text-height: 273px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			// width: calc(($home-cardWidth / $home-maxWidth) * 100%);
-			width: 48vw;
-			// height: 100%;
-			// max-width: $home-cardWidth;
+			width: 50vw;
 			background-color: variables.$color-textGrey;
-			// margin: 0 30px;
-			padding: 0 4vw;
-			margin: 0 2vw;
+			padding: 0 3vw;
+			margin: 0 1vw;
 
 			@media screen and (max-width: variables.$MQ-large-tablet) {
 				margin: 0 15px;
