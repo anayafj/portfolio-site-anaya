@@ -8,8 +8,6 @@ import { useRouter } from 'next/router';
 export default function Header() {
 	const router = useRouter();
 
-	// console.log('Current Route Path = ', router.pathname);
-
 	const renderLogo = () => {
 		if (router.pathname === '/') {
 			return (

@@ -1,27 +1,10 @@
 @use '../styles/util/variables';
 @import '../styles/util/mixins.scss';
 
-$header-max-height: 220px;
-$border-max-height: 159px;
-$logoContainer-max-width: 864px;
-$logoContainer-max-height: 164px;
-$logo-max-width: 820px;
-$logo-max-height: 120px;
-$subheader-max-width: 440px;
-$subheader-min-width: 250px;
-
-$subheader-max-height: 16px;
-
 .logoContainer {
 	cursor: pointer;
-	height: calc(($logoContainer-max-height / $header-max-height) * 100%);
-	max-width: $logoContainer-max-width;
-	max-height: $logoContainer-max-height;
-	min-width: 454px;
-	min-height: 94px;
-	margin: auto calc((214px / variables.$desktop-width) * 100%);
-	margin-top: calc((33px / variables.$desktop-height) * 100%);
-	margin-bottom: calc((22px / variables.$desktop-height) * 100%);
+	padding: 0 16vw;
+	max-width: 1144px;
 
 	* {
 		pointer-events: none;
@@ -29,58 +12,50 @@ $subheader-max-height: 16px;
 
 	.logo {
 		display: flex;
-		width: 100%;
-		height: calc((138px / 164px) * 100%);
-		max-height: 138px;
+		justify-content: center;
 		border: 2px solid variables.$color-teal;
 		border-bottom: 0;
 
 		img {
-			position: relative;
-			width: calc(($logo-max-width / $logoContainer-max-width) * 100%);
-			max-width: $logo-max-width;
-			max-height: $logo-max-height;
-			margin: 0 auto;
-			margin-top: calc((15px / variables.$desktop-height) * 100%);
+			width: calc((820px / 864px) * 100%);
+			margin-top: calc((15px / variables.$desktop-height) * 100%); //1.875%
 		}
 	}
 
 	.subheaderContainer {
 		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		height: 16px;
-		max-height: $subheader-max-height;
+		max-height: 16px;
+
 		@include fluid-type(
 			variables.$MQ-large-laptop,
 			variables.$MQ-large-desktop,
-			5.2px,
-			7px
+			4px,
+			5.5px
 		);
 		font-family: variables.$font-family-akira;
 		color: #fff;
 
-		@media screen and (max-width: variables.$MQ-large-laptop) {
-			@include fluid-type(
-				variables.$MQ-large-tablet,
-				variables.$MQ-large-laptop,
-				3.7px,
-				5.2px
-			);
-		}
+		// @media screen and (max-width: variables.$MQ-large-laptop) {
+		// 	@include fluid-type(
+		// 		variables.$MQ-large-tablet,
+		// 		variables.$MQ-large-laptop,
+		// 		3.7px,
+		// 		5.2px
+		// 	);
+		// }
 
-		@media screen and (max-width: variables.$MQ-large-tablet) {
-			height: 12px;
-			@include fluid-type(
-				variables.$MQ-large-phone-portrait,
-				variables.$MQ-large-tablet,
-				3.3px,
-				3.7px
-			);
-		}
+		// @media screen and (max-width: variables.$MQ-large-tablet) {
+		// 	height: 12px;
+		// 	@include fluid-type(
+		// 		variables.$MQ-large-phone-portrait,
+		// 		variables.$MQ-large-tablet,
+		// 		3.3px,
+		// 		3.7px
+		// 	);
+		// }
 
 		.bottom-border {
-			width: calc((215px / $logoContainer-max-width) * 100%);
+			width: 28%;
 			height: auto;
 			border-bottom: 2px solid variables.$color-teal;
 		}
@@ -99,19 +74,20 @@ $subheader-max-height: 16px;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			margin-top: calc((14px / variables.$desktop-height) * 100%);
+			margin: calc((14px / variables.$desktop-height) * 100%) auto 0;
 
-			@media screen and (max-width: variables.$MQ-large-laptop) {
-				margin-top: calc((18px / variables.$desktop-height) * 100%);
-			}
+			// @media screen and (max-width: variables.$MQ-large-laptop) {
+			// 	margin-top: calc((18px / variables.$desktop-height) * 100%);
+			// }
 
-			@media screen and (max-width: variables.$MQ-large-tablet) {
-				margin-top: calc((16px / variables.$desktop-height) * 100%);
-			}
+			// @media screen and (max-width: variables.$MQ-large-tablet) {
+			// 	margin-top: calc((16px / variables.$desktop-height) * 100%);
+			// }
 
 			h1,
 			span {
 				margin: 0;
+				letter-spacing: 0.5px;
 			}
 
 			span {
@@ -133,8 +109,8 @@ $subheader-max-height: 16px;
 				@include fluid-type(
 					variables.$MQ-large-phone-portrait,
 					variables.$MQ-large-desktop,
-					7px,
-					13px
+					9px,
+					12px
 				);
 				font-family: variables.$font-family-blankRiver;
 				color: variables.$color-pink;
