@@ -1,0 +1,230 @@
+@use '../util/variables';
+@import '../util/mixins.scss';
+
+$home-maxWidth: 1267px;
+$home-maxHeight: 480px;
+$home-cardWidth: 670px;
+$home-cardHeight: 110px;
+
+$holla-text-width: 1198px;
+$holla-text-height: 273px;
+
+.main {
+	display: flex;
+	flex-flow: wrap;
+	width: 97vw;
+	height: 64vw;
+	--height: 64vw;
+	max-height: 580px;
+	background-color: variables.$color-homeGray;
+	margin-left: auto;
+	padding-right: 20px;
+
+	.bgLines {
+		position: absolute;
+		width: 100%;
+		height: calc(var(--height) - 30px);
+		max-height: 560px;
+		border-left: 2px solid variables.$color-overlayDrkGray;
+		border-bottom: 2px solid variables.$color-overlayDrkGray;
+		padding-left: 9px;
+		margin-left: 9px;
+	}
+
+	.hola-container {
+		width: calc(($holla-text-width / $home-maxHeight) * 100%);
+		height: max-content;
+		margin: 4vh 1vh 0 2vw;
+
+		// @media screen and (max-width: variables.$MQ-large-tablet) {
+		// 	margin-top: 30px;
+		// }
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.peep-container {
+		position: absolute;
+		width: calc((195px / 567px) * 100%);
+		height: 370px;
+		max-height: 567px;
+		margin-top: 9.04%;
+		margin-left: 28.36%;
+		overflow: hidden;
+
+		// @media screen and (max-width: variables.$MQ-large-laptop) {
+		// 	margin-left: 28.36%;
+		// }
+
+		// @media screen and (max-width: variables.$MQ-large-tablet) {
+		// 	margin-left: 26.36%;
+		// }
+
+		img {
+			width: 100%;
+			max-width: 195px;
+		}
+	}
+
+	.homePage-navigation {
+		display: flex;
+		align-self: flex-end;
+		justify-content: center;
+		width: 100%;
+		height: 14vw;
+		max-height: 130px;
+		z-index: 1;
+		margin-left: 11px;
+		padding-left: 12px;
+		padding-right: 25px;
+		margin-bottom: 16px;
+
+		// @media screen and (max-width: variables.$MQ-large-tablet) {
+		// 	height: 90px;
+		// }
+
+		// @media screen and (max-width: variables.$MQ-large-laptop) {
+		// 	height: 10vw;
+		// }
+
+		.workLink-container {
+			cursor: pointer;
+			width: 17vw;
+			max-width: 213px;
+			min-width: 132px;
+			height: fit-content;
+			margin-top: 4vw;
+			overflow: hidden;
+
+			* {
+				pointer-events: none;
+			}
+
+			&:hover h2 {
+				transition: color 0.2s ease-out;
+				color: variables.$color-pink;
+			}
+
+			.workLogo {
+				width: 15vw;
+				margin-left: auto;
+				padding: 0 2px 0 3vw;
+
+				img {
+					width: 100%;
+					max-width: 168px;
+					margin: 0 0 0 auto;
+				}
+			}
+
+			h2 {
+				display: flex;
+				justify-content: flex-end;
+				font-size: 9px;
+				@include fluid-type(
+					variables.$MQ-large-tablet,
+					variables.$MQ-large-desktop,
+					7px,
+					9px
+				);
+				font-weight: 200;
+				font-family: variables.$font-family-heavitas;
+				letter-spacing: 0.8px;
+				color: variables.$color-textOffWhite;
+				transition: color 0.3s ease-in;
+				margin: 0 0 2px;
+			}
+
+			.buttonLines-work {
+				width: 90%;
+				min-width: 144px;
+				margin-left: auto;
+				height: 4px;
+				border-top: 1px solid variables.$color-pink;
+			}
+		}
+
+		.aboutLink-container {
+			cursor: pointer;
+			width: 17vw;
+			height: fit-content;
+			margin-top: 3vw;
+			overflow: hidden;
+
+			* {
+				pointer-events: none;
+			}
+
+			&:hover h2 {
+				transition: color 0.2s ease-out;
+				color: variables.$color-pink;
+			}
+
+			.aboutLogo {
+				width: 8.3vw;
+				padding: 0 2.5vw 0 2px;
+
+				img {
+					width: 100%;
+					max-width: 69px;
+					margin: 0 auto 0 0;
+				}
+			}
+
+			h2 {
+				display: flex;
+				justify-content: flex-start;
+				font-size: 9px;
+				@include fluid-type(
+					variables.$MQ-large-tablet,
+					variables.$MQ-large-desktop,
+					7px,
+					9px
+				);
+				font-weight: 200;
+				font-family: variables.$font-family-heavitas;
+				letter-spacing: 0.6px;
+				color: variables.$color-textOffWhite;
+				transition: color 0.3s ease-in;
+				margin: 0 0 2px 2px;
+			}
+
+			.buttonLines-about {
+				width: 90%;
+				height: 4px;
+				border-top: 1px solid variables.$color-pink;
+				margin-left: 2px;
+			}
+		}
+
+		.homeCard {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 50vw;
+			background-color: variables.$color-textGrey;
+			padding: 0 3vw;
+			margin: 0 1vw;
+
+			@media screen and (max-width: variables.$MQ-large-tablet) {
+				margin: 0 15px;
+			}
+
+			h1 {
+				@include fluid-type(
+					variables.$MQ-large-laptop,
+					variables.$MQ-large-desktop,
+					16px,
+					22px
+				);
+				text-align: center;
+				font-weight: 400;
+				font-family: variables.$font-family-amatic;
+				color: variables.$color-pink;
+			}
+		}
+	}
+}

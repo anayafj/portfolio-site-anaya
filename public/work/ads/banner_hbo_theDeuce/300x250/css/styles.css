@@ -1,0 +1,396 @@
+#videoContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 250px;
+  width: 300px;
+  z-index: 11;
+  background-color: black; }
+
+#videoPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1; }
+
+#vidControls {
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  height: 26px;
+  width: 250px;
+  z-index: 3;
+  display: none; }
+
+#playButton {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  height: 14px;
+  width: 7px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 2; }
+  #playButton svg, #playButton path {
+    fill: #FFF; }
+  #playButton:hover svg, #playButton:hover path {
+    fill: #da4971; }
+
+#pauseButton {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  height: 14px;
+  width: 9px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 2;
+  display: none; }
+  #pauseButton svg, #pauseButton path {
+    fill: #FFF; }
+  #pauseButton:hover svg, #pauseButton:hover path {
+    fill: #da4971; }
+
+#soundOnButton {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  height: 16px;
+  width: 18px;
+  cursor: pointer;
+  z-index: 2; }
+  #soundOnButton svg, #soundOnButton path {
+    fill: #FFF; }
+  #soundOnButton:hover svg, #soundOnButton:hover path {
+    fill: #da4971; }
+
+#soundOffButton {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  height: 16px;
+  width: 18px;
+  cursor: pointer;
+  z-index: 2;
+  display: none; }
+  #soundOffButton svg, #soundOffButton path {
+    fill: #FFF; }
+  #soundOffButton:hover svg, #soundOffButton:hover path {
+    fill: #da4971; }
+
+#videoScrubber {
+  position: absolute;
+  width: 190px;
+  height: inherit;
+  left: 25px;
+  top: 1px;
+  z-index: 3; }
+
+#scrubHandle {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: 8px;
+  width: 8px;
+  z-index: 6;
+  cursor: pointer;
+  background: #FFF; }
+
+.endControlScrubber {
+  width: 190px !important; }
+
+#scrubTrack {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 4px;
+  width: inherit;
+  background: #666;
+  z-index: 5;
+  cursor: pointer; }
+
+#scrubProgress {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: #aad24e;
+  z-index: 5;
+  pointer-events: none; }
+
+#vidControlBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  border-radius: 4px;
+  background-color: black;
+  opacity: 0.5; }
+
+#snd-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+  background: url("../images/mute.png") no-repeat;
+  opacity: .6;
+  overflow: hidden; }
+
+#videoClick {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  cursor: pointer; }
+
+#closeVideo {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  height: 18px;
+  width: 58px;
+  background: url("../images/close.png") no-repeat;
+  z-index: 11;
+  cursor: pointer; }
+
+#replayBtn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  height: 17px;
+  width: 17px;
+  z-index: 11;
+  cursor: pointer; }
+  #replayBtn svg, #replayBtn path {
+    fill: #000; }
+  #replayBtn:hover {
+    transition: all 0.5s ease-out;
+    -ms-transform: rotate(-360deg);
+    transform: rotate(-360deg); }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body, body * {
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+#adContainer {
+  height: 250px;
+  width: 300px;
+  display: none;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  z-index: 1;
+  transition: all 0.3s ease-out; }
+  #adContainer.ready {
+    display: block; }
+
+#border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  border: 1px solid #000;
+  z-index: 1; }
+
+.bg-exit {
+  z-index: 10;
+  cursor: pointer; }
+  .bg-exit.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+
+#expand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px; }
+
+#expBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  background: url("../images/background.jpg") no-repeat; }
+
+#textureOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  background: url("../images/textureOverlay.png") no-repeat; }
+
+#filmGrain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px; }
+
+#film1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  background: url("../images/filmGrain_1.png") no-repeat; }
+
+#film2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  background: url("../images/filmGrain_2.png") no-repeat; }
+
+#film3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  background: url("../images/filmGrain_3.png") no-repeat; }
+
+#film4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  background: url("../images/filmGrain_4.png") no-repeat; }
+
+#filmStrip {
+  position: absolute;
+  bottom: 67px;
+  left: 1px;
+  height: 144px;
+  width: 298px; }
+
+#filmStripLong {
+  position: absolute;
+  top: 0;
+  left: -288px;
+  height: 144px;
+  width: 586px; }
+
+#fs1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 144px;
+  width: 298px; }
+
+#fs2 {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  height: 144px;
+  width: 288px; }
+
+.film, #fs1, #fs2 {
+  background: url("../images/filmStrip_white.png") no-repeat; }
+
+#fsPink1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 144px;
+  width: 106px;
+  background: url("../images/filmStrip_pink.png") no-repeat; }
+
+#fsPink2 {
+  position: absolute;
+  top: 0;
+  left: 106px;
+  height: 144px;
+  width: 90px;
+  background: url("../images/filmStrip_pink.png") no-repeat;
+  background-position: bottom left -106px; }
+
+#fsPink3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 144px;
+  width: 100px;
+  background: url("../images/filmStrip_pink.png") no-repeat;
+  background-position: bottom right; }
+
+#header {
+  position: absolute;
+  top: 4px;
+  left: 38px;
+  height: 31px;
+  width: 236px; }
+
+#head1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 236px;
+  background: url("../images/header.png") no-repeat; }
+
+#head2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 17px;
+  width: 236px;
+  background-position: bottom left;
+  background-image: url("../images/header.png"); }
+
+#TT {
+  position: absolute;
+  bottom: 29px;
+  left: 57px;
+  height: 61px;
+  width: 199px;
+  background: url("../images/TT.png") no-repeat; }
+
+#tuneIn {
+  position: absolute;
+  bottom: 8px;
+  left: 74px;
+  height: 15px;
+  width: 161px;
+  background: url("../images/date1.png") no-repeat;
+  cursor: pointer; }
+
+.Date_tonight {
+  width: 162px !important;
+  height: 14px !important;
+  background: url("../images/date3.png") no-repeat !important; }
+
+.Date_post {
+  width: 199px !important;
+  height: 15px !important;
+  left: 57px !important;
+  background: url("../images/date4.png") no-repeat !important; }

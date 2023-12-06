@@ -1,0 +1,1750 @@
+/* #region generated */
+/* ===============================================================
+ * ~~~~~~~~~~~~~~~~~~~~~~ Sense 8 | Banners ~~~~~~~~~~~~~~~~~~~~~~
+ * ===============================================================
+ */
+body {
+  margin  : 0;
+  padding : 0;
+}
+
+* {
+  box-sizing : border-box;
+}
+
+.hidden {
+  display    : none;
+  visibility : hidden;
+}
+
+#ad {
+  width    : 160px;
+  height   : 600px;
+  /* FIXME commented while deving */
+  /*display: none;*/
+  position : relative;
+  overflow : hidden;
+  z-index  : 1;
+}
+
+#ad.ready {
+  display : block;
+}
+
+.bg_image, #endShows, .lrgShows, #show1, #show2, .card {
+  background-repeat           : no-repeat;
+  background-position         : top left;
+  background-size             : 100% 100%;
+  -webkit-backface-visibility : hidden;
+}
+
+.border-frame {
+  position         : absolute;
+  background-color : #CCC;
+  z-index          : 100;
+}
+
+.border-frame.left {
+  left : 0;
+}
+
+.border-frame.right {
+  right : 0;
+}
+
+.border-frame.left, .border-frame.right {
+  top    : 0;
+  width  : 1px;
+  height : 100%;
+}
+
+.border-frame.top {
+  top : 0;
+}
+
+.border-frame.bottom {
+  bottom : 0;
+}
+
+.border-frame.top, .border-frame.bottom {
+  left   : 0;
+  width  : 100%;
+  height : 1px;
+}
+
+.bg-exit {
+  cursor : pointer;
+}
+
+.bg-exit.fill {
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  width    : 100%;
+  height   : 100%;
+}
+
+#hulu-logo {
+  position : absolute;
+  top      : 560px;
+  left     : 44px;
+  width    : 72px;
+  height   : 24px;
+  z-index  : 6;
+  opacity  : 0;
+}
+
+#hulu-logo svg,
+#hulu-logo path {
+  fill : #6A3;
+}
+
+.show-tile {
+  stroke       : #6A3;
+  stroke-width : 2px;
+}
+
+#card1 {
+  background-image : url(../img/bg_1.jpg);
+}
+
+#show1Logo {
+  position : absolute;
+  top      : 27px;
+  left     : 18px;
+  opacity  : 0.9;
+}
+
+#show1Logo svg,
+#show1Logo path {
+  fill : #FFF;
+}
+
+#txt1a {
+  position : absolute;
+  top      : 231px;
+  left     : 12px;
+  opacity  : 0;
+  z-index  : 2;
+}
+
+#txt1a svg,
+#txt1a #a path {
+  fill : #FFF;
+}
+
+#txt1b {
+  position : absolute;
+  top      : 231px;
+  left     : 12px;
+  opacity  : 0;
+  z-index  : 2;
+}
+
+#txt1b svg,
+#txt1b #b path {
+  fill : #6A3;
+}
+
+#card3 {
+  background-image : url(../img/bg_2.png);
+}
+
+#show2Logo {
+  position : absolute;
+  top      : 18px;
+  left     : 21px;
+  opacity  : 0.9;
+}
+
+#show2Logo svg,
+#show2Logo path {
+  fill : #FFF;
+}
+
+#txt2a {
+  position : absolute;
+  top      : 218px;
+  left     : 15px;
+  z-index  : 2;
+}
+
+#txt2a svg,
+#txt2a #mid1 path {
+  fill : #6A3;
+}
+
+#txt2a #bot1 path {
+  fill : #FFF;
+}
+
+#txt2b {
+  position : absolute;
+  top      : 298px;
+  left     : 18px;
+  z-index  : 2;
+}
+
+#txt2b svg,
+#txt2b #mid2 path {
+  fill : #6A3;
+}
+
+#txt2b #bot2 path {
+  fill : #FFF;
+}
+
+#shape2 {
+  position           : absolute;
+  top                : 0px;
+  left               : 300px;
+  width              : 50px;
+  height             : 250px;
+  -webkit-box-sizing : -2px 0px 10px 0px rgba(0, 0, 0, 0.92);
+  -moz-box-sizing    : -2px 0px 10px 0px rgba(0, 0, 0, 0.92);
+  box-sizing         : -2px 0px 10px 0px rgba(0, 0, 0, 0.92);
+  overflow           : hidden;
+  z-index            : 1;
+}
+
+#txt3 {
+  position : absolute;
+  top      : 242px;
+  left     : 32px;
+  z-index  : 3;
+}
+
+#txt3 svg,
+#txt3 #a path {
+  fill : #6A3;
+}
+
+#txt3 #b path {
+  fill : #FFF;
+}
+
+#shape3 {
+  position           : absolute;
+  top                : 0px;
+  left               : 300px;
+  width              : 50px;
+  height             : 250px;
+  -webkit-box-sizing : -2px 0px 10px 0px rgba(0, 0, 0, 0.92);
+  -moz-box-sizing    : -2px 0px 10px 0px rgba(0, 0, 0, 0.92);
+  box-sizing         : -2px 0px 10px 0px rgba(0, 0, 0, 0.92);
+  overflow           : hidden;
+  z-index            : 1;
+}
+
+#shape3 svg,
+#shape3 polygon {
+  fill : #222;
+}
+
+#card6 {
+  background-image : url(../img/bg_3.png);
+}
+
+#show3Logo {
+  position : absolute;
+  top      : 21px;
+  left     : 16px;
+  opacity  : 0.7;
+}
+
+#show3Logo svg,
+#show3Logo path {
+  fill : #FFF;
+}
+
+#show3_panel {
+  position         : absolute;
+  top              : 0px;
+  left             : -50px;
+  width            : 50px;
+  height           : 250px;
+  background-image : url(../img/lrgShow3_angle.png);
+}
+
+#endcard {
+  position         : absolute;
+  top              : 0px;
+  left             : 0px;
+  width            : 160px;
+  height           : 600px;
+  cursor           : pointer;
+  background-color : #222;
+}
+
+#endRevealContainer {
+  opacity : 0;
+}
+
+#endRevealUp {
+  position         : absolute;
+  top              : 0px;
+  left             : 0px;
+  width            : 300px;
+  height           : 125px;
+  cursor           : pointer;
+  background-color : #222;
+  z-index          : 2;
+}
+
+#endRevealDown {
+  position         : absolute;
+  top              : 125px;
+  left             : 0px;
+  width            : 300px;
+  height           : 125px;
+  cursor           : pointer;
+  background-color : #222;
+  z-index          : 2;
+}
+
+#lrgLogo {
+  position : absolute;
+  top      : 505px;
+  left     : 37px;
+  width    : 72px;
+  height   : 24px;
+  z-index  : 12;
+}
+
+#lrgLogo svg,
+#lrgLogo path {
+  fill : #6A3;
+}
+
+#header {
+  position : absolute;
+  top      : 28px;
+  left     : 20px;
+  z-index  : 5;
+}
+
+#header svg,
+#header #a path {
+  fill : #FFF;
+}
+
+#header #b path {
+  fill : #6A3;
+}
+
+#endShows {
+  position         : absolute;
+  top              : 0px;
+  left             : 0px;
+  width            : 160px;
+  height           : 600px;
+  background-image : url(../img/bg_final.jpg);
+  z-index          : 2;
+}
+
+#shape {
+  position : absolute;
+  top      : 0px;
+  right    : 0px;
+  left     : 0px;
+  width    : 175px;
+  height   : 250px;
+  overflow : hidden;
+  z-index  : 1;
+}
+
+#shape4 {
+  position           : absolute;
+  top                : 0px;
+  left               : -50px;
+  width              : 50px;
+  height             : 250px;
+  -webkit-box-sizing : -2px 0px 10px 0px rgba(0, 0, 0, 0.92);
+  -moz-box-sizing    : -2px 0px 10px 0px rgba(0, 0, 0, 0.92);
+  box-sizing         : -2px 0px 10px 0px rgba(0, 0, 0, 0.92);
+  overflow           : hidden;
+  z-index            : 1;
+}
+
+#shape4 svg,
+#shape4 polygon {
+  fill : #E9E9E9;
+}
+
+#ctaButton {
+  position : absolute;
+  top      : 551px;
+  left     : 13px;
+  z-index  : 6;
+  overflow : hidden;
+  cursor   : pointer;
+}
+
+#ctaButton svg,
+#ctaButton rect {
+  fill : #6A3;
+}
+
+#ctaButton:hover path {
+  fill : #CCC;
+}
+
+#ctaButton:hover #ctaTxt svg,
+#ctaButton:hover #ctaTxt path {
+  fill : #222;
+}
+
+#ctaTxt {
+  position : absolute;
+  top      : 3px;
+  left     : 9px;
+  z-index  : 8;
+}
+
+#ctaTxt svg,
+#ctaTxt path {
+  fill : #FFF;
+}
+
+.backgroundColor {
+  position         : absolute;
+  top              : 0;
+  left             : 0;
+  width            : 100%;
+  height           : 100%;
+  background-color : #222;
+  z-index          : 1;
+}
+
+.swapBgColor {
+  background-color : #CCC;
+}
+
+#endcard {
+  z-index : 7;
+}
+
+#endcard > .bg-exit {
+  z-index : 6;
+}
+
+#smLogo,
+#card6,
+#card5,
+#card4,
+#card3,
+#card2,
+#card1 {
+  pointer-events : none;
+}
+
+/* #endregion */
+
+/* #region handcoded (not from SCSS) */
+.card {
+  position            : absolute;
+  top                 : 0px;
+  left                : 0px;
+  width               : 160px;
+  height              : 600px;
+  background-color    : #222;
+  background-repeat   : no-repeat;
+  background-position : top left;
+  background-size     : 100% 100%;
+}
+
+.storyboard-text,
+.storyboard-image {
+  position : absolute;
+  margin   : auto;
+}
+
+.card,
+.storyboard-text,
+.storyboard-image {
+  -webkit-transform : translateZ(0);
+  -moz-transform    : translateZ(0);
+  -ms-transform     : translateZ(0);
+  -o-transform      : translateZ(0);
+  transform         : translateZ(0);
+}
+
+/* #region card one (modern family) */
+.card-one svg {
+  display      : block;
+  width        : 100%;
+  margin-left  : auto;
+  margin-right : auto;
+  fill         : #FFF;
+}
+
+.card-one .modern-family {
+  margin-top    : 27px;
+  margin-bottom : 6px;
+  opacity       : 0.7;
+}
+
+.card-one.start {
+  opacity : 1;
+}
+
+@-moz-keyframes card-one-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@-webkit-keyframes card-one-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@keyframes card-one-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+/* #endregion */
+
+/* #region card two (FALL PREMIERES ARE NOW ON HULU) */
+.card-two.start {
+  opacity : 0;
+}
+
+@-moz-keyframes card-two-in {
+  from { opacity : 0; }
+  to { opacity : 1; }
+}
+
+@-webkit-keyframes card-two-in {
+  from { opacity : 0; }
+  to { opacity : 1; }
+}
+
+@keyframes card-two-in {
+  from { opacity : 0; }
+  to { opacity : 1; }
+}
+
+@-moz-keyframes card-two-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@-webkit-keyframes card-two-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@keyframes card-two-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+/* #region text block one */
+.card-two .textblock-one.start {
+  opacity : 0;
+  top     : 211px;
+  left    : 13px;
+}
+
+@-moz-keyframes card-two-textblock-one-in {
+  from {
+    opacity : 0;
+    top     : 211px;
+  }
+  to {
+    opacity : 1;
+    top     : 231px;
+  }
+}
+
+@-webkit-keyframes card-two-textblock-one-in {
+  from {
+    opacity : 0;
+    top     : 211px;
+  }
+  to {
+    opacity : 1;
+    top     : 231px;
+  }
+}
+
+@keyframes card-two-textblock-one-in {
+  from {
+    opacity : 0;
+    top     : 211px;
+  }
+  to {
+    opacity : 1;
+    top     : 231px;
+  }
+}
+
+/* #endregion */
+
+/* #region text block two */
+.card-two .textblock-two.start {
+  opacity : 0;
+  top     : 268px;
+  left    : 20px;
+}
+
+@-moz-keyframes card-two-textblock-two-in {
+  from {
+    opacity : 0;
+    top     : 268px;
+  }
+  to {
+    opacity : 1;
+    top     : 288px;
+  }
+}
+
+@-webkit-keyframes card-two-textblock-two-in {
+  from {
+    opacity : 0;
+    top     : 268px;
+  }
+  to {
+    opacity : 1;
+    top     : 288px;
+  }
+}
+
+@keyframes card-two-textblock-two-in {
+  from {
+    opacity : 0;
+    top     : 268px;
+  }
+  to {
+    opacity : 1;
+    top     : 288px;
+  }
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region card three (last man on earth) */
+.card-three.start {
+  opacity   : 0;
+  transform : scale(1.2);
+}
+
+@-moz-keyframes card-three-in {
+  from {
+    opacity   : 0;
+    transform : scale(1.2);
+  }
+  to {
+    opacity   : 1;
+    transform : scale(1);
+  }
+}
+
+@-webkit-keyframes card-three-in {
+  from {
+    opacity   : 0;
+    transform : scale(1.2);
+  }
+  to {
+    opacity   : 1;
+    transform : scale(1);
+  }
+}
+
+@keyframes card-three-in {
+  from {
+    opacity   : 0;
+    transform : scale(1.2);
+  }
+  to {
+    opacity   : 1;
+    transform : scale(1);
+  }
+}
+
+@-moz-keyframes card-three-out {
+
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@-webkit-keyframes card-three-out {
+
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@keyframes card-three-out {
+
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+/* #region text block one */
+.card-three .textblock-one.start {
+  top   : 0;
+  left  : 0;
+  right : 0;
+  width : 119px;
+}
+
+.card-three .textblock-one div {
+	text-align : center;
+	padding-top : 7px;
+}
+
+@-moz-keyframes card-three-textblock-one-in {
+  from { top : 0; }
+  to { top : 18px; }
+}
+
+@-webkit-keyframes card-three-textblock-one-in {
+  from { top : 0; }
+  to { top : 18px; }
+}
+
+@keyframes card-three-textblock-one-in {
+  from { top : 0; }
+  to { top : 18px; }
+}
+
+/* #endregion */
+/* #endregion */
+
+/* #region card four (ALL-NEW SEASONS / ALL-NEW SERIES) */
+.card-four.start {
+  opacity : 0;
+}
+
+.card-four svg {
+  width  : 129.563px;
+  height : 54.375px;
+}
+
+@-moz-keyframes card-four-in {
+  from { opacity : 1; }
+  to { opacity : 1; }
+}
+
+@-webkit-keyframes card-four-in {
+  from { opacity : 1; }
+  to { opacity : 1; }
+}
+
+@keyframes card-four-in {
+  from { opacity : 1; }
+  to { opacity : 1; }
+}
+
+@-moz-keyframes card-four-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@-webkit-keyframes card-four-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@keyframes card-four-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+/* #region text block one */
+.card-four .textblock-one.start {
+  opacity : 0;
+  top     : 218px;
+  left    : 0;
+}
+
+@-moz-keyframes card-four-textblock-one-in {
+  from {
+    opacity : 0;
+    left    : 0;
+  }
+  to {
+    opacity : 1;
+    left    : 15px;
+  }
+}
+
+@-webkit-keyframes card-four-textblock-one-in {
+  from {
+    opacity : 0;
+    left    : 0;
+  }
+  to {
+    opacity : 1;
+    left    : 15px;
+  }
+}
+
+@keyframes card-four-textblock-one-in {
+  from {
+    opacity : 0;
+    left    : 0;
+  }
+  to {
+    opacity : 1;
+    left    : 15px;
+  }
+}
+
+@-moz-keyframes card-four-textblock-one-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@-webkit-keyframes card-four-textblock-one-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@keyframes card-four-textblock-one-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+/* #endregion */
+
+/* #region text block two */
+.card-four .textblock-two.start {
+  opacity : 0;
+  top     : 298px;
+  right   : 0;
+}
+
+@-moz-keyframes card-four-textblock-two-in {
+  from {
+    opacity : 0;
+    right   : 0;
+  }
+  to {
+    opacity : 1;
+    right   : 18px;
+  }
+}
+
+@-webkit-keyframes card-four-textblock-two-in {
+  from {
+    opacity : 0;
+    right   : 0;
+  }
+  to {
+    opacity : 1;
+    right   : 18px;
+  }
+}
+
+@keyframes card-four-textblock-two-in {
+  from {
+    opacity : 0;
+    right   : 0;
+  }
+  to {
+    opacity : 1;
+    right   : 18px;
+  }
+}
+
+@-moz-keyframes card-four-textblock-two-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@-webkit-keyframes card-four-textblock-two-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@keyframes card-four-textblock-two-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+/* #endregion */
+/* #endregion */
+
+/* #region card five (ALL IN ONE PLACE) */
+.card-five.start {
+  opacity : 0;
+}
+
+@-moz-keyframes card-five-in {
+  from { opacity : 1; }
+  to { opacity : 1; }
+}
+
+@-webkit-keyframes card-five-in {
+  from { opacity : 1; }
+  to { opacity : 1; }
+}
+
+@keyframes card-five-in {
+  from { opacity : 1; }
+  to { opacity : 1; }
+}
+
+@-moz-keyframes card-five-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@-webkit-keyframes card-five-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@keyframes card-five-out {
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+/* #region text block one */
+.card-five .textblock-one.start {
+  opacity : 0;
+  top     : 217px;
+  left    : 33px;
+}
+
+@-moz-keyframes card-five-textblock-one-in {
+  from {
+    opacity : 0;
+    top     : 217px;
+  }
+  to {
+    opacity : 1;
+    top     : 241px;
+  }
+}
+
+@-webkit-keyframes card-five-textblock-one-in {
+  from {
+    opacity : 0;
+    top     : 217px;
+  }
+  to {
+    opacity : 1;
+    top     : 241px;
+  }
+}
+
+@keyframes card-five-textblock-one-in {
+  from {
+    opacity : 0;
+    top     : 217px;
+  }
+  to {
+    opacity : 1;
+    top     : 241px;
+  }
+}
+
+/* #endregion */
+/* #endregion */
+
+/* #region card six (law and order) */
+.card-six.start {
+  opacity   : 0;
+  transform : scale(1.2);
+}
+
+@-moz-keyframes card-six-in {
+  from {
+    opacity   : 0;
+    transform : scale(1.2);
+  }
+  to {
+    opacity   : 1;
+    transform : scale(1);
+  }
+}
+
+@-webkit-keyframes card-six-in {
+  from {
+    opacity   : 0;
+    transform : scale(1.2);
+  }
+  to {
+    opacity   : 1;
+    transform : scale(1);
+  }
+}
+
+@keyframes card-six-in {
+  from {
+    opacity   : 0;
+    transform : scale(1.2);
+  }
+  to {
+    opacity   : 1;
+    transform : scale(1);
+  }
+}
+
+@-moz-keyframes card-six-out {
+
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@-webkit-keyframes card-six-out {
+
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+@keyframes card-six-out {
+
+  from { opacity : 1; }
+  to { opacity : 0; }
+}
+
+/* #region text block one */
+.card-six .textblock-one.start {
+  top   : 0;
+  left  : 0;
+  right : 0;
+  width : 106px;
+}
+
+.card-six .textblock-one div {
+	text-align : center;
+	padding-top : 7px;
+}
+
+@-moz-keyframes card-six-textblock-one-in {
+  from { top : 0; }
+  to { top : 21px; }
+}
+
+@-webkit-keyframes card-six-textblock-one-in {
+  from { top : 0; }
+  to { top : 21px; }
+}
+
+@keyframes card-six-textblock-one-in {
+  from { top : 0; }
+  to { top : 21px; }
+}
+
+/* #endregion */
+/* #endregion */
+
+/* #region card seven (END FRAME) */
+.card-seven.start {
+  opacity : 0;
+}
+
+.card-seven .storyboard-image svg {
+  stroke       : #6A3;
+  stroke-width : 2;
+}
+
+@-moz-keyframes card-seven-in {
+  from { opacity : 1; }
+  to { opacity : 1; }
+}
+
+@-webkit-keyframes card-seven-in {
+  from { opacity : 1; }
+  to { opacity : 1; }
+}
+
+@keyframes card-seven-in {
+  from { opacity : 1; }
+  to { opacity : 1; }
+}
+
+/* #region text block one */
+.card-seven .textblock-one.start {
+  opacity : 0;
+  top     : 18px;
+  left    : 19px;
+}
+
+@-moz-keyframes card-seven-textblock-one-in {
+  from {
+    opacity : 0;
+    top     : 18px;
+  }
+  to {
+    opacity : 1;
+    top     : 36px;
+  }
+}
+
+@-webkit-keyframes card-seven-textblock-one-in {
+  from {
+    opacity : 0;
+    top     : 18px;
+  }
+  to {
+    opacity : 1;
+    top     : 36px;
+  }
+}
+
+@keyframes card-seven-textblock-one-in {
+  from {
+    opacity : 0;
+    top     : 18px;
+  }
+  to {
+    opacity : 1;
+    top     : 36px;
+  }
+}
+
+/* #endregion */
+
+/* #region text block two */
+.card-seven .textblock-two.start {
+  opacity : 0;
+  top     : 80px;
+  left    : 18px;
+}
+
+@-moz-keyframes card-seven-textblock-two-in {
+  from {
+    opacity : 0;
+    top     : 80px;
+  }
+  to {
+    opacity : 1;
+    top     : 95px;
+  }
+}
+
+@-webkit-keyframes card-seven-textblock-two-in {
+  from {
+    opacity : 0;
+    top     : 80px;
+  }
+  to {
+    opacity : 1;
+    top     : 95px;
+  }
+}
+
+@keyframes card-seven-textblock-two-in {
+  from {
+    opacity : 0;
+    top     : 80px;
+  }
+  to {
+    opacity : 1;
+    top     : 95px;
+  }
+}
+
+/* #endregion */
+
+/* #region image one */
+.card-seven .image-one.start {
+  opacity : 0;
+  top     : 178px;
+}
+
+@-moz-keyframes card-seven-image-one-in {
+  from {
+    opacity : 0;
+    top     : 178px;
+  }
+  to {
+    opacity : 1;
+    top     : 152px;
+  }
+}
+
+@-webkit-keyframes card-seven-image-one-in {
+  from {
+    opacity : 0;
+    top     : 178px;
+  }
+  to {
+    opacity : 1;
+    top     : 152px;
+  }
+}
+
+@keyframes card-seven-image-one-in {
+  from {
+    opacity : 0;
+    top     : 178px;
+  }
+  to {
+    opacity : 1;
+    top     : 152px;
+  }
+}
+
+/* #endregion */
+
+/* #region image two */
+.card-seven .image-two.start {
+  opacity : 0;
+  top     : 288px;
+}
+
+@-moz-keyframes card-seven-image-two-in {
+  from {
+    opacity : 0;
+    top     : 288px;
+  }
+  to {
+    opacity : 1;
+    top     : 252px;
+  }
+}
+
+@-webkit-keyframes card-seven-image-two-in {
+  from {
+    opacity : 0;
+    top     : 288px;
+  }
+  to {
+    opacity : 1;
+    top     : 252px;
+  }
+}
+
+@keyframes card-seven-image-two-in {
+  from {
+    opacity : 0;
+    top     : 288px;
+  }
+  to {
+    opacity : 1;
+    top     : 252px;
+  }
+}
+
+/* #endregion */
+
+/* #region image three */
+.card-seven .image-three.start {
+  opacity : 0;
+  top     : 401px;
+}
+
+@-moz-keyframes card-seven-image-three-in {
+  from {
+    opacity : 0;
+    top     : 401px;
+  }
+  to {
+    opacity : 1;
+    top     : 352px;
+  }
+}
+
+@-webkit-keyframes card-seven-image-three-in {
+  from {
+    opacity : 0;
+    top     : 401px;
+  }
+  to {
+    opacity : 1;
+    top     : 352px;
+  }
+}
+
+@keyframes card-seven-image-three-in {
+  from {
+    opacity : 0;
+    top     : 401px;
+  }
+  to {
+    opacity : 1;
+    top     : 352px;
+  }
+}
+
+/* #endregion */
+/* #endregion */
+
+/* #region hulu image / endframe hulu image and button */
+.hulu-logo {
+  left  : 0;
+  right : 0;
+}
+
+.hulu-logo svg {
+  display      : block;
+  width        : 100%;
+  margin-left  : auto;
+  margin-right : auto;
+}
+
+.hulu-logo.start {
+  opacity : 1;
+  bottom  : -26px;
+}
+
+.hulu-logo .logo {
+  margin-bottom : 17px;
+}
+
+.hulu-logo .button .text {
+  position : absolute;
+  bottom   : 9px;
+  display  : block;
+  fill     : #FFF;
+}
+
+.hulu-logo .button .background {
+  fill : #6A3;
+}
+
+.hulu-logo .button:hover .text {
+  fill : #222;
+}
+
+.hulu-logo .button:hover .background {
+  fill : #CCC;
+}
+
+@-moz-keyframes card-seven-hulu-logo-button-in {
+  from {
+    opacity : 1;
+    bottom  : -26px;
+  }
+  to {
+    opacity : 1;
+    bottom  : 23px;
+  }
+}
+
+@-webkit-keyframes card-seven-hulu-logo-button-in {
+  from {
+    opacity : 1;
+    bottom  : -26px;
+  }
+  to {
+    opacity : 1;
+    bottom  : 23px;
+  }
+}
+
+@keyframes card-seven-hulu-logo-button-in {
+  from {
+    opacity : 1;
+    bottom  : -26px;
+  }
+  to {
+    opacity : 1;
+    bottom  : 23px;
+  }
+}
+
+/* #endregion */
+
+/* #region animation durations and delays */
+.card,
+.storyboard-text,
+.storyboard-image {
+  -webkit-animation-fill-mode       : forwards;
+  -moz-animation-fill-mode          : forwards;
+  -ms-animation-fill-mode           : forwards;
+  -o-animation-fill-mode            : forwards;
+  animation-fill-mode               : forwards;
+  -webkit-animation-iteration-count : 1;
+  -moz-animation-iteration-count    : 1;
+  -ms-animation-iteration-count     : 1;
+  -o-animation-iteration-count      : 1;
+  animation-iteration-count         : 1;
+  -webkit-animation-timing-function : ease-out;
+  -moz-animation-timing-function    : ease-out;
+  -ms-animation-timing-function     : ease-out;
+  -o-animation-timing-function      : ease-out;
+  animation-timing-function         : ease-out;
+}
+
+/* #region card one */
+.card-one {
+  -webkit-animation-name     : card-one-out;
+  -moz-animation-name        : card-one-out;
+  -ms-animation-name         : card-one-out;
+  -o-animation-name          : card-one-out;
+  animation-name             : card-one-out;
+  -webkit-animation-delay    : 1s;
+  -moz-animation-delay       : 1s;
+  -ms-animation-delay        : 1s;
+  -o-animation-delay         : 1s;
+  animation-delay            : 1s;
+  -webkit-animation-duration : 1s;
+  -moz-animation-duration    : 1s;
+  -ms-animation-duration     : 1s;
+  -o-animation-duration      : 1s;
+  animation-duration         : 1s;
+}
+
+/* #endregion */
+
+/* #region card two */
+.card-two {
+  -webkit-animation-name     : card-two-in, card-two-out;
+  -moz-animation-name        : card-two-in, card-two-out;
+  -ms-animation-name         : card-two-in, card-two-out;
+  -o-animation-name          : card-two-in, card-two-out;
+  animation-name             : card-two-in, card-two-out;
+  -webkit-animation-delay    : 1.5s, 3.5s;
+  -moz-animation-delay       : 1.5s, 3.5s;
+  -ms-animation-delay        : 1.5s, 3.5s;
+  -o-animation-delay         : 1.5s, 3.5s;
+  animation-delay            : 1.5s, 3.5s;
+  -webkit-animation-duration : 1s, 1s;
+  -moz-animation-duration    : 1s, 1s;
+  -ms-animation-duration     : 1s, 1s;
+  -o-animation-duration      : 1s, 1s;
+  animation-duration         : 1s, 1s;
+}
+
+.card-two .textblock-one {
+  -webkit-animation-name     : card-two-textblock-one-in;
+  -moz-animation-name        : card-two-textblock-one-in;
+  -ms-animation-name         : card-two-textblock-one-in;
+  -o-animation-name          : card-two-textblock-one-in;
+  animation-name             : card-two-textblock-one-in;
+  -webkit-animation-delay    : 1.5s;
+  -moz-animation-delay       : 1.5s;
+  -ms-animation-delay        : 1.5s;
+  -o-animation-delay         : 1.5s;
+  animation-delay            : 1.5s;
+  -webkit-animation-duration : 0.5s;
+  -moz-animation-duration    : 0.5s;
+  -ms-animation-duration     : 0.5s;
+  -o-animation-duration      : 0.5s;
+  animation-duration         : 0.5s;
+}
+
+.card-two .textblock-two {
+  -webkit-animation-name     : card-two-textblock-two-in;
+  -moz-animation-name        : card-two-textblock-two-in;
+  -ms-animation-name         : card-two-textblock-two-in;
+  -o-animation-name          : card-two-textblock-two-in;
+  animation-name             : card-two-textblock-two-in;
+  -webkit-animation-delay    : 2s;
+  -moz-animation-delay       : 2s;
+  -ms-animation-delay        : 2s;
+  -o-animation-delay         : 2s;
+  animation-delay            : 2s;
+  -webkit-animation-duration : 0.5s;
+  -moz-animation-duration    : 0.5s;
+  -ms-animation-duration     : 0.5s;
+  -o-animation-duration      : 0.5s;
+  animation-duration         : 0.5s;
+}
+
+/* #endregion */
+
+/* #region card three */
+.card-three {
+  -webkit-animation-name     : card-three-in, card-three-out;
+  -moz-animation-name        : card-three-in, card-three-out;
+  -ms-animation-name         : card-three-in, card-three-out;
+  -o-animation-name          : card-three-in, card-three-out;
+  animation-name             : card-three-in, card-three-out;
+  -webkit-animation-delay    : 3.3s, 5.3s;
+  -moz-animation-delay       : 3.3s, 5.3s;
+  -ms-animation-delay        : 3.3s, 5.3s;
+  -o-animation-delay         : 3.3s, 5.3s;
+  animation-delay            : 3.3s, 5.3s;
+  -webkit-animation-duration : 1s, 1s;
+  -moz-animation-duration    : 1s, 1s;
+  -ms-animation-duration     : 1s, 1s;
+  -o-animation-duration      : 1s, 1s;
+  animation-duration         : 1s, 1s;
+}
+
+.card-three .textblock-one {
+  -webkit-animation-name     : card-three-textblock-one-in;
+  -moz-animation-name        : card-three-textblock-one-in;
+  -ms-animation-name         : card-three-textblock-one-in;
+  -o-animation-name          : card-three-textblock-one-in;
+  animation-name             : card-three-textblock-one-in;
+  -webkit-animation-delay    : 3.3s;
+  -moz-animation-delay       : 3.3s;
+  -ms-animation-delay        : 3.3s;
+  -o-animation-delay         : 3.3s;
+  animation-delay            : 3.3s;
+  -webkit-animation-duration : 1s;
+  -moz-animation-duration    : 1s;
+  -ms-animation-duration     : 1s;
+  -o-animation-duration      : 1s;
+  animation-duration         : 1s;
+}
+
+/* #endregion */
+
+/* #region card four */
+.card-four {
+  -webkit-animation-name     : card-four-in;
+  -moz-animation-name        : card-four-in;
+  -ms-animation-name         : card-four-in;
+  -o-animation-name          : card-four-in;
+  animation-name             : card-four-in;
+  -webkit-animation-delay    : 6.3s;
+  -moz-animation-delay       : 6.3s;
+  -ms-animation-delay        : 6.3s;
+  -o-animation-delay         : 6.3s;
+  animation-delay            : 6.3s;
+  -webkit-animation-duration : 0s;
+  -moz-animation-duration    : 0s;
+  -ms-animation-duration     : 0s;
+  -o-animation-duration      : 0s;
+  animation-duration         : 0s;
+}
+
+.card-four .textblock-one {
+  -webkit-animation-name     : card-four-textblock-one-in, card-four-textblock-one-out;
+  -moz-animation-name        : card-four-textblock-one-in, card-four-textblock-one-out;
+  -ms-animation-name         : card-four-textblock-one-in, card-four-textblock-one-out;
+  -o-animation-name          : card-four-textblock-one-in, card-four-textblock-one-out;
+  animation-name             : card-four-textblock-one-in, card-four-textblock-one-out;
+  -webkit-animation-delay    : 6.3s, 7.3s;
+  -moz-animation-delay       : 6.3s, 7.3s;
+  -ms-animation-delay        : 6.3s, 7.3s;
+  -o-animation-delay         : 6.3s, 7.3s;
+  animation-delay            : 6.3s, 7.3s;
+  -webkit-animation-duration : 0.5s, 0.5s;
+  -moz-animation-duration    : 0.5s, 0.5s;
+  -ms-animation-duration     : 0.5s, 0.5s;
+  -o-animation-duration      : 0.5s, 0.5s;
+  animation-duration         : 0.5s, 0.5s;
+}
+
+.card-four .textblock-two {
+  -webkit-animation-name     : card-four-textblock-two-in, card-four-textblock-two-out;
+  -moz-animation-name        : card-four-textblock-two-in, card-four-textblock-two-out;
+  -ms-animation-name         : card-four-textblock-two-in, card-four-textblock-two-out;
+  -o-animation-name          : card-four-textblock-two-in, card-four-textblock-two-out;
+  animation-name             : card-four-textblock-two-in, card-four-textblock-two-out;
+  -webkit-animation-delay    : 6.5s, 7.3s;
+  -moz-animation-delay       : 6.5s, 7.3s;
+  -ms-animation-delay        : 6.5s, 7.3s;
+  -o-animation-delay         : 6.5s, 7.3s;
+  animation-delay            : 6.5s, 7.3s; /* animate out as the same time as textblock-one */
+  -webkit-animation-duration : 0.5s, 0.5s;
+  -moz-animation-duration    : 0.5s, 0.5s;
+  -ms-animation-duration     : 0.5s, 0.5s;
+  -o-animation-duration      : 0.5s, 0.5s;
+  animation-duration         : 0.5s, 0.5s;
+}
+
+/* #endregion */
+
+/* #region card five */
+.card-five {
+  -webkit-animation-name     : card-five-in, card-five-out;
+  -moz-animation-name        : card-five-in, card-five-out;
+  -ms-animation-name         : card-five-in, card-five-out;
+  -o-animation-name          : card-five-in, card-five-out;
+  animation-name             : card-five-in, card-five-out;
+  -webkit-animation-delay    : 7.8s, 9.8s;
+  -moz-animation-delay       : 7.8s, 9.8s;
+  -ms-animation-delay        : 7.8s, 9.8s;
+  -o-animation-delay         : 7.8s, 9.8s;
+  animation-delay            : 7.8s, 9.8s;
+  -webkit-animation-duration : 0s, 0.5s;
+  -moz-animation-duration    : 0s, 0.5s;
+  -ms-animation-duration     : 0s, 0.5s;
+  -o-animation-duration      : 0s, 0.5s;
+  animation-duration         : 0s, 0.5s;
+}
+
+.card-five .textblock-one {
+  -webkit-animation-name     : card-five-textblock-one-in;
+  -moz-animation-name        : card-five-textblock-one-in;
+  -ms-animation-name         : card-five-textblock-one-in;
+  -o-animation-name          : card-five-textblock-one-in;
+  animation-name             : card-five-textblock-one-in;
+  -webkit-animation-delay    : 7.8s;
+  -moz-animation-delay       : 7.8s;
+  -ms-animation-delay        : 7.8s;
+  -o-animation-delay         : 7.8s;
+  animation-delay            : 7.8s;
+  -webkit-animation-duration : 0.5s;
+  -moz-animation-duration    : 0.5s;
+  -ms-animation-duration     : 0.5s;
+  -o-animation-duration      : 0.5s;
+  animation-duration         : 0.5s;
+}
+
+/* #endregion */
+
+/* #region card six */
+.card-six {
+  -webkit-animation-name     : card-six-in, card-six-out;
+  -moz-animation-name        : card-six-in, card-six-out;
+  -ms-animation-name         : card-six-in, card-six-out;
+  -o-animation-name          : card-six-in, card-six-out;
+  animation-name             : card-six-in, card-six-out;
+  -webkit-animation-delay    : 9.8s, 11.8s;
+  -moz-animation-delay       : 9.8s, 11.8s;
+  -ms-animation-delay        : 9.8s, 11.8s;
+  -o-animation-delay         : 9.8s, 11.8s;
+  animation-delay            : 9.8s, 11.8s;
+  -webkit-animation-duration : 1s, 1s;
+  -moz-animation-duration    : 1s, 1s;
+  -ms-animation-duration     : 1s, 1s;
+  -o-animation-duration      : 1s, 1s;
+  animation-duration         : 1s, 1s;
+}
+
+.card-six .textblock-one {
+  -webkit-animation-name     : card-six-textblock-one-in;
+  -moz-animation-name        : card-six-textblock-one-in;
+  -ms-animation-name         : card-six-textblock-one-in;
+  -o-animation-name          : card-six-textblock-one-in;
+  animation-name             : card-six-textblock-one-in;
+  -webkit-animation-delay    : 9.8s;
+  -moz-animation-delay       : 9.8s;
+  -ms-animation-delay        : 9.8s;
+  -o-animation-delay         : 9.8s;
+  animation-delay            : 9.8s;
+  -webkit-animation-duration : 1s;
+  -moz-animation-duration    : 1s;
+  -ms-animation-duration     : 1s;
+  -o-animation-duration      : 1s;
+  animation-duration         : 1s;
+}
+
+/* #endregion */
+
+/* #region card seven */
+.card-seven {
+  -webkit-animation-name     : card-seven-in;
+  -moz-animation-name        : card-seven-in;
+  -ms-animation-name         : card-seven-in;
+  -o-animation-name          : card-seven-in;
+  animation-name             : card-seven-in;
+  -webkit-animation-delay    : 12.8s;
+  -moz-animation-delay       : 12.8s;
+  -ms-animation-delay        : 12.8s;
+  -o-animation-delay         : 12.8s;
+  animation-delay            : 12.8s;
+  -webkit-animation-duration : 0s;
+  -moz-animation-duration    : 0s;
+  -ms-animation-duration     : 0s;
+  -o-animation-duration      : 0s;
+  animation-duration         : 0s;
+}
+
+.card-seven .textblock-one {
+  -webkit-animation-name     : card-seven-textblock-one-in;
+  -moz-animation-name        : card-seven-textblock-one-in;
+  -ms-animation-name         : card-seven-textblock-one-in;
+  -o-animation-name          : card-seven-textblock-one-in;
+  animation-name             : card-seven-textblock-one-in;
+  -webkit-animation-delay    : 12.8s;
+  -moz-animation-delay       : 12.8s;
+  -ms-animation-delay        : 12.8s;
+  -o-animation-delay         : 12.8s;
+  animation-delay            : 12.8s;
+  -webkit-animation-duration : 0.5s;
+  -moz-animation-duration    : 0.5s;
+  -ms-animation-duration     : 0.5s;
+  -o-animation-duration      : 0.5s;
+  animation-duration         : 0.5s;
+}
+
+.card-seven .textblock-two {
+  -webkit-animation-name     : card-seven-textblock-two-in;
+  -moz-animation-name        : card-seven-textblock-two-in;
+  -ms-animation-name         : card-seven-textblock-two-in;
+  -o-animation-name          : card-seven-textblock-two-in;
+  animation-name             : card-seven-textblock-two-in;
+  -webkit-animation-delay    : 13.3s;
+  -moz-animation-delay       : 13.3s;
+  -ms-animation-delay        : 13.3s;
+  -o-animation-delay         : 13.3s;
+  animation-delay            : 13.3s;
+  -webkit-animation-duration : 0.5s;
+  -moz-animation-duration    : 0.5s;
+  -ms-animation-duration     : 0.5s;
+  -o-animation-duration      : 0.5s;
+  animation-duration         : 0.5s;
+}
+
+.card-seven .image-one {
+  -webkit-animation-name     : card-seven-image-one-in;
+  -moz-animation-name        : card-seven-image-one-in;
+  -ms-animation-name         : card-seven-image-one-in;
+  -o-animation-name          : card-seven-image-one-in;
+  animation-name             : card-seven-image-one-in;
+  -webkit-animation-delay    : 13.8s;
+  -moz-animation-delay       : 13.8s;
+  -ms-animation-delay        : 13.8s;
+  -o-animation-delay         : 13.8s;
+  animation-delay            : 13.8s;
+  -webkit-animation-duration : 0.5s;
+  -moz-animation-duration    : 0.5s;
+  -ms-animation-duration     : 0.5s;
+  -o-animation-duration      : 0.5s;
+  animation-duration         : 0.5s;
+}
+
+.card-seven .image-two {
+  -webkit-animation-name     : card-seven-image-two-in;
+  -moz-animation-name        : card-seven-image-two-in;
+  -ms-animation-name         : card-seven-image-two-in;
+  -o-animation-name          : card-seven-image-two-in;
+  animation-name             : card-seven-image-two-in;
+  -webkit-animation-delay    : 14.3s;
+  -moz-animation-delay       : 14.3s;
+  -ms-animation-delay        : 14.3s;
+  -o-animation-delay         : 14.3s;
+  animation-delay            : 14.3s;
+  -webkit-animation-duration : 0.5s;
+  -moz-animation-duration    : 0.5s;
+  -ms-animation-duration     : 0.5s;
+  -o-animation-duration      : 0.5s;
+  animation-duration         : 0.5s;
+}
+
+.card-seven .image-three {
+  -webkit-animation-name     : card-seven-image-three-in;
+  -moz-animation-name        : card-seven-image-three-in;
+  -ms-animation-name         : card-seven-image-three-in;
+  -o-animation-name          : card-seven-image-three-in;
+  animation-name             : card-seven-image-three-in;
+  -webkit-animation-delay    : 14.8s;
+  -moz-animation-delay       : 14.8s;
+  -ms-animation-delay        : 14.8s;
+  -o-animation-delay         : 14.8s;
+  animation-delay            : 14.8s;
+  -webkit-animation-duration : 0.5s;
+  -moz-animation-duration    : 0.5s;
+  -ms-animation-duration     : 0.5s;
+  -o-animation-duration      : 0.5s;
+  animation-duration         : 0.5s;
+}
+
+.hulu-logo {
+  -webkit-animation-name     : card-seven-hulu-logo-button-in;
+  -moz-animation-name        : card-seven-hulu-logo-button-in;
+  -ms-animation-name         : card-seven-hulu-logo-button-in;
+  -o-animation-name          : card-seven-hulu-logo-button-in;
+  animation-name             : card-seven-hulu-logo-button-in;
+  -webkit-animation-delay    : 15.3s;
+  -moz-animation-delay       : 15.3s;
+  -ms-animation-delay        : 15.3s;
+  -o-animation-delay         : 15.3s;
+  animation-delay            : 15.3s;
+  -webkit-animation-duration : 0.5s;
+  -moz-animation-duration    : 0.5s;
+  -ms-animation-duration     : 0.5s;
+  -o-animation-duration      : 0.5s;
+  animation-duration         : 0.5s;
+}
+
+/* #endregion */
+/* #endregion */
+
+/* #endregion */

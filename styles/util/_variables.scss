@@ -1,0 +1,65 @@
+@forward './mixins';
+
+
+//////////////////////////////////////////////////////////////////////
+//// VARIABLES ///////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+// Desktop
+$desktop-width: 1280px;
+$desktop-height: 800px;
+
+// COLORS ----------------------------------->
+
+$color-red: red;
+$color-teal: #42605c;
+$color-pink: #fa7d81;
+$color-yellow: #f7d54e;
+$color-blue: #8db4b7;
+$color-textGrey: #363636;
+$color-btnTextGrey: #161616;
+$color-textOffWhite: #f7f7f7;
+
+// Background Colors
+$color-footerDark: #212121;
+$color-bodybg: #262626;
+$color-bgGray: #292929;
+$color-homeGray: #2e2e2e;
+$color-overlayDrkGray: #252525;
+$color-white: #fff;
+
+:export {
+	Color-pink: $color-pink;
+}
+
+// MEDIA QUERIES ----------------------------->
+
+$MQ-large-desktop: 1284px;
+$MQ-large-laptop: 992px;
+$MQ-large-tablet: 768px;
+$MQ-large-phone-portrait: 576px;
+
+// FONTS ------------------------------------>
+
+//Default font size
+$font-size: 18px;
+
+@font-face {
+	font-family: 'akira_expandedsuper_bold';
+	src: url('../../public/fonts/akira_expanded_demo-webfont.woff2')
+			format('woff2'),
+		url('../../public/fonts/akira_expanded_demo-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$font-family-akira: 'akira_expandedsuper_bold';
+$font-family-blankRiver: 'Blank River', sans-serif;
+$font-family-heavitas: 'Heavitas', sans-serif;
+$font-family-myriad: 'Myriad Pro';
+$font-family-montserrat: 'Montserrat', sans-serif;
+$font-family-amatic: 'Amatic SC', sans-serif;
+
+$font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, 'Blank River',
+	sans-serif;

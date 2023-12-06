@@ -1,0 +1,250 @@
+#videoContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 250px;
+  width: 300px;
+  z-index: 11;
+  background-color: black; }
+
+#videoPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1; }
+
+#vidControls {
+  position: absolute;
+  bottom: 15px;
+  left: 22px;
+  height: 26px;
+  width: 250px;
+  z-index: 3;
+  display: none; }
+
+#playButton {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  height: 14px;
+  width: 7px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 2; }
+  #playButton svg, #playButton path {
+    fill: #FFF; }
+  #playButton:hover svg, #playButton:hover path {
+    fill: #ffd67f; }
+
+#pauseButton {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  height: 14px;
+  width: 9px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 2;
+  display: none; }
+  #pauseButton svg, #pauseButton path {
+    fill: #FFF; }
+  #pauseButton:hover svg, #pauseButton:hover path {
+    fill: #ffd67f; }
+
+#soundOnButton {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  height: 16px;
+  width: 18px;
+  cursor: pointer;
+  z-index: 2; }
+  #soundOnButton svg, #soundOnButton path {
+    fill: #FFF; }
+  #soundOnButton:hover svg, #soundOnButton:hover path {
+    fill: #ffd67f; }
+
+#soundOffButton {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  height: 16px;
+  width: 18px;
+  cursor: pointer;
+  z-index: 2;
+  display: none; }
+  #soundOffButton svg, #soundOffButton path {
+    fill: #FFF; }
+  #soundOffButton:hover svg, #soundOffButton:hover path {
+    fill: #ffd67f; }
+
+#videoScrubber {
+  position: absolute;
+  width: 190px;
+  height: inherit;
+  left: 25px;
+  top: 1px;
+  z-index: 3; }
+
+#scrubHandle {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: 8px;
+  width: 8px;
+  z-index: 6;
+  cursor: pointer;
+  background: #FFF; }
+
+.endControlScrubber {
+  width: 190px !important; }
+
+#scrubTrack {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 4px;
+  width: inherit;
+  background: #666;
+  z-index: 5;
+  cursor: pointer; }
+
+#scrubProgress {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: #ffd67f;
+  z-index: 5;
+  pointer-events: none; }
+
+#vidControlBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  border-radius: 4px;
+  background-color: black;
+  opacity: 0.5; }
+
+#snd-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 51px;
+  width: 51px;
+  background: url("../images/soundIcon.png");
+  overflow: hidden; }
+
+#videoClick {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  cursor: pointer; }
+
+#replayBtn {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  height: 17px;
+  width: 17px;
+  z-index: 11;
+  cursor: pointer; }
+  #replayBtn svg, #replayBtn path {
+    fill: #FFF; }
+  #replayBtn:hover {
+    transition: all 0.5s ease-out;
+    -ms-transform: rotate(-360deg);
+    transform: rotate(-360deg); }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body, body * {
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+#adContainer {
+  height: 250px;
+  width: 300px;
+  display: none;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  border: 1px solid #ffd67f;
+  z-index: 1;
+  transition: all 0.3s ease-out; }
+  #adContainer.ready {
+    display: block; }
+
+.bg-exit {
+  z-index: 10;
+  cursor: pointer; }
+  .bg-exit.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+
+#expand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px; }
+
+#expBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 300px;
+  background: url("../images/exp_background.jpg") no-repeat; }
+
+#expLogo {
+  position: absolute;
+  right: 16px;
+  bottom: 41px;
+  height: 41px;
+  width: 218px;
+  background: url("../images/svg/logo.svg") no-repeat; }
+
+#expPedigree {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  height: 29px;
+  width: 182px;
+  background: url("../images/col_quote.png") no-repeat; }
+
+#expDate {
+  position: absolute;
+  right: 16px;
+  bottom: 19px;
+  height: 17px;
+  width: 219px;
+  background: url("../images/exp_date_sundays.png") no-repeat; }
+
+.expDate_post {
+  width: 219px !important;
+  height: 18px !important;
+  background: url("../images/exp_date_tonight.png") no-repeat !important; }

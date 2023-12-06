@@ -1,0 +1,54 @@
+@use '../util/variables';
+@import '../util/mixins';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: variables.$color-bgGray;
+	overflow: hidden;
+	user-select: none;
+
+	&.about {
+		background-color: variables.$color-overlayDrkGray;
+	}
+
+	&.portfolio {
+		background-color: variables.$color-footerDark;
+	}
+
+	.guyBust {
+		pointer-events: none;
+		position: absolute;
+		bottom: -40px;
+		right: -56px;
+		// z-index: 1;
+
+		img {
+			width: 100%;
+			max-width: 173px;
+			max-height: 274px;
+			transform: scaleX(-1);
+		}
+	}
+
+	.rightColumn {
+		pointer-events: none;
+		position: fixed;
+		right: 0;
+		height: 100%;
+		border-right: 20px solid variables.$color-teal;
+		// z-index: 1;
+	}
+
+	.wrapper {
+		width: 100%;
+		margin: 0 auto;
+		overflow: hidden;
+
+		section {
+			width: 100%;
+			// height: wrapperHeight();
+		}
+	}
+}

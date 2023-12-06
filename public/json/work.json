@@ -1,0 +1,163 @@
+{
+    "projects": {
+       "projectItems": [
+            {
+                "id": 1,
+                "selected": false,
+                "type": "Ads",
+                "title": "Transparent",
+                "client": "Amazon Prime",
+                "description": "Season Final",
+                "thumb": "amz_transparent_thumb.jpg",
+                "media": {
+                    "mediaType": "video",
+                    "source": "/banner_amazon_transparent/az_transparent.mp4"
+                },
+                "modal": {
+                    "headline": "Ad to promote new season",
+                    "details": "- No Framework\n- New Cast"
+                }
+            },
+            {
+                "id": 2,
+                "selected": false,
+                "type": "Ads",
+                "title": "Watchmen",
+                "client": "HBO",
+                "description": "New series digital banner campaign",
+                "thumb": "hbo_watchmen_thumb.jpg",
+                "media": {
+                    "mediaType": "banner",
+                    "source": "/banner_hbo_watchmen/300x250/index.html"
+                },
+                "modal": {
+                    "headline": "300x250 video banner",
+                    "details": "- MP4 videos\n- Tune-in date coded"
+                }
+            },
+            {
+                "id": 3,
+                "selected": false,
+                "type": "Website/Ads",
+                "title": "The Book of Mormon",
+                "client": "Broadway",
+                "description": "Website for client",
+                "thumb": "bway_bom_thumb.jpg",
+                "media": {
+                    "mediaType": "banner",
+                    "source": "iframe"
+                },
+                "modal": {
+                    "headline": "Website about the Broadway Musical & Ads",
+                    "details": "- Site built in vanilla js, no Framework\n- Worked on the Mexico territory page\n- Ads with video built in HTML5\n- Video motion made with After Effect and adapted for diffrent sizes."
+                }
+            },
+            {
+                "id": 4,
+                "selected": false,
+                "type": "Ads",
+                "title": "All Elite Wrestling",
+                "client": "TNT",
+                "description": "Website for client",
+                "thumb": "tnt_aew_thumb.jpg",
+                "media": {
+                    "mediaType": "banner",
+                    "source": "iframe"
+                },
+                "modal": {
+                    "headline": "Multiple size banners, some with video",
+                    "details": "- Ads built in HTML5\n- Animation done with greensock library."
+                }
+            },
+            {
+                "id": 5,
+                "selected": false,
+                "type": "Ads",
+                "title": "To Kill A Mockingbird",
+                "client": "Broadway",
+                "description": "Website for client",
+                "thumb": "bway_TKAM_thumb.jpg",
+                "media": {
+                    "mediaType": "banner",
+                    "source": "iframe"
+                },
+                "modal": {
+                    "headline": "Multiple size banners, some with video",
+                    "details": "- Ads built in HTML5\n- Animation done with greensock library."
+                }
+            },
+            {
+
+            "id": 6,
+            "selected": false,
+            "type": "Ads",
+            "title": "West Side Story",
+            "client": "Broadway",
+            "description": "Website for client",
+            "thumb": "bway_wss_thumb.jpg",
+            "media": {
+                "mediaType": "banner",
+                "source": "iframe"
+            },
+            "modal": {
+                "headline": "Multiple size banners, some with video",
+                "details": "- Ads built in HTML5\n- Animation done with greensock library."
+            }
+        },
+        {
+
+            "id": 7,
+            "selected": false,
+            "type": "Website/Ads",
+            "title": "The Music Man",
+            "client": "Broadway",
+            "description": "Website for client",
+            "thumb": "bway_musicman_thumb.jpg",
+            "media": {
+                "mediaType": "banner",
+                "source": "iframe"
+            },
+            "modal": {
+                "headline": "Website about the Broadway Musical & Ads",
+                "details": "- Ads built in HTML5\n- Animation done with greensock library."
+            }
+        },
+        {
+
+            "id": 8,
+            "selected": false,
+            "type": "Ads",
+            "title": "Gary A sequal to Titus Andronicus",
+            "client": "Broadway",
+            "description": "Ads client",
+            "thumb": "bway_gary_thumb.jpg",
+            "media": {
+                "mediaType": "banner",
+                "source": "iframe"
+            },
+            "modal": {
+                "headline": "Ads promoting the Broadway Musical",
+                "details": "- Ads built in HTML5\n- Motion done in After effects"
+            }
+        },
+        {
+
+            "id": 9,
+            "selected": false,
+            "type": "Ads",
+            "title": "An American Pickle",
+            "client": "HBOMAX",
+            "description": "Website for client",
+            "thumb": "hbo_americanpickle_thumb.jpg",
+            "media": {
+                "mediaType": "banner",
+                "source": "iframe"
+            },
+            "modal": {
+                "headline": "New movie on new network - Variety of Banners",
+                "details": "- Ads built in HTML5\n- Animation done with greensock library."
+            }
+        }
+        ]
+    }
+}

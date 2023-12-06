@@ -1,0 +1,121 @@
+@use '../util/variables';
+@import '../util/mixins';
+
+.logoContainer {
+	cursor: pointer;
+	padding: 0 16vw;
+	max-width: 1144px;
+
+	* {
+		pointer-events: none;
+	}
+
+	.logo {
+		display: flex;
+		justify-content: center;
+		border: 2px solid variables.$color-teal;
+		border-bottom: 0;
+
+		img {
+			width: calc((820px / 864px) * 100%);
+			margin-top: calc((15px / variables.$desktop-height) * 100%); //1.875%
+		}
+	}
+
+	.subheaderContainer {
+		display: flex;
+		max-height: 16px;
+
+		@include fluid-type(
+			variables.$MQ-large-laptop,
+			variables.$MQ-large-desktop,
+			4px,
+			5.5px
+		);
+		font-family: variables.$font-family-akira;
+		color: #fff;
+
+		// @media screen and (max-width: variables.$MQ-large-laptop) {
+		// 	@include fluid-type(
+		// 		variables.$MQ-large-tablet,
+		// 		variables.$MQ-large-laptop,
+		// 		3.7px,
+		// 		5.2px
+		// 	);
+		// }
+
+		// @media screen and (max-width: variables.$MQ-large-tablet) {
+		// 	height: 12px;
+		// 	@include fluid-type(
+		// 		variables.$MQ-large-phone-portrait,
+		// 		variables.$MQ-large-tablet,
+		// 		3.3px,
+		// 		3.7px
+		// 	);
+		// }
+
+		.bottom-border {
+			width: 28%;
+			height: auto;
+			border-bottom: 2px solid variables.$color-teal;
+		}
+
+		.leftBorder {
+			@extend .bottom-border;
+			border-left: 2px solid variables.$color-teal;
+		}
+
+		.rightBorder {
+			@extend .bottom-border;
+			border-right: 2px solid variables.$color-teal;
+		}
+
+		.subheaderText {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: calc((14px / variables.$desktop-height) * 100%) auto 0;
+
+			// @media screen and (max-width: variables.$MQ-large-laptop) {
+			// 	margin-top: calc((18px / variables.$desktop-height) * 100%);
+			// }
+
+			// @media screen and (max-width: variables.$MQ-large-tablet) {
+			// 	margin-top: calc((16px / variables.$desktop-height) * 100%);
+			// }
+
+			h1,
+			span {
+				margin: 0;
+				letter-spacing: 0.5px;
+			}
+
+			span {
+				width: 3px;
+				height: 3px;
+				border-radius: 50%;
+				background: variables.$color-pink;
+				margin: 0 5px;
+			}
+
+			h1,
+			h2 {
+				margin: 0;
+			}
+
+			h2 {
+				display: inline-block;
+				margin: 0;
+				@include fluid-type(
+					variables.$MQ-large-phone-portrait,
+					variables.$MQ-large-desktop,
+					9px,
+					12px
+				);
+				font-family: variables.$font-family-blankRiver;
+				color: variables.$color-pink;
+				margin: 0 2px;
+			}
+		}
+	}
+}
