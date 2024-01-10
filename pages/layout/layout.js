@@ -40,14 +40,22 @@ export default function Layout({ children }) {
   return (
     <>
       <div className={container}>
-				<div className={styles.wrapper}>
-					<Header />
-					<section>{children}</section>
-				</div>
-				<Footer />
-				<div className={bust}><img src="/svg/peep_bust.svg" alt="illustrated person" /></div>
-				<div className={rightColumn}></div>
-			</div>
+	  	<Header />
+		<section>{children}</section>
+		<Footer />
+		<div className={bust}><img src="/svg/peep_bust.svg" alt="illustrated person" /></div>
+		<div className={rightColumn}></div>
+		</div>
     </>
   );
 }
+
+{/* <div className={container}>
+			<div className={styles.wrapper}>
+				<Header />
+				<section>{children}</section>
+			</div>
+			<Footer />
+			<div className={bust}><img src="/svg/peep_bust.svg" alt="illustrated person" /></div>
+			<div className={rightColumn}></div>
+		</div> */}

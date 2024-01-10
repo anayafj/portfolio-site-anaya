@@ -42,3 +42,16 @@
 	// need a percentage to return
 	@return $height-pct;
 }
+
+
+// have bottom get sticky when it reaches the bottom of the page
+
+// 1. Get height of page.
+// 2. Get height and y position of footer
+// 3. height of page - y position of footer = new baseline
+// 4. baseline - height of footer = distance from bottom of the page
+// 5. return distance from bottom of the page;
+
+// @function shortyGetLow(){
+// 	@return floor; 
+// }

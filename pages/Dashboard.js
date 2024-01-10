@@ -39,7 +39,8 @@ export default function Dashboard() {
 					className={styles['workLink-container']}
 				>
 					<div className={styles['workLogo']}>
-						<img src="/svg/homeNav_work.svg" alt="navButton - Work" />
+						<span>Work</span>
+						{/* <img src="/svg/homeNav_work.svg" alt="navButton - Work" /> */}
 					</div>
 					<h2>Check out my projects</h2>
 					<div className={styles['buttonLines-work']}></div>
@@ -56,9 +57,9 @@ export default function Dashboard() {
 					className={styles['aboutLink-container']}
 				>
 					<div className={styles['aboutLogo']}>
-						<img src="/svg/homeNav_me.svg" alt="navButton - About" />
+					<span>About Me</span>
+						{/* <img src="/svg/homeNav_me.svg" alt="navButton - About" /> */}
 					</div>
-					{/* <h2>Please let me introduce myself</h2> */}
 					<h2>Let me introduce myself</h2>
 					<div className={styles['buttonLines-about']}></div>
 				</section>

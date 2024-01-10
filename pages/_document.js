@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
-      <title>Francisco Anaya Portfolio Site</title>
+      {/* <title>Francisco Anaya Portfolio Site</title> */}
 				<meta name="description" content="Portfolio website using NextJs" />
 				<link rel="icon" href="/favicon.ico" />
 				<link

@@ -1,0 +1,281 @@
+@use '../util/variables';
+@import '../util/mixins';
+
+$nav-col-width: 115px;
+$nav-exp-width: 386px;
+$nav-exp-height: 30px;
+
+.navContainer {
+	margin-right: 40px;
+
+	.expandedNav {
+		display: flex;
+		position: relative;
+		align-items: center;
+		width: $nav-exp-width;
+		height: $nav-exp-height;
+		border-radius: 6px;
+		overflow: hidden;
+
+		.expNavBg {
+			cursor: pointer;
+			display: flex;
+			width: 100%;
+			height: 100%;
+			background-color: variables.$color-pink;
+
+			.shapes {
+				width: 100%;
+				height: 100%;
+				transform: skew(146deg);
+			}
+
+			.homeTab:hover {
+				.pinkTxt {
+					top: 4px;
+					transition: top 0.3s ease-out;
+				}
+
+				hr {
+					visibility: visible;
+					width: 70%;
+					transition: width 0.3s ease-out;
+				}
+			}
+
+			.home {
+				position: relative;
+				width: 106px;
+				height: 100%;
+
+				.pinkTxt {
+					position: absolute;
+					top: 5px;
+					left: 24px;
+					pointer-events: none;
+
+					transition: top 0.2s ease-out;
+
+					img {
+						width: 100%;
+						max-width: 51px;
+						max-height: 16px;
+					}
+				}
+
+				hr {
+					visibility: hidden;
+					position: absolute;
+					top: 14px;
+					left: 12px;
+					width: 0%;
+					border-width: 1px;
+					border-color: black;
+
+					transition: all 0.2s ease-out;
+				}
+			}
+
+			.workTab:hover {
+				.yellowTxt {
+					top: 2px;
+					transition: top 0.3s ease-out;
+				}
+
+				hr {
+					visibility: visible;
+					width: 70%;
+					transition: width 0.3s ease-out;
+				}
+			}
+
+			.work {
+				position: relative;
+				width: 114px;
+
+				&.workTabActive .yellow {
+					background-color: black;
+					transition: background-color 0.2s ease-out;
+				}
+				&.workTabActive.open .yellow {
+					background-color: variables.$color-yellow;
+					transition: background-color 0.3s ease-in 0.3s;
+				}
+
+				&.workTabActive .yellowTxt {
+					left: 35px;
+
+					img {
+						display: none;
+					}
+
+					span {
+						display: block;
+					}
+				}
+
+				.yellow {
+					@extend .shapes;
+					background-color: variables.$color-yellow;
+					pointer-events: none;
+				}
+
+				.yellowTxt {
+					position: absolute;
+					top: 4px;
+					left: 29px;
+					pointer-events: none;
+
+					transition: top 0.2s ease-out;
+
+					img {
+						width: 100%;
+						max-width: 53px;
+						max-height: 16px;
+					}
+
+					span {
+						display: none;
+						font-size: 19px;
+						font-family: variables.$font-family-blankRiver;
+						letter-spacing: 1.5px;
+						color: white;
+					}
+				}
+
+				hr {
+					visibility: hidden;
+					position: absolute;
+					top: 13px;
+					left: 11px;
+					width: 0%;
+					border-width: 1px;
+					border-color: black;
+
+					transition: all 0.2s ease-out;
+				}
+			}
+
+			.aboutTab:hover {
+				.blueTxt {
+					top: 4px;
+					transition: top 0.3s ease-out;
+				}
+
+				hr {
+					visibility: visible;
+					width: 80%;
+					transition: width 0.3s ease-out;
+				}
+			}
+
+			.about {
+				position: relative;
+				width: 114px;
+
+				&.aboutTabActive .blue {
+					background-color: black;
+					transition: background-color 0.2s ease-out;
+				}
+				&.aboutTabActive.open .blue {
+					background-color: variables.$color-blue;
+					transition: background-color 0.2s ease-out;
+				}
+
+				&.aboutTabActive .blueTxt {
+					top: 3px;
+					left: 23px;
+
+					img {
+						display: none;
+					}
+
+					span {
+						display: block;
+					}
+				}
+
+				.blue {
+					@extend .shapes;
+					background-color: variables.$color-blue;
+					pointer-events: none;
+				}
+
+				.blueTxt {
+					position: absolute;
+					top: 6px;
+					left: 18px;
+					pointer-events: none;
+
+					transition: top 0.2s ease-out;
+
+					img {
+						width: 100%;
+						max-width: 75px;
+						max-height: 18px;
+					}
+
+					span {
+						display: none;
+						font-size: 19px;
+						font-family: variables.$font-family-blankRiver;
+						letter-spacing: 1.1px;
+						color: white;
+					}
+				}
+
+				hr {
+					visibility: hidden;
+					position: absolute;
+					top: 14px;
+					left: 5px;
+					width: 0%;
+					border-width: 1px;
+					border-color: black;
+
+					transition: all 0.2s ease-out;
+				}
+			}
+
+			.navMenu {
+				display: flex;
+				position: relative;
+				left: -10px;
+				width: 51px;
+
+				.white {
+					border-top: 0px solid transparent;
+					border-right: 42px solid white;
+					border-bottom: 30px solid white;
+					border-left: 20px solid transparent;
+				}
+
+				.menuCta {
+					display: flex;
+					align-items: center;
+					position: absolute;
+					margin-top: 6px;
+					margin-left: 22px;
+
+					img {
+						width: 100%;
+						max-width: 51px;
+						max-height: 17px;
+						margin-left: 5px;
+					}
+				}
+
+				.closeXtext {
+					display: flex;
+					align-items: center;
+					position: absolute;
+					margin-top: 4px;
+					margin-left: 32px;
+					font-family: variables.$font-family-blankRiver;
+					font-size: 18px;
+					color: variables.$color-btnTextGrey;
+				}
+			}
+		}
+	}
+}
