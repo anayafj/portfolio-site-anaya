@@ -1,0 +1,131 @@
+@use '../util/variables';
+
+.mainContainer {
+	max-width: 1080px;
+	min-width: 500px;
+
+	header {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		max-height: 55px;
+		background-color: variables.$color-bgGray;
+		border-radius: 6px 6px 0 0;
+
+		h1 {
+			pointer-events: none;
+			font-size: 18px;
+			font-family: variables.$font-family-blankRiver;
+			letter-spacing: 2px;
+			color: variables.$color-pink;
+			margin: 0;
+			padding: 0 4px;
+		}
+
+		.logoContainer {
+			display: flex;
+			margin: 10px 0 10px 20px;
+
+			.logo {
+				width: 1.5vw;
+				min-width: 15px;
+				max-width: 22px;
+
+				img {
+					width: 100%;
+					max-width: 23px;
+					max-height: 31px;
+					margin: 0 auto;
+				}
+			}
+
+			.subheaderContainer {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				width: fit-content;
+				margin-left: 10px;
+
+				h1 {
+					font-size: 8px;
+					font-family: variables.$font-family-akira;
+					font-style: normal;
+					color: #fff;
+					letter-spacing: 1.4px;
+					margin: 0;
+					padding: 0;
+				}
+
+				span {
+					width: 3px;
+					height: 3px;
+					border-radius: 50%;
+					background: variables.$color-pink;
+					margin: 0 5px;
+				}
+			}
+		}
+
+		button {
+			cursor: pointer;
+			font-size: 20px;
+			font-family: variables.$font-family-blankRiver;
+			text-decoration: none;
+			border: none;
+			color: variables.$color-textOffWhite;
+			background-color: transparent;
+			padding: 0 10px;
+			margin-right: 10px;
+			margin-left: auto;
+
+			&:hover {
+				color: variables.$color-yellow;
+			}
+		}
+	}
+
+	.content {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-color: variables.$color-white;
+
+		.main {
+			display: flex;
+			justify-content: center;
+			margin-top: 40px;
+		}
+
+		.info {
+			display: flex;
+			width: 88%;
+			flex-direction: column;
+			margin-top: 10px;
+			margin-bottom: 40px;
+
+			hr {
+				width: 100%;
+				border: 0;
+				height: 2px;
+				background-color: variables.$color-pink;
+			}
+
+			h1,
+			h2 {
+				font-family: variables.$font-family-avenir;
+				font-size: 12px;
+				font-weight: 900;
+				color: variables.$color-textGrey;
+				margin: 0;
+			}
+
+			h2 {
+				font-size: 10px;
+				font-weight: 500;
+				letter-spacing: 0.6px;
+				color: #686868;
+				white-space: pre-line;
+			}
+		}
+	}
+}

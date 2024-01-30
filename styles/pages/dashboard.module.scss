@@ -170,10 +170,14 @@ $holla-text-height: 273px;
 
 		.aboutLink-container {
 			cursor: pointer;
-			width: 17vw;
-			height: fit-content;
-			margin-top: 3vw;
-			overflow: hidden;
+			width: 18vw;
+			align-self: flex-end;
+			// height: fit-content;
+			// margin-top: 3vw;
+			// padding-left: 5px;
+			margin-bottom: 2vw;
+			padding-left: 8px;
+			// overflow: hidden;
 
 			* {
 				pointer-events: none;
@@ -196,6 +200,9 @@ $holla-text-height: 273px;
 				width: 8.3vw;
 				padding: 0 2.5vw 0 2px;
 				font-size: 56px;
+				// padding-left: 4px;
+
+
 				@include fluid-type(
 					variables.$MQ-large-tablet,
 					variables.$MQ-large-desktop,
@@ -205,7 +212,7 @@ $holla-text-height: 273px;
 				font-weight: 200;
 				font-family: variables.$font-family-blankRiver;
 				letter-spacing: 0.8px;
-				line-height: 54px;
+				line-height: 45px;
 				color: variables.$color-dimBlue;
 				transition: color 0.5s ease-out;
 
@@ -251,9 +258,9 @@ $holla-text-height: 273px;
 			padding: 0 3vw;
 			margin: 0 1vw;
 
-			@media screen and (max-width: variables.$MQ-large-tablet) {
-				margin: 0 15px;
-			}
+			// @media screen and (max-width: variables.$MQ-large-tablet) {
+			// 	margin: 0 15px;
+			// }
 
 			h1 {
 				@include fluid-type(

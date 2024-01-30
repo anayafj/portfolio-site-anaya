@@ -12,7 +12,8 @@ const myStyles = classNames.bind(styles);
 
 export default function Layout({ children }) {
   const router = useRouter();
-	const [path, setPath] = useState(null);
+  const [path, setPath] = useState(null);
+  console.log("path =  "+path);
 
 	useEffect(() => {
 		setPath(router.pathname);
@@ -26,6 +27,7 @@ export default function Layout({ children }) {
 	let bust = myStyles(
 		{ guyBust: true },
 		`${path === '/portfolio' ? '' : 'hide'}`,
+		`${path === '/' || null ? 'hide' : ''}`,
 	);
 
 	let rightColumn = myStyles(

@@ -47,7 +47,6 @@ export default function About() {
 	// let scrollText = myStyles({ textContent: true });
 
 	return (
-		// <Fragment>
 			<div className={styles.aboutPage}>
 				<StandingGuyContainer
 					src="/svg/peep_standing.svg"
@@ -90,6 +89,5 @@ export default function About() {
 				</div>
 				<hr noshade="false" />
 			</div>
-		// </Fragment>
 	);
 }
