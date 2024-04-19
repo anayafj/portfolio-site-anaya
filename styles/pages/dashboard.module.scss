@@ -12,33 +12,27 @@ $holla-text-height: 273px;
 .main {
 	display: flex;
 	flex-flow: wrap;
-	width: 97vw;
-	--height: 44vw;
-	height: var(--height);
+	// width: 97vw;
+	width: 100%;
+	height: 764px;
+	// --height: 44vw;
+	// height: var(--height);
 	// max-height: 580px;
-	background-color: variables.$color-homeGray;
-	margin-left: auto;
-	padding-right: 20px;
+	background-color: #F7F3E7;
+	// margin-left: auto;
+	// padding-right: 20px;
+	margin-top: 14vw;
 
-	@media screen and (min-width: variables.$MQ-large-laptop) {
-		--height:auto;
-	}
+	// @media screen and (min-width: variables.$MQ-large-laptop) {
+	// 	--height:auto;
+	// }
 
-	.bgLines {
-		position: absolute;
-		width: 100%;
-		height: calc(var(--height) - 24px);
-		max-height: 560px;
-		border-left: 2px solid variables.$color-overlayDrkGray;
-		border-bottom: 2px solid variables.$color-overlayDrkGray;
-		padding-left: 9px;
-		margin-left: 9px;
-	}
 
 	.hola-container {
 		width: calc(($holla-text-width / $home-maxHeight) * 100%);
 		height: max-content;
 		margin: 4vh 1vh 0 2vw;
+		// color: #FAFFFD;
 
 		// @media screen and (max-width: variables.$MQ-large-tablet) {
 		// 	margin-top: 30px;

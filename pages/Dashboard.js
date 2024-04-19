@@ -20,7 +20,6 @@ export default function Dashboard() {
 
 	return (
 		<main className={styles.main}>
-			<div className={styles['bgLines']}></div>
 			<div className={styles['hola-container']}>
 				<img className={styles['hola']} src="/svg/hola.svg" alt="Hola - text" />
 			</div>
@@ -32,7 +31,14 @@ export default function Dashboard() {
 				/>
 			</div>
 
-			<nav className={styles['homePage-navigation']}>
+			<div className={styles['homeCard']}>
+					<h1>
+						I design, animate, <span>&amp;</span> code <br /> Bringing a mixture
+						of diverse skills and experieces to all projects
+					</h1>
+			</div>
+
+			{/* <nav className={styles['homePage-navigation']}>
 				<section
 					onClick={handleClick}
 					id="workLink"
@@ -40,7 +46,6 @@ export default function Dashboard() {
 				>
 					<div className={styles['workLogo']}>
 						<span>Work</span>
-						{/* <img src="/svg/homeNav_work.svg" alt="navButton - Work" /> */}
 					</div>
 					<h2>Check out my projects</h2>
 					<div className={styles['buttonLines-work']}></div>
@@ -58,12 +63,11 @@ export default function Dashboard() {
 				>
 					<div className={styles['aboutLogo']}>
 					<span>About Me</span>
-						{/* <img src="/svg/homeNav_me.svg" alt="navButton - About" /> */}
 					</div>
 					<h2>Let me introduce myself</h2>
 					<div className={styles['buttonLines-about']}></div>
 				</section>
-			</nav>
+			</nav> */}
 		</main>
 	);
 

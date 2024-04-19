@@ -24,17 +24,6 @@ export default function Layout({ children }) {
 		`${path != null ? path.slice(1) : ''}`,
 	);
 
-	let bust = myStyles(
-		{ guyBust: true },
-		`${path === '/portfolio' ? '' : 'hide'}`,
-		`${path === '/' || null ? 'hide' : ''}`,
-	);
-
-	let rightColumn = myStyles(
-		{ rightColumn: true },
-		`${path === '/' ? '' : 'hide'}`,
-	);
-
   let  section = myStyles(
     
   );
@@ -45,8 +34,6 @@ export default function Layout({ children }) {
 	  	<Header />
 		<section>{children}</section>
 		<Footer />
-		<div className={bust}><img src="/svg/peep_bust.svg" alt="illustrated person" /></div>
-		<div className={rightColumn}></div>
 		</div>
     </>
   );

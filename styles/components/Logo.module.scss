@@ -2,6 +2,8 @@
 @import '../util/mixins';
 
 .logo {
+	position: absolute;
+	margin-top: 4vw;
 	cursor: pointer;
 	pointer-events: none;
 	border-bottom: 6px solid #FA7D81;

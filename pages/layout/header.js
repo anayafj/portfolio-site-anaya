@@ -11,6 +11,7 @@ export default function Header() {
 		if (router.pathname === '/') {
 			return (
 				<header className={styles.header}>
+					<div className={styles.headerBg}></div>
 					<Logo version="1" />
 				</header>
 			);
