@@ -4,17 +4,19 @@
 .header {
 	display: flex;
 	justify-content: center;
-	position: absolute;
-	height: 170px;
+	position: relative;
+	// position: absolute;
+	// height: 17.25%;
+	// height: calc((77px / 400px) * 100%);
 }
 
-.headerBg {
-	position: absolute;
-	width: 100%;
-	height: 170px;
-	background-color: black;
-	opacity: .2;
-}
+// .headerBg {
+// 	// position: absolute;
+// 	width: 100%;
+// 	height: 230px;
+// 	background-color: black;
+// 	opacity: .2;
+// }
 
 .headerPages {
 	display: flex;

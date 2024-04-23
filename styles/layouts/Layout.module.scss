@@ -10,6 +10,14 @@
 	overflow: hidden;
 	user-select: none;
 
+	.headerBg {
+		position: absolute;
+		width: 100%;
+		height: 230px;
+		background-color: black;
+		opacity: .2;
+	}
+
 	&.about {
 		background-color: variables.$color-overlayDrkGray;
 	}

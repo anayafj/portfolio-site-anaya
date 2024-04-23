@@ -31,6 +31,7 @@ export default function Layout({ children }) {
   return (
     <>
       <div className={container}>
+	  	<div className={styles.headerBg}></div>
 	  	<Header />
 		<section>{children}</section>
 		<Footer />

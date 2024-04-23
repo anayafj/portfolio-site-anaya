@@ -9,19 +9,35 @@ $home-cardHeight: 110px;
 $holla-text-width: 1198px;
 $holla-text-height: 273px;
 
+$shadow-color: hsla(220, 14%, 17%, 0.3);
+
 .main {
 	display: flex;
 	flex-flow: wrap;
+	position: relative;
+	// top: -4vw;
+	// top: -60px;
+	left: 40px;
 	// width: 97vw;
 	width: 100%;
 	height: 764px;
 	// --height: 44vw;
 	// height: var(--height);
-	// max-height: 580px;
+	max-height: 764px;
+	border-radius: 10px 0 0 10px;
 	background-color: #F7F3E7;
-	// margin-left: auto;
-	// padding-right: 20px;
-	margin-top: 14vw;
+	margin-top: 38px;
+	filter:
+      drop-shadow(
+        -4px 6px 4px $shadow-color
+      )
+      drop-shadow(
+        -2px 6px 6px $shadow-color
+      )
+	  drop-shadow(
+        0px 4px 10px $shadow-color
+      )
+	;
 
 	// @media screen and (min-width: variables.$MQ-large-laptop) {
 	// 	--height:auto;
@@ -47,12 +63,9 @@ $holla-text-height: 273px;
 	.peep-container {
 		position: absolute;
 		width: calc((195px / 567px) * 100%);
-		height: 40%;
-		// height: calc((370px/580px)*100%);
-		// height: 370px;
-		max-height: 567px;
+		max-height: 627px;
 		margin-top: 8.04%;
-		margin-left: 30.36%;
+		margin-left: 32.4%;
 		overflow: hidden;
 
 		// @media screen and (max-width: variables.$MQ-large-laptop) {
@@ -65,213 +78,32 @@ $holla-text-height: 273px;
 
 		img {
 			width: 100%;
-			max-width: 195px;
+			max-width: 216px;
 		}
 	}
 
-	.homePage-navigation {
+	.homeCard {
 		display: flex;
-		align-self: flex-end;
-		justify-content: center;
-		width: 100%;
-		height: 14vw;
-		max-height: 130px;
-		z-index: 1;
-		margin-left: 11px;
-		padding-left: 12px;
-		padding-right: 25px;
-		margin-bottom: 12px;
+		position: absolute;
+		width: 50vw;
+		margin-top: 34.04%;
+    	margin-left: 50.4%;
 
 		// @media screen and (max-width: variables.$MQ-large-tablet) {
-		// 	height: 90px;
+		// 	margin: 0 15px;
 		// }
 
-		// @media screen and (max-width: variables.$MQ-large-laptop) {
-		// 	height: 10vw;
-		// }
-
-		.workLink-container {
-			cursor: pointer;
-			width: 17vw;
-			max-width: 213px;
-			min-width: 132px;
-			height: fit-content;
-			margin-top: 4vw;
-			overflow: hidden;
-
-			* {
-				pointer-events: none;
-			}
-
-			&:hover h2 {
-				transition: color 0.4s ease-in-out;
-				color: variables.$color-pink;
-			} 
-			
-			&:hover .workLogo {
-				color: variables.$color-textOffWhite;
-				// color: variables.$color-brightGreen;
-				transition: color 0.5s ease-out;
-			}
-
-			.workLogo {
-				width: 15vw;
-				margin-left: auto;
-				padding: 0 2px 0 3vw;
-				font-size: 66px;
-				@include fluid-type(
-					variables.$MQ-large-tablet,
-					variables.$MQ-large-desktop,
-					50px,
-					66px
-				);
-				font-weight: 200;
-				font-family: variables.$font-family-blankRiver;
-				letter-spacing: 0.8px;
-				line-height: 52px;
-				color: variables.$color-dimGreen;
-				transition: color 0.5s ease-out;
-
-				img {
-					width: 100%;
-					max-width: 168px;
-					margin: 0 0 0 auto;
-				}
-			}
-
-			h2 {
-				display: flex;
-				justify-content: flex-end;
-				font-size: 9px;
-				@include fluid-type(
-					variables.$MQ-large-tablet,
-					variables.$MQ-large-desktop,
-					7px,
-					9px
-				);
-				font-weight: 200;
-				font-family: variables.$font-family-heavitas;
-				letter-spacing: 0.8px;
-				color: variables.$color-textOffWhite;
-				transition: color 0.6s ease-out;
-				margin: 0 0 2px;
-			}
-
-			.buttonLines-work {
-				width: 90%;
-				min-width: 144px;
-				margin-left: auto;
-				height: 4px;
-				border-top: 1px solid variables.$color-pink;
-			}
-		}
-
-		.aboutLink-container {
-			cursor: pointer;
-			width: 18vw;
-			align-self: flex-end;
-			// height: fit-content;
-			// margin-top: 3vw;
-			// padding-left: 5px;
-			margin-bottom: 2vw;
-			padding-left: 8px;
-			// overflow: hidden;
-
-			* {
-				pointer-events: none;
-			}
-
-			&:hover h2 {
-				transition: color 0.4s ease-in-out;
-				color: variables.$color-pink;
-			}
-
-			&:hover .aboutLogo {
-				color: variables.$color-textOffWhite;
-				// color: variables.$color-brightGreen;
-				transition: color 0.5s ease-out;
-			}
-
-
-			.aboutLogo {
-				display: inline;
-				width: 8.3vw;
-				padding: 0 2.5vw 0 2px;
-				font-size: 56px;
-				// padding-left: 4px;
-
-
-				@include fluid-type(
-					variables.$MQ-large-tablet,
-					variables.$MQ-large-desktop,
-					40px,
-					56px
-				);
-				font-weight: 200;
-				font-family: variables.$font-family-blankRiver;
-				letter-spacing: 0.8px;
-				line-height: 45px;
-				color: variables.$color-dimBlue;
-				transition: color 0.5s ease-out;
-
-				img {
-					width: 100%;
-					max-width: 69px;
-					margin: 0 auto 0 0;
-				}
-			}
-
-			h2 {
-				display: flex;
-				justify-content: flex-start;
-				font-size: 9px;
-				@include fluid-type(
-					variables.$MQ-large-tablet,
-					variables.$MQ-large-desktop,
-					7px,
-					9px
-				);
-				font-weight: 200;
-				font-family: variables.$font-family-heavitas;
-				letter-spacing: 0.6px;
-				color: variables.$color-textOffWhite;
-				transition: color 0.6s ease-out;
-				margin: 0 0 2px 2px;
-			}
-
-			.buttonLines-about {
-				width: 90%;
-				height: 4px;
-				border-top: 1px solid variables.$color-pink;
-				margin-left: 2px;
-			}
-		}
-
-		.homeCard {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 50vw;
-			background-color: variables.$color-textGrey;
-			padding: 0 3vw;
-			margin: 0 1vw;
-
-			// @media screen and (max-width: variables.$MQ-large-tablet) {
-			// 	margin: 0 15px;
-			// }
-
-			h1 {
-				@include fluid-type(
-					variables.$MQ-large-laptop,
-					variables.$MQ-large-desktop,
-					16px,
-					22px
-				);
-				text-align: center;
-				font-weight: 400;
-				font-family: variables.$font-family-amatic;
-				color: variables.$color-pink;
-			}
+		h1 {
+			@include fluid-type(
+				variables.$MQ-large-laptop,
+				variables.$MQ-large-desktop,
+				16px,
+				22px
+			);
+			text-align: left;
+			font-weight: 400;
+			font-family: variables.$font-family-amatic;
+			color: #000;
 		}
 	}
 }
