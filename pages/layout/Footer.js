@@ -35,33 +35,25 @@ export default function Footer() {
 		`${pageName === null ? '' : 'shift'}`,
 	);
 
-	let portfolioGreyBar = myStyles(
-		{ bottomGrey: true },
-		`${pageName === 'portfolio' ? 'showBar' : ''}`,
-	);
-
 	return (
 		<footer className={footerStyles}>
-			<div className={portfolioGreyBar}></div>
-			<div className={styles.footerMain}>
-				<div className={styles.greyBar}></div>
-				<div className={styles.ctaContent}>
-					{renderContactHeader()}
-					<div onClick={handleContactClick} className={styles.cta}>
-						<div className={styles.ctaBg}>
-							<div className={styles.blue}></div>
-							<div className={styles.yellow}></div>
-							<div className={styles.pink}></div>
-						</div>
-						<h2>
-							Contact Me <span>&#187;</span>
-						</h2>
+			<div className={styles.ctaContent}>
+				{renderContactHeader()}
+
+				<div onClick={handleContactClick} className={styles.cta}>
+					<div className={styles.ctaBg}>
+						<div className={styles.blue}></div>
+						<div className={styles.yellow}></div>
+						<div className={styles.pink}></div>
 					</div>
+					<h2>Contact Me <span>&#187;</span></h2>
 				</div>
+
 			</div>
-			<small>
+
+			{/* <small>
 				<span>&copy;</span>2022 Anayadev.com. All rights reserved.
-			</small>
+			</small> */}
 		</footer>
 	)
 }
