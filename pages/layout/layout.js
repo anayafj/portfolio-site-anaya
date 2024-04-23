@@ -39,13 +39,3 @@ export default function Layout({ children }) {
     </>
   );
 }
-
-{/* <div className={container}>
-			<div className={styles.wrapper}>
-				<Header />
-				<section>{children}</section>
-			</div>
-			<Footer />
-			<div className={bust}><img src="/svg/peep_bust.svg" alt="illustrated person" /></div>
-			<div className={rightColumn}></div>
-		</div> */}

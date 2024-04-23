@@ -2,9 +2,9 @@
 @import '../util/mixins';
 
 .container {
-	// display: flex;
+	display: flex;
     min-height: 100vh;
-	// flex-direction: column;
+	flex-direction: column;
 	height: 100vh;
 	background-color: variables.$color-pink;
 	overflow: hidden;
@@ -39,15 +39,6 @@
 			max-height: 274px;
 			transform: scaleX(-1);
 		}
-	}
-
-	.rightColumn {
-		pointer-events: none;
-		position: fixed;
-		right: 0;
-		height: 100%;
-		border-right: 20px solid variables.$color-teal;
-		// z-index: 1;
 	}
 
 	.wrapper {
