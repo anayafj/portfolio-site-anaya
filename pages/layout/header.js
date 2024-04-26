@@ -13,6 +13,7 @@ export default function Header() {
 				<header className={styles.header}>
 					{/* <div className={styles.headerBg}></div> */}
 					<Logo version="1" />
+					<Navigation />
 				</header>
 			);
 		} else {

@@ -12,6 +12,7 @@ $footer-text-color : #2F2F2F;
 	border-radius: 0 10px 0 0;
 	flex-wrap: wrap;
 	background-color: #B1E1F8;
+	// background-color: variables.$color-button-white;
 
 
 	.ctaContent {
@@ -45,24 +46,25 @@ $footer-text-color : #2F2F2F;
 				height: 30px;
 				border-radius: 6px;
 				overflow: hidden;
-				background-color: white;
+				background-color: variables.$color-button-white;
 				pointer-events: none;
 
 				.pink {
 					float: right;
 					width: 0;
 					height: 0;
-					border-top: 30px solid variables.$color-pink;
-					border-right: 12px solid variables.$color-pink;
+					border-top: 30px solid variables.$color-button-pink;
+					border-right: 12px solid variables.$color-button-pink;
 					border-left: 20px solid transparent;
 				}
+
 				.yellow {
 					display: inline-block;
 					position: relative;
 					left: 144px;
 					width: 4px;
 					height: 30px;
-					background-color: variables.$color-yellow;
+					background-color: variables.$color-button-yellow;
 					transform: skew(34deg);
 				}
 
@@ -72,7 +74,7 @@ $footer-text-color : #2F2F2F;
 					left: 144px;
 					width: 4px;
 					height: 30px;
-					background-color: variables.$color-blue;
+					background-color: variables.$color-button-green;
 					transform: skew(34deg);
 				}
 			}
@@ -100,5 +102,5 @@ $footer-text-color : #2F2F2F;
 			font-family: variables.$font-family-myriad;
 			color: #686868;
 		}
-		}
-		}
+	}
+}
