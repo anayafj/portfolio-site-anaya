@@ -46,6 +46,21 @@ $nav-exp-height: 40px;
 			transform: skew(-20deg);
 		}
 
+		h2 {
+			position: absolute;
+			display: contents;
+			transform: translate(30px, 3px);
+			font-family: variables.$font-family-blankRiver;
+			font-size: 18px;
+			font-weight: normal;
+			color: #000;
+			margin: 0;
+		}
+
+		// .homeTab {
+			
+		// }
+
 		.homeTab:hover {
 			.pinkTxt {
 				top: 4px;

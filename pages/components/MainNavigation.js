@@ -295,24 +295,20 @@ export default function MainNavigation() {
 		<nav className={styles.navContainer}>
 				<div className={styles.navTabs}>
 					<div id="home" className={homeTab} ref={pink}>
-						{/* <div className={styles.pinkTxt}>
-							<img src="/svg/txt_home.svg" alt="Home tab txt" />
-						</div> */}
+						<h2>My Work</h2>
 						<hr></hr>
 					</div>
 					<div id="work" className={workTab} ref={yellow}>
 						<div className={styles.yellow}></div>
 						<div className={styles.yellowTxt} ref={yellowTxt}>
-							{/* <img src="/svg/txt_work.svg" alt="Work tab txt" /> */}
-							<span>Work</span>
+							<h2>About Me</h2>
 						</div>
 						<hr></hr>
 					</div>
 					<div id="about" className={aboutTab} ref={blue}>
 						<div className={styles.blue}></div>
 						<div className={navAboutText} ref={blueTxt}>
-							{/* <img src="/svg/txt_about.svg" alt="About tab txt" /> */}
-							<span>About Me</span>
+							<h2>Contact Me</h2>
 						</div>
 						<hr></hr>
 					</div>
