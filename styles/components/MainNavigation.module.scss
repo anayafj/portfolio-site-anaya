@@ -47,14 +47,17 @@ $nav-exp-height: 40px;
 		}
 
 		h2 {
-			position: absolute;
-			display: contents;
-			transform: translate(30px, 3px);
+			// position: absolute;
+			// display: contents;
+			// transform: translate(30px, 3px);
+			// display: block;
 			font-family: variables.$font-family-blankRiver;
-			font-size: 18px;
+			font-size: 19px;
+			letter-spacing: .5px;
 			font-weight: normal;
 			color: #000;
 			margin: 0;
+			width: fit-content;
 		}
 
 		// .homeTab {
@@ -78,10 +81,14 @@ $nav-exp-height: 40px;
 			position: relative;
 			width: 150px;
 
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
 			.pinkTxt {
 				position: absolute;
-				top: 5px;
-				left: 24px;
+				// top: 5px;
+				// left: 24px;
 				pointer-events: none;
 
 				transition: top 0.2s ease-out;
@@ -120,8 +127,12 @@ $nav-exp-height: 40px;
 		}
 
 		.work {
-			position: relative;
+			// position: relative;
 			width: 170px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 			&.workTabActive .yellow {
 				background-color: black;
@@ -153,8 +164,8 @@ $nav-exp-height: 40px;
 
 			.yellowTxt {
 				position: absolute;
-				top: 4px;
-				left: 29px;
+				// top: 4px;
+				// left: 29px;
 				pointer-events: none;
 
 				transition: top 0.2s ease-out;
@@ -201,8 +212,13 @@ $nav-exp-height: 40px;
 		}
 
 		.about {
-			position: relative;
+			// position: relative;
 			width: 166px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
 
 			&.aboutTabActive .blue {
 				background-color: black;
@@ -229,14 +245,18 @@ $nav-exp-height: 40px;
 
 			.blue {
 				@extend .shapes;
+				// position: absolute;
+				// width: inherit;
 				background-color: variables.$color-button-green;
 				pointer-events: none;
 			}
 
 			.blueTxt {
 				position: absolute;
-				top: 6px;
-				left: 18px;
+				// display: flex;
+				// justify-content: center;
+				// top: 6px;
+				// left: 18px;
 				pointer-events: none;
 
 				transition: top 0.2s ease-out;
@@ -256,11 +276,15 @@ $nav-exp-height: 40px;
 				}
 			}
 
+
+			
+
 			hr {
 				visibility: hidden;
 				position: absolute;
-				top: 14px;
-				left: 5px;
+				bottom: 10px;
+				left: 28px;
+				//60%
 				width: 0%;
 				border-width: 1px;
 				border-color: black;
