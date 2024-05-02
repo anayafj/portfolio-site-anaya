@@ -5,6 +5,10 @@ $nav-col-width: 115px;
 $nav-exp-width: 480px;
 $nav-exp-height: 40px;
 
+$tab-width : 150px;
+$tab-line-bottom : 20%;
+$tab-line-width : 55%;
+
 .navContainer {
 	display: flex;
 	position: relative;
@@ -47,10 +51,6 @@ $nav-exp-height: 40px;
 		}
 
 		h2 {
-			// position: absolute;
-			// display: contents;
-			// transform: translate(30px, 3px);
-			// display: block;
 			font-family: variables.$font-family-blankRiver;
 			font-size: 19px;
 			letter-spacing: .5px;
@@ -60,79 +60,53 @@ $nav-exp-height: 40px;
 			width: fit-content;
 		}
 
-		// .homeTab {
-			
-		// }
-
 		.homeTab:hover {
-			.pinkTxt {
-				top: 4px;
-				transition: top 0.3s ease-out;
-			}
-
 			hr {
 				visibility: visible;
-				width: 70%;
+				width: $tab-line-width;
 				transition: width 0.3s ease-out;
 			}
 		}
 
 		.home {
 			position: relative;
-			width: 150px;
-
 			display: flex;
+			width: $tab-width;
 			justify-content: center;
 			align-items: center;
-
-			.pinkTxt {
-				position: absolute;
-				// top: 5px;
-				// left: 24px;
-				pointer-events: none;
-
-				transition: top 0.2s ease-out;
-
-				img {
-					width: 100%;
-					max-width: 51px;
-					max-height: 16px;
-				}
-			}
 
 			hr {
 				visibility: hidden;
 				position: absolute;
-				top: 14px;
-				left: 12px;
+				bottom: $tab-line-bottom;
+				border-style: solid;
 				width: 0%;
 				border-width: 1px;
-				border-color: black;
+				border-color: rgb(255, 255, 255);
 
 				transition: all 0.2s ease-out;
 			}
 		}
 
 		.workTab:hover {
-			.yellowTxt {
-				top: 2px;
-				transition: top 0.3s ease-out;
-			}
-
 			hr {
 				visibility: visible;
-				width: 70%;
+				width: $tab-line-width;
 				transition: width 0.3s ease-out;
 			}
 		}
 
 		.work {
-			// position: relative;
-			width: 170px;
-
+			position: relative;
 			display: flex;
+			width: $tab-width;
 			justify-content: center;
 			align-items: center;
+
+			h2 {
+				position: absolute;
+			}
+
 
 			&.workTabActive .yellow {
 				background-color: black;
@@ -144,80 +118,65 @@ $nav-exp-height: 40px;
 				transition: background-color 0.3s ease-in 0.3s;
 			}
 
-			&.workTabActive .yellowTxt {
-				left: 35px;
-
-				img {
-					display: none;
-				}
-
-				span {
-					display: block;
-				}
+			&.workTabActive .h2 {
+				// font-family: variables.$font-family-blankRiver;
+			// font-size: 19px;
+			// letter-spacing: .5px;
+			// font-weight: normal;
+			color: #c81717;
+			// margin: 0;
+			// width: fit-content;
 			}
+
+			// &.workTabActive .yellowTxt {
+			// 	left: 35px;
+
+			// 	img {
+			// 		display: none;
+			// 	}
+
+			// 	span {
+			// 		display: block;
+			// 	}
+			// }
 
 			.yellow {
-				@extend .shapes;
+				@extend.shapes;
 				background-color: variables.$color-button-yellow;
 				pointer-events: none;
-			}
-
-			.yellowTxt {
-				position: absolute;
-				// top: 4px;
-				// left: 29px;
-				pointer-events: none;
-
-				transition: top 0.2s ease-out;
-
-				img {
-					width: 100%;
-					max-width: 53px;
-					max-height: 16px;
-				}
-
-				span {
-					display: none;
-					font-size: 19px;
-					font-family: variables.$font-family-blankRiver;
-					letter-spacing: 1.5px;
-					color: white;
-				}
 			}
 
 			hr {
 				visibility: hidden;
 				position: absolute;
-				top: 13px;
-				left: 11px;
+				bottom: $tab-line-bottom;
+				border-style: solid;
 				width: 0%;
 				border-width: 1px;
-				border-color: black;
+				border-color: rgb(255, 255, 255);
 
 				transition: all 0.2s ease-out;
 			}
 		}
 
 		.aboutTab:hover {
-			.blueTxt {
-				top: 4px;
-				transition: top 0.3s ease-out;
-			}
-
 			hr {
 				visibility: visible;
-				width: 80%;
+				width: $tab-line-width;
 				transition: width 0.3s ease-out;
 			}
 		}
 
 		.about {
-			// position: relative;
-			width: 166px;
-
+			position: relative;
 			display: flex;
+			width: $tab-width;
 			justify-content: center;
 			align-items: center;
+
+			h2 {
+				position: absolute;
+			}
 
 
 			&.aboutTabActive .blue {
@@ -230,64 +189,35 @@ $nav-exp-height: 40px;
 				transition: background-color 0.2s ease-out;
 			}
 
-			&.aboutTabActive .blueTxt {
-				top: 3px;
-				left: 23px;
+			// &.aboutTabActive .blueTxt {
+			// 	top: 3px;
+			// 	left: 23px;
 
-				img {
-					display: none;
-				}
+			// 	img {
+			// 		display: none;
+			// 	}
 
-				span {
-					display: block;
-				}
-			}
+			// 	span {
+			// 		display: block;
+			// 	}
+			// }
 
 			.blue {
-				@extend .shapes;
-				// position: absolute;
-				// width: inherit;
+				@extend.shapes;
+				position: absolute;
+				width: inherit;
 				background-color: variables.$color-button-green;
 				pointer-events: none;
 			}
 
-			.blueTxt {
-				position: absolute;
-				// display: flex;
-				// justify-content: center;
-				// top: 6px;
-				// left: 18px;
-				pointer-events: none;
-
-				transition: top 0.2s ease-out;
-
-				img {
-					width: 100%;
-					max-width: 75px;
-					max-height: 18px;
-				}
-
-				span {
-					display: none;
-					font-size: 19px;
-					font-family: variables.$font-family-blankRiver;
-					letter-spacing: 1.1px;
-					color: white;
-				}
-			}
-
-
-			
-
 			hr {
 				visibility: hidden;
 				position: absolute;
-				bottom: 10px;
-				left: 28px;
-				//60%
+				bottom: $tab-line-bottom;
+				border-style: solid;
 				width: 0%;
 				border-width: 1px;
-				border-color: black;
+				border-color: rgb(255, 255, 255);
 
 				transition: all 0.2s ease-out;
 			}

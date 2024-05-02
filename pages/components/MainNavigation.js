@@ -209,63 +209,85 @@ export default function MainNavigation() {
 	// 	);
 	// };
 
+
+
 	////
 	//// TAB NAVIGATION -------------------------------------------//
+	// initialLoad
 
 	// Tab state updated
 	useEffect(() => {
 		switch (tab) {
-			case pink:
-				router.push('/');
-				break;
-			case yellow:
-				router.push('/portfolio');
-				break;
-			case blue:
-				router.push('/about');
-				break;
+			// case pink:
+			// 	router.push('/');
+			// 	break;
+			// case yellow:
+			// 	router.push('/portfolio');
+			// 	break;
+			// case blue:
+			// 	router.push('/about');
+			// 	break;
 			case null:
 				break;
 		}
+		console.log(" Switch tab = "+ tab);
 	}, [tab]);
 
 	// Tab clicked on ----------------------------
 	const navigationHandler = (e) => {
-		e.preventDefault();
-		if (e.target.id != 'home') {
-			e.target.removeEventListener('click', navigationHandler);
-		}
+		console.log("navigationHandler -- e.target.id = ",e.currentTarget.id);
+		console.log("navigationHandler -- tab = ",tab);
 
-		switch (e.target.id) {
-			case 'home':
+		e.preventDefault();
+		e.currentTarget.removeEventListener('click', navigationHandler);
+
+		switch (e.currentTarget.id) {
+				case 'home':
+				console.log("Home --");
 				setTab(pink);
+				// if(tab){
+				// 	tab.current.addEventListener('click', navigationHandler);
+				// }
+				// blue.current.addEventListener('click', navigationHandler);
 				break;
 			case 'work':
+				console.log("Work --");
 				setTab(yellow);
-				blue.current.addEventListener('click', navigationHandler);
+				// if(!tab){
+				// 	tab.current.addEventListener('click', navigationHandler);
+				// }
+				// blue.current.addEventListener('click', navigationHandler);
 				break;
 			case 'about':
+				console.log("About --");
 				setTab(blue);
-				yellow.current.addEventListener('click', navigationHandler);
+				// if(!tab){
+				// 	tab.current.addEventListener('click', navigationHandler);
+				// }
+				// yellow.current.addEventListener('click', navigationHandler);
 				break;
+				default: console.log("default --"); 
 		}
+		// tab.current.addEventListener('click', navigationHandler);
 	};
 
 	// Default setup for navigation tab buttons
 	const setNavigation = () => {
 		setTabEventListener();
-		switch (router.pathname) {
-			case '/about':
-				blue.current.removeEventListener('click', navigationHandler);
-				setTab(blue);
-				break;
-			case '/portfolio':
-				yellow.current.removeEventListener('click', navigationHandler);
-				setTab(yellow);
-				break;
-		}
+		console.log("setNavigation -- path = "+router.pathname);
+		// switch (router.pathname) {
+		// 	case '/about':
+		// 		blue.current.removeEventListener('click', navigationHandler);
+		// 		setTab(blue);
+		// 		break;
+		// 	case '/portfolio':
+		// 		yellow.current.removeEventListener('click', navigationHandler);
+		// 		setTab(yellow);
+		// 		break;
+		// }
 	};
 
+	// Set tabs - active
 	const setTabEventListener = () => {
 		pink.current.addEventListener('click', navigationHandler);
 		yellow.current.addEventListener('click', navigationHandler);
@@ -293,39 +315,35 @@ export default function MainNavigation() {
 
 	return (
 		<nav className={styles.navContainer}>
-				<div className={styles.navTabs}>
-					<div id="home" className={homeTab} ref={pink}>
-						<h2>My Work</h2>
-						<hr></hr>
-					</div>
-					<div id="work" className={workTab} ref={yellow}>
-						<div className={styles.yellow}></div>
-						<div className={styles.yellowTxt} ref={yellowTxt}>
-							<h2>About Me</h2>
-						</div>
-						<hr></hr>
-					</div>
-					<div id="about" className={aboutTab} ref={blue}>
-						<div className={styles.blue}></div>
-						<div className={navAboutText} ref={blueTxt}>
-							<h2>Contact Me</h2>
-						</div>
-						<hr></hr>
-					</div>
-					<div
-						// onClick={menuExpColBtnHandler}
-						className={styles.navMenu}
-						ref={white}
-					>
-						<div className={styles.white} ref={whiteShape}></div>
-						{/* <div className={menuExpand} ref={menuTxt}>
+			<div className={styles.navTabs}>
+				<div id="home" className={homeTab} ref={pink}>
+					<h2>My Work</h2>
+					<hr></hr>
+				</div>
+				<div id="work" className={workTab} ref={yellow}>
+					<div className={styles.yellow}></div>
+					<h2>About Me</h2>
+					<hr></hr>
+				</div>
+				<div id="about" className={aboutTab} ref={blue}>
+					<div className={styles.blue}></div>
+					<h2>Contact Me</h2>
+					<hr></hr>
+				</div>
+				<div
+					// onClick={menuExpColBtnHandler}
+					className={styles.navMenu}
+					ref={white}
+				>
+					<div className={styles.white} ref={whiteShape}></div>
+					{/* <div className={menuExpand} ref={menuTxt}>
 							<img src="/svg/txt_menu.svg" alt="menu text" />
 						</div>
 						<div className={menuCollapse} ref={closeX}>
 							X
 						</div> */}
-					</div>
 				</div>
+			</div>
 		</nav>
 	);
 }
