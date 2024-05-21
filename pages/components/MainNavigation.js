@@ -45,9 +45,9 @@ export default function MainNavigation() {
 	//// MENU -------------------------------------------//
 
 	// Menu state updated
-	// useEffect(() => {
-	// 	toggleMenu();
-	// }, [menu]);
+	useEffect(() => {
+		toggleMenu();
+	}, [menu]);
 
 	// Menu exp/col button hit
 	// const menuExpColBtnHandler = (e) => {
@@ -63,25 +63,27 @@ export default function MainNavigation() {
 	// 	}
 	// };
 
-	// const toggleMenu = () => {
-	// 	if (initialLoad && menu != null) {
-	// 		setInitialLoad(false);
-	// 		return;
-	// 	}
+	const toggleMenu = () => {
+		if (initialLoad && menu != null) {
+			setInitialLoad(false);
+			return;
+		}
 
-	// 	switch (menu) {
-	// 		case true:
-	// 			expandMenu();
-	// 			tl.play('start');
-	// 			break;
-	// 		case false:
-	// 			collapseMenu();
-	// 			tl.play();
-	// 			break;
-	// 		case null:
-	// 			break;
-	// 	}
-	// };
+		switch (menu) {
+			case true:
+				// expandMenu();
+				// tl.play('start');
+				console.log("Menu is set to - ",menu);
+				break;
+			case false:
+				console.log("Menu is set to false - ",menu);
+				// collapseMenu();
+				// tl.play();
+				break;
+			case null:
+				break;
+		}
+	};
 
 	// Collapse Animation for Nav Menu Bar
 	// const collapseMenu = () => {
@@ -217,54 +219,84 @@ export default function MainNavigation() {
 
 	// Tab state updated
 	useEffect(() => {
-		switch (tab) {
-			// case pink:
-			// 	router.push('/');
-			// 	break;
-			// case yellow:
-			// 	router.push('/portfolio');
-			// 	break;
-			// case blue:
-			// 	router.push('/about');
-			// 	break;
-			case null:
+
+		console.log('TAB state update -- tab = ',tab);
+
+		if(tab){
+			console.log('tab selected');
+
+			switch (tab){
+				case 1:
+					console.log('tab 1 effect');
 				break;
+				case 2:
+					console.log('tab 2 effect');
+				break;
+				case 3:
+					console.log('tab 3 effect');
+				break;
+				default:
+					break;
+			}
+		} else {
+			console.log('No tab selected');
 		}
-		console.log(" Switch tab = "+ tab);
+
+		console.log('TAB state update - END -- tab = ',tab);
+		// if(tab == null){
+		// 	console.log('No tab selected');
+		// 	return;
+		// } else {
+		// 	console.log('tab selected');
+		// 	switch (tab.id) {
+		// 		case 'home':
+		// 			console.log('home tab effect');
+		// 		break;
+		// 		case pink:
+		// 			console.log('Pink Updated');
+		// 		// 	router.push('/');
+		// 			break;
+		// 		case yellow:
+		// 			console.log('YELLOW Updated');
+		// 		// 	router.push('/portfolio');
+		// 			break;
+		// 		case blue:
+		// 			console.log('Blue Updated');
+		// 		// 	router.push('/about');
+		// 			break;
+		// 	}
+		// }
+		
+		// console.log(" Switch tab = ",tab);
 	}, [tab]);
 
 	// Tab clicked on ----------------------------
 	const navigationHandler = (e) => {
-		console.log("navigationHandler -- e.target.id = ",e.currentTarget.id);
-		console.log("navigationHandler -- tab = ",tab);
+		// console.log("navigationHandler --- e.target.id = ",e.currentTarget.id);
+		// console.log("navigationHandler --- tab = ",tab);
 
 		e.preventDefault();
 		e.currentTarget.removeEventListener('click', navigationHandler);
 
 		switch (e.currentTarget.id) {
+			
 				case 'home':
-				console.log("Home --");
-				setTab(pink);
-				// if(tab){
-				// 	tab.current.addEventListener('click', navigationHandler);
-				// }
-				// blue.current.addEventListener('click', navigationHandler);
+				console.log("Home -- YELLOW");
+				// tab.addEventListener('click', navigationHandler);
+				setTab(2);
+				// setTab(yellow);
 				break;
 			case 'work':
-				console.log("Work --");
-				setTab(yellow);
-				// if(!tab){
-				// 	tab.current.addEventListener('click', navigationHandler);
-				// }
-				// blue.current.addEventListener('click', navigationHandler);
+				console.log("Work -- PINK");
+				// tab.addEventListener('click', navigationHandler);
+				setTab(1);
+				// setTab(pink);
 				break;
 			case 'about':
-				console.log("About --");
-				setTab(blue);
-				// if(!tab){
-				// 	tab.current.addEventListener('click', navigationHandler);
-				// }
-				// yellow.current.addEventListener('click', navigationHandler);
+				console.log("About -- BLUE");
+				setTab(3);
+				// tab.addEventListener('click', navigationHandler);
+				// setTab(blue);
 				break;
 				default: console.log("default --"); 
 		}
@@ -273,8 +305,12 @@ export default function MainNavigation() {
 
 	// Default setup for navigation tab buttons
 	const setNavigation = () => {
+		setTab(0);
 		setTabEventListener();
-		console.log("setNavigation -- path = "+router.pathname);
+		// console.log("setNavigation -- tab = ",tab);
+		// console.log("setNavigation -- path = "+router.pathname);
+		
+
 		// switch (router.pathname) {
 		// 	case '/about':
 		// 		blue.current.removeEventListener('click', navigationHandler);
@@ -301,10 +337,15 @@ export default function MainNavigation() {
 	let menuCollapse = myStyles({ closeXtext: true });
 
 	let navAboutText = myStyles({ blueTxt: true }, ``);
-	let homeTab = myStyles({ home: true }, `${tab === pink ? '' : 'homeTab'}`);
+	let homeTab = myStyles(
+		{ home: true },
+		`${tab === yellow ? 'homeTabActive' : 'homeTab'}`,
+		`${menu === true ? '' : 'open'}`,
+	);
+
 	let workTab = myStyles(
 		{ work: true },
-		`${tab == yellow ? 'workTabActive' : 'workTab'}`,
+		`${tab == pink ? 'workTabActive' : 'workTab'}`,
 		`${menu === true ? '' : 'open'}`,
 	);
 	let aboutTab = myStyles(
@@ -316,11 +357,12 @@ export default function MainNavigation() {
 	return (
 		<nav className={styles.navContainer}>
 			<div className={styles.navTabs}>
-				<div id="home" className={homeTab} ref={pink}>
+			<div id="work" className={workTab} ref={pink}>
+					<div className={styles.pink}></div>
 					<h2>My Work</h2>
 					<hr></hr>
 				</div>
-				<div id="work" className={workTab} ref={yellow}>
+				<div id="home" className={homeTab} ref={yellow}>
 					<div className={styles.yellow}></div>
 					<h2>About Me</h2>
 					<hr></hr>
