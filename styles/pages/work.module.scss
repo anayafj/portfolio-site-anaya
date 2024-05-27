@@ -5,7 +5,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	background-color: variables.$color-homeGray;
+	background-color: variables.$color-pink;
 
 	.top {
 		display: flex;
@@ -64,19 +64,21 @@
 		align-self: flex-end;
 		width: 97vw;
 		height: 79vh;
-		background-color: variables.$color-textGrey;
+		border-radius: 10px 0 0 10px;
+		// background-color: variables.$color-textGrey;
+		background-color: #F7F3E7;;
 		overflow: hidden;
 
-		.infoBorder {
-			pointer-events: none;
-			position: absolute;
-			left: 1vw;
-			bottom: 2vw;
-			width: 100%;
-			height: 100%;
-			border-left: 2px solid rgba($color: #000000, $alpha: 0.2);
-			border-bottom: 2px solid rgba($color: #000000, $alpha: 0.2);
-		}
+		// .infoBorder {
+		// 	pointer-events: none;
+		// 	position: absolute;
+		// 	left: 1vw;
+		// 	bottom: 2vw;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	border-left: 2px solid rgba($color: #000000, $alpha: 0.2);
+		// 	border-bottom: 2px solid rgba($color: #000000, $alpha: 0.2);
+		// }
 
 		.projectContainer {
 			display: flex;

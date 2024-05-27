@@ -9,6 +9,8 @@ $tab-width : 150px;
 $tab-line-bottom : 20%;
 $tab-line-width : 55%;
 
+$shadow-color: hsla(0, 0%, 0%, 0.3);
+
 .navContainer {
 	display: flex;
 	position: relative;
@@ -17,11 +19,11 @@ $tab-line-width : 55%;
 	height: $nav-exp-height;
 	border-radius: 6px;
 	background-color: variables.$color-button-pink;
-	// background-color: brown;
 	overflow: hidden;
 	margin-top: calc((47px/1024px)*100%);
 	margin-left: 4%;
 	margin-right: auto;
+	filter: drop-shadow(0px 0px 8px $shadow-color);
 
 	.navTabs {
 		cursor: pointer;
@@ -30,18 +32,24 @@ $tab-line-width : 55%;
 		height: 100%;
 
 		.shapes {
+			position: absolute;
 			width: 100%;
 			height: 100%;
 			transform: skew(200deg);
+			pointer-events: none;
+		}
+		
+		.shape_front {
+			@extend .shapes;
+			width: calc($tab-width + 40px);
+			transform: skew(0deg);
 		}
 
-		.shape_cap {
-			width: 100%;
-			height: 100%;
-			transform: skew(200deg);
+		.shape_end {
+			@extend .shapes;
 		}
 
-		.shape_cap::after {
+		.shape_end::after {
 			content: '';
 			position: absolute;
 			left: 40px;
@@ -51,13 +59,6 @@ $tab-line-width : 55%;
 			transform: skew(-20deg);
 		}
 
-		.shape_front {
-			width: 100%;
-			height: 100%;
-			background-color: variables.$color-button-pink;
-			width: calc($tab-width + 40px);
-			position: absolute;
-		}
 
 		h2 {
 			font-family: variables.$font-family-blankRiver;
@@ -69,15 +70,18 @@ $tab-line-width : 55%;
 			width: fit-content;
 		}
 
-		.homeTab:hover {
-			hr {
-				visibility: visible;
-				width: $tab-line-width;
-				// transition: width 0.3s ease-out;
-			}
+		hr {
+			visibility: hidden;
+			position: absolute;
+			bottom: $tab-line-bottom;
+			border-style: solid;
+			width: 0%;
+			border-width: 1px;
+			border-color: rgb(255, 255, 255);
+			transition: all 0.1s ease-in;
 		}
 
-		.home {
+		.tabs_default {
 			position: relative;
 			display: flex;
 			width: $tab-width;
@@ -87,192 +91,81 @@ $tab-line-width : 55%;
 			h2 {
 				position: absolute;
 			}
+		}
 
-			hr {
-				visibility: hidden;
-				position: absolute;
-				bottom: $tab-line-bottom;
-				border-style: solid;
-				width: 0%;
-				border-width: 1px;
-				border-color: rgb(255, 255, 255);
-				// transition: all 0.2s ease-out;
-			}
-
-			// &.homeTabActive .pink {
-			// 	background-color: black;
-			// 	// transition: background-color 0.2s ease-out;
-			// }
-
-			// &.homeTabActive.open {
-			// 	.pink {
-			// 		// opacity: 0.33;
-			// 		background-color: rgb(43, 255, 0);
-			// 		// transition: background-color 0.3s ease-in 0.3s;
-			// 		// transition: background-color 0.2s ease-out;
-			// 	}
-
-			// 	h2 {
-			// 		color: #fff;
-			// 		letter-spacing: 1.3px;
-			// 		font-size: 16px;
-			// 		// transition: background-color 0.4s ease-out;
-			// 	}
-			// }
-
-			&.homeTabActive .yellow {
-				background-color: black;
-				// transition: background-color 0.2s ease-out;
-			}
-
-			&.homeTabActive.open {
-
-				.pink {
-					// opacity: 0.33;
-					background-color: rgb(43, 255, 0);
-					// transition: background-color 0.3s ease-in 0.3s;
-					// transition: background-color 0.2s ease-out;
+		/// TAB Button Hover effect ------------------------------------------------------
+		.workTab, .aboutTab, .contactTab {
+			&:hover {
+				hr {
+					visibility: visible;
+					width: $tab-line-width;
+					transition: width 0.2s ease-out;
 				}
-
-				h2 {
-					color: #fff;
-					letter-spacing: 1.3px;
-					font-size: 16px;
-					// transition: background-color 0.4s ease-out;
-				}
-			} 
-
-			.yellow {
-				@extend.shapes;
-				background-color: variables.$color-button-yellow;
-				pointer-events: none;
 			}
 		}
 
-		.workTab:hover {
-			hr {
-				visibility: visible;
-				width: $tab-line-width;
-				// transition: width 0.3s ease-out;
-			}
-		}
-
+		/// TAB 1 ------------------------------------------------------
 		.work {
-			position: relative;
-			display: flex;
-			width: $tab-width;
-			justify-content: center;
-			align-items: center;			
+			@extend .tabs_default;
 
-			h2 {
-				position: absolute;
-			}
-
-			&.workTabActive .pink {
-				background-color: black;
-				// transition: background-color 0.2s ease-out;
-			}
-
-			&.workTabActive.open .pink {
-				// background-color: variables.$color-yellow;
-				background-color: rgb(43, 255, 0);
-				// transition: background-color 0.3s ease-in 0.3s;
+			&.workTabActive {
+				h2 {
+					color: variables.$color-button-pink;
+					transition: color 0.5s ease-out;
+				}
+				.pink {
+					background-color: #000;
+				}
 			}
 
 			.pink {
 				@extend.shape_front;
-				pointer-events: none;
-			}
-
-			hr {
-				visibility: hidden;
-				position: absolute;
-				bottom: $tab-line-bottom;
-				border-style: solid;
-				width: 0%;
-				border-width: 1px;
-				border-color: rgb(255, 255, 255);
-
-				// transition: all 0.2s ease-out;
+				background-color: variables.$color-button-pink;
 			}
 		}
 
-		.aboutTab:hover {
-			hr {
-				visibility: visible;
-				width: $tab-line-width;
-				// transition: width 0.3s ease-out;
-			}
-		}
-
+		/// TAB 2 ------------------------------------------------------
 		.about {
-			position: relative;
-			display: flex;
-			width: $tab-width;
-			justify-content: center;
-			align-items: center;
+			@extend .tabs_default;
 
-			h2 {
-				position: absolute;
-			}
-
-
-			&.aboutTabActive .blue {
-				background-color: black;
-				// transition: background-color 0.2s ease-out;
-			}
-
-			&.aboutTabActive.open {
-				.blue {
-					// background-color: hsl(158 49% 35% / 1); //variables.$color-blue;
-					background-color: rgb(43, 255, 0);
-					// opacity: 0.33;
-					// transition: background-color 0.2s ease-out;
-				}
-
+			&.aboutTabActive {
 				h2 {
-					color: #fff;
-					letter-spacing: 1.3px;
-					font-size: 16px;
-					// transition: background-color 0.4s ease-out;
+					color: variables.$color-button-yellow;
+					transition: color 0.5s ease-out;
+				}
+				.yellow {
+					background-color: #000;
 				}
 			}
 
-			// &.aboutTabActive .blueTxt {
-			// 	top: 3px;
-			// 	left: 23px;
+			.yellow {
+				@extend.shapes;
+				background-color: variables.$color-button-yellow;
+			}
+		}
 
-			// 	img {
-			// 		display: none;
-			// 	}
+		
+		/// TAB 3 ------------------------------------------------------
+		.contact {
+			@extend .tabs_default;
 
-			// 	span {
-			// 		display: block;
-			// 	}
-			// }
+			&.contactTabActive {
+				h2 {
+					color: variables.$color-button-green;
+					transition: color 0.5s ease-out;
+				}
+				.blue {
+					background-color: #000;
+				}
+			}
 
 			.blue {
 				@extend.shapes;
-				position: absolute;
-				left: 0;
-				width: inherit;
 				background-color: variables.$color-button-green;
-				pointer-events: none;
-			}
-
-			hr {
-				visibility: hidden;
-				position: absolute;
-				bottom: $tab-line-bottom;
-				border-style: solid;
-				width: 0%;
-				border-width: 1px;
-				border-color: rgb(255, 255, 255);
-
-				// transition: all 0.2s ease-out;
 			}
 		}
 
+		/// Menu ------------------------------------------------------
 		.navMenu {
 			display: flex;
 			position: relative;
@@ -280,9 +173,8 @@ $tab-line-width : 55%;
 			width: 51px;
 
 			.white {
-				@extend .shape_cap;
-				background-color: #fff;
-				pointer-events: none;
+				@extend .shape_end;
+				background-color: variables.$color-button-white;
 			}
 
 			.menuCta {

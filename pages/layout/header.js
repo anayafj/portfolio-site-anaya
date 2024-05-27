@@ -19,7 +19,8 @@ export default function Header() {
 		} else {
 			return (
 				<header className={styles.headerPages}>
-					<SubLogo />
+					{/* <SubLogo /> */}
+					<Logo version="1" />
 					<Navigation />
 				</header>
 			);

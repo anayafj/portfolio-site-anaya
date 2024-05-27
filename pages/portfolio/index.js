@@ -83,7 +83,7 @@ export default function PortfolioPage() {
 				</div>
 			</div>
 			<div className={styles.mainContainer}>
-				<div className={styles.infoBorder}></div>
+				{/* <div className={styles.infoBorder}></div> */}
 				<div className={styles.projectContainer}>
 					<div className={styles.fade}></div>
 					<div className={styles.projects}>{renderProjects()}</div>
