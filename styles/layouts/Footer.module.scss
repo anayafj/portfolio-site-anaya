@@ -7,8 +7,9 @@ $footer-text-color : #2F2F2F;
 	display: flex;
 	position: absolute;
 	width: 44%;
+	max-width: 600px;
 	bottom: 0;
-	min-height: 60px;
+	min-height: 50px;
 	border-radius: 0 10px 0 0;
 	flex-wrap: wrap;
 	background-color: #B1E1F8;
@@ -25,10 +26,28 @@ $footer-text-color : #2F2F2F;
 			display: inline-block;
 			position: relative;
 			font-family: variables.$font-family-heavitas;
-			font-size: 13px;
-			letter-spacing: .04em;
+			font-size: 12px;
+			@include fluid-type(
+					1084px,
+					1284px,
+					10px,
+					12px
+				);
+			letter-spacing: .05em;
 			color: $footer-text-color;
-			-webkit-font-smoothing: subpixel-antialiased;
+			-webkit-font-smoothing: antialiased;
+			transition: all .2s ease-out;
+
+			@media screen and (max-width: 1000px) {
+				@include fluid-type(
+					840px,
+					1000px,
+					8px,
+					10px
+				);
+				letter-spacing: 0em;
+				transition: all .2s ease-out;
+			}
 		}
 
 		.cta {
@@ -38,10 +57,23 @@ $footer-text-color : #2F2F2F;
 			width: 170px;
 			height: 30px;
 			margin-left: 13px;
+			border-radius: 6px;
+			overflow: hidden;
+			transition: width .2s ease-out;
+
+			@media screen and (max-width: 1080px) {
+				width: 120px;
+				transition: all .2s ease-out;
+			}
+
+			@media screen and (max-width: 1000px) {
+				margin: 0 8px;
+			}
 
 			.ctaBg {
 				position: absolute;
 				top: 0;
+				right: 0;
 				width: 170px;
 				height: 30px;
 				border-radius: 6px;
@@ -87,6 +119,18 @@ $footer-text-color : #2F2F2F;
 				font-weight: normal;
 				color: variables.$color-textGrey;
 				margin: 0;
+				transition: all .2s ease-out;
+
+				@media screen and (max-width: 1080px) {
+					@include fluid-type(
+						1080px,
+						1284px,
+						17px,
+						20px
+					);
+					transform: translate(10px, 5px);
+					transition: all .2s ease-out;
+				}
 			}
 		}
 
