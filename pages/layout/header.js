@@ -12,15 +12,16 @@ export default function Header() {
 			return (
 				<header className={styles.header}>
 					{/* <div className={styles.headerBg}></div> */}
-					<Logo version="1" />
+					<Logo isPages="false"  />
 					<Navigation />
 				</header>
 			);
 		} else {
 			return (
 				<header className={styles.headerPages}>
+					{/* <div className={styles.headerBg}></div> */}
 					{/* <SubLogo /> */}
-					<Logo version="1" />
+					<Logo isPages="true" />
 					<Navigation />
 				</header>
 			);

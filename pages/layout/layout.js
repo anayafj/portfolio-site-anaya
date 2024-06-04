@@ -13,7 +13,7 @@ const myStyles = classNames.bind(styles);
 export default function Layout({ children }) {
   const router = useRouter();
   const [path, setPath] = useState(null);
-  console.log("path =  "+path);
+//   console.log("path =  "+path);
 
 	useEffect(() => {
 		setPath(router.pathname);

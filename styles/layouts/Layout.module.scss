@@ -1,6 +1,9 @@
 @use '../util/variables';
 @import '../util/mixins';
 
+$header-bg-height : 230px;
+$pages-bg-height : 100px;
+
 .container {
 	display: flex;
     min-height: 100vh;
@@ -13,17 +16,21 @@
 	.headerBg {
 		position: absolute;
 		width: 100%;
-		height: 230px;
+		height: $header-bg-height;
 		background-color: black;
 		opacity: .2;
+		transition: height 0.4s ease-out;
 	}
 
-	&.about {
-		background-color: variables.$color-overlayDrkGray;
-	}
+	// &.about {
+	// 	background-color: variables.$color-overlayDrkGray;
+	// }
 
-	&.portfolio {
-		background-color: variables.$color-footerDark;
+	&.portfolio, &.about {
+		.headerBg {
+			height: $pages-bg-height;
+			transition: height 0.4s ease-out;
+		}
 	}
 
 	.guyBust {
