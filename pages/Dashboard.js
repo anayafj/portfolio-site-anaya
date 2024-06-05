@@ -6,6 +6,7 @@ import peep from "../public/svg/peep_standing.svg";
 
 export default function Dashboard() {
 	//   const router = useRouter();
+	// const widthPct = Math.floor((100 / 100) * 100);
 
 	//  const handleClick = (e) => {
 	//      e.preventDefault();
@@ -23,11 +24,13 @@ export default function Dashboard() {
 
 	return (
 		<main className={styles.main}>
-			<div className={styles['hola-container']}>
+			<div className={styles['hola-container']}>				
 				<Image
 					className={styles['hola']}
 					src={holaTxt}
 					alt="Lrg HOLA text"
+					width={100}
+                	height={100}
 				/>
 			</div>
 			<div className={styles['peep-container']}>
@@ -35,6 +38,8 @@ export default function Dashboard() {
 					className={styles['peep']}
 					src={peep}
 					alt="illustrated person"
+					width={100}
+                	height={100}
 				/>
 			</div>
 			<div className={styles['homeCard']}>

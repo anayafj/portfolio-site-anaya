@@ -6,23 +6,25 @@ import { useRouter } from 'next/router';
 
 export default function Header() {
 	const router = useRouter();
+	let isPages = false
 
 	const renderLogo = () => {
 		if (router.pathname === '/') {
 			return (
 				<header className={styles.header}>
 					{/* <div className={styles.headerBg}></div> */}
-					<Logo isPages="false"  />
-					<Navigation />
+					<Logo isPages={isPages}  />
+					<Navigation isPages={isPages}/>
 				</header>
 			);
 		} else {
+			isPages = true;
 			return (
 				<header className={styles.headerPages}>
 					{/* <div className={styles.headerBg}></div> */}
 					{/* <SubLogo /> */}
-					<Logo isPages="true" />
-					<Navigation />
+					<Logo isPages={isPages}/>
+					<Navigation isPages={isPages}/>
 				</header>
 			);
 		}

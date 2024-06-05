@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 
 const myStyles = classNames.bind(styles);
 
-export default function MainNavigation() {
+export default function MainNavigation({ isPages }) {
 
 	const router = useRouter();
 	const [menu, setMenu] = useState(null);
@@ -228,14 +228,14 @@ export default function MainNavigation() {
 	// Tab state updated
 	useEffect(() => {
 
-		console.log('TAB state update -- tab = ', tab);
+		// console.log('TAB state update -- tab = ', tab);
 		//  router.push('/');  //--- To Dashboard
 
 		if (tab) {
-			console.log('tab selected');
+			// console.log('tab selected');
 			navigationRoutes(tab);
 		} else {
-			console.log('No tab selected');
+			// console.log('No tab selected');
 		}
 	}, [tab]);
 
@@ -250,7 +250,7 @@ export default function MainNavigation() {
 				router.push('/about');
 				break;
 			case 3:
-				console.log('tab 3 effect');
+				// console.log('tab 3 effect');
 				break;
 			default:
 				break;

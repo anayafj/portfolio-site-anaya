@@ -1,31 +1,32 @@
 import { useRouter } from 'next/router';
 import styles from '../../styles/components/Logo.module.scss';
-// import Image from 'next/image';
-// import mainLogo from "../../public/svg/logo_name.svg";
+import classNames from 'classnames/bind';
+import Image from 'next/image';
+
+const myStyles = classNames.bind(styles);
 
 export default function Logo({ isPages }) {
-	// console.log('version = ' + version);
-	console.log('isPages = ',isPages);
-	
-// if True, we update logo with a new class
-
-
 	const router = useRouter();
-
 	const homeClick = (e) => {
-		// console.log('homeClick');
 		e.preventDefault();
 		router.push('/');
 	};
 
+	let logo = myStyles(
+		{ logo: true },
+		{'logo' : true},
+		`${isPages === true ? 'small' : ''}`,
+	);	
+
 	return (
-		<div onClick={homeClick} className={styles.logo}>
-			{/* <Image
-                    className={styles['img']}
-                    src={mainLogo}
-                    alt="Logo - Francisco Anaya"
-                /> */}
-			<img src="/svg/logo_name.svg" alt="Logo - Francisco Anaya" />
+		<div onClick={homeClick} className={logo}>
+			<Image
+				className={styles.img}
+				src="/svg/logo_name.svg"
+				alt="Logo - Francisco Anaya"
+				width={"100"}
+				height={"100"}
+			/>
 		</div>
 	);
 }
