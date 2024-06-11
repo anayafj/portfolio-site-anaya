@@ -6,7 +6,6 @@
 	border-bottom: 6px solid #FA7D81;
 	max-width: 446px;
 	margin-top: 4vw;
-	margin-left: auto;
 	cursor: pointer;
 	pointer-events: none;
 	
@@ -19,9 +18,8 @@
 
 	&.small {
 		border-bottom: 4px solid #FA7D81;
-		margin-top: unset;
-		margin-left: unset;
-		max-width: 250px;
+		margin-top: 1.5vw;
+		max-width: 262px;
 
 		.img {
 			margin-bottom: 4px;

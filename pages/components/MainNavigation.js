@@ -1,6 +1,6 @@
 import styles from '../../styles/components/MainNavigation.module.scss';
 import { useState, useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 import classNames from 'classnames/bind';
 import { useRouter } from 'next/router';
 
@@ -11,6 +11,7 @@ export default function MainNavigation({ isPages }) {
 	const router = useRouter();
 	const [menu, setMenu] = useState(null);
 	const [tab, setTab] = useState(null);
+	// const [atHome, setAtHome] = useState(null);
 	// const [initialLoad, setInitialLoad] = useState(true);
 	// const [menuAnimating, setMenuAnimating] = useState(null);
 
@@ -20,13 +21,9 @@ export default function MainNavigation({ isPages }) {
 	// const menuContainer = useRef();
 	const pink = useRef();
 	const yellow = useRef();
-	// const yellowTxt = useRef();
 	const blue = useRef();
-	// const blueTxt = useRef();
 	const white = useRef();
 	const whiteShape = useRef();
-	// const closeX = useRef();
-	// const menuTxt = useRef();
 	// const tl = gsap.timeline({ paused: true });
 
 	// Initial setup -----------//
@@ -227,30 +224,32 @@ export default function MainNavigation({ isPages }) {
 
 	// Tab state updated
 	useEffect(() => {
-
-		// console.log('TAB state update -- tab = ', tab);
+		console.log('refresh -- tab = ',tab);
+		console.log('isPages = ',isPages);
 		//  router.push('/');  //--- To Dashboard
 
+		if(tab === null){
+			console.log("Refresh!!!!!")
+		}
+
 		if (tab) {
-			// console.log('tab selected');
+			console.log('tab selected');
 			navigationRoutes(tab);
 		} else {
-			// console.log('No tab selected');
+			console.log('No tab selected');
+
 		}
 	}, [tab]);
 
 	const navigationRoutes = (route) => {
 		switch (route) {
 			case 1:
-				// console.log('tab 1 effect');
 				router.push('/portfolio');
 				break;
 			case 2:
-				// console.log('tab 2 effect');
 				router.push('/about');
 				break;
 			case 3:
-				// console.log('tab 3 effect');
 				break;
 			default:
 				break;
@@ -284,9 +283,14 @@ export default function MainNavigation({ isPages }) {
 		}
 	};
 
+	// const tabRefreshCheck = () => {
+	// 	if()
+	// }
+
 	// Default setup for navigation tab buttons
 	const setNavigation = () => {
 		setTab(0);
+		// setAtHome(true);
 		setTabEventListener();
 	};
 
@@ -298,12 +302,10 @@ export default function MainNavigation({ isPages }) {
 	};
 
 	// Styles ----------------------------------------------------------------------->>
-
 	// let mainNavContainer = myStyles({ expandedNav: true });
 	// let menuExpand = myStyles({ menuCta: true });
 	// let menuCollapse = myStyles({ closeXtext: true });
 
-	// let navAboutText = myStyles({ blueTxt: true }, ``);
 	let workTab = myStyles(
 		{ work: true },
 		`${tab == 1 ? 'workTabActive' : 'workTab'}`,
@@ -322,8 +324,14 @@ export default function MainNavigation({ isPages }) {
 		`${menu === true ? '' : 'open'}`,
 	);
 
+	let navContainerStyles = myStyles(
+		{ navContainer: true },
+		{"navContainer": true },
+		`${isPages ? 'onPages' : ''}`,
+	);
+
 	return (
-		<nav className={styles.navContainer}>
+			<nav className={navContainerStyles}>
 			<div className={styles.navTabs}>
 				<div id="work" className={workTab} ref={pink}>
 					<div className={styles.pink}></div>

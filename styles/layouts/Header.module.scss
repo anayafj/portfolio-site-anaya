@@ -1,11 +1,10 @@
 @use '../../styles/util/variables';
 @import '../../styles/util/mixins.scss';
 
-// $header-bg-height : 100px;
-
 .header {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	position: relative;
 }
 
@@ -13,16 +12,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	// border-bottom: 3px solid variables.$color-teal;
 	width: 100%;
 	height: 100px;
-	// max-height: 100px;
-
-	// .headerBg {
-	// 	position: absolute;
-	// 	width: 100%;
-	// 	height: $header-bg-height;
-	// 	background-color: black;
-	// 	opacity: .2;
-	// }
 }

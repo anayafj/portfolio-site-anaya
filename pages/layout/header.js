@@ -1,6 +1,5 @@
 import styles from '../../styles/layouts/Header.module.scss';
 import Logo from '../components/Logo';
-import SubLogo from '../components/SubLogo';
 import Navigation from '../components/MainNavigation';
 import { useRouter } from 'next/router';
 
@@ -12,7 +11,6 @@ export default function Header() {
 		if (router.pathname === '/') {
 			return (
 				<header className={styles.header}>
-					{/* <div className={styles.headerBg}></div> */}
 					<Logo isPages={isPages}  />
 					<Navigation isPages={isPages}/>
 				</header>
@@ -21,8 +19,6 @@ export default function Header() {
 			isPages = true;
 			return (
 				<header className={styles.headerPages}>
-					{/* <div className={styles.headerBg}></div> */}
-					{/* <SubLogo /> */}
 					<Logo isPages={isPages}/>
 					<Navigation isPages={isPages}/>
 				</header>

@@ -13,21 +13,27 @@ $shadow-color: hsla(0, 0%, 0%, 0.3);
 
 .navContainer {
 	display: flex;
-	position: relative;
-	align-items: center;
-	width: $nav-exp-width;
+	// position: relative;
+	// align-items: center;
+	max-width: $nav-exp-width;
 	height: $nav-exp-height;
 	border-radius: 6px;
 	background-color: variables.$color-button-pink;
 	overflow: hidden;
 	// margin-top: calc((47px/1024px)*100%);
+	margin-top: 3vw; //1.5vw;
 	margin-left: 4%;
 	// margin-right: auto;
-	filter: drop-shadow(0px 0px 8px $shadow-color);
+	filter: drop-shadow(0px 0px 5px $shadow-color);
 
-	@media screen and (max-width: 1056px) {
-		margin-right: 4%;
+	&.onPages {
+		margin-top: 1.5vw;
+		// background-color: magenta;
 	}
+
+	// @media screen and (max-width: 1056px) {
+	// 	margin-right: 4%;
+	// }
 
 	.navTabs {
 		cursor: pointer;

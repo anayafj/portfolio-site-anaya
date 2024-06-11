@@ -21,6 +21,7 @@ export default function Logo({ isPages }) {
 	return (
 		<div onClick={homeClick} className={logo}>
 			<Image
+				priority={true}
 				className={styles.img}
 				src="/svg/logo_name.svg"
 				alt="Logo - Francisco Anaya"

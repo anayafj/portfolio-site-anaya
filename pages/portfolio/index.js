@@ -55,7 +55,7 @@ export default function PortfolioPage() {
 							title={title}
 							client={client}
 							titleColor={TitleColor}
-							imgBorderColor={ImageBorderColor}
+							// imgBorderColor={ImageBorderColor}
 							thumbnail={thumb}
 							description={description}
 							descriptionColor={DescriptionColor}
@@ -83,7 +83,7 @@ export default function PortfolioPage() {
 				</div>
 			</div>
 			<div className={styles.mainContainer}>
-				{/* <div className={styles.infoBorder}></div> */}
+				<div className={styles.infoBorder}></div>
 				<div className={styles.projectContainer}>
 					<div className={styles.fade}></div>
 					<div className={styles.projects}>{renderProjects()}</div>
