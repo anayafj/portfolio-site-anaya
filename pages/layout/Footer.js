@@ -19,7 +19,7 @@ export default function Footer() {
 	}, [router.pathname]);
 
 	const renderContactHeader = () => {
-		if (pageName === null)
+		// if (pageName === null)
 			return <h1>Got a project or just want to reach out</h1>;
 	};
 

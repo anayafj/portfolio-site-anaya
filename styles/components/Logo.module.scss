@@ -18,8 +18,9 @@
 
 	&.small {
 		border-bottom: 4px solid #FA7D81;
-		margin-top: 1.5vw;
 		max-width: 262px;
+		margin-top: 1.5vw;
+		pointer-events: bounding-box;
 
 		.img {
 			margin-bottom: 4px;
