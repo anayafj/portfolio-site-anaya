@@ -71,15 +71,13 @@ export default function PortfolioPage() {
 	return (
 		<div className={styles.workPage}>
 			<div className={styles.top}>
-				<div className={styles.tabLogo}>
+				{/* <div className={styles.tabLogo}>
 					<img src="/svg/homeNav_work.svg" alt="About Me Logo" />
 					<div className={styles.lines}></div>
-				</div>
+				</div> */}
 				<div className={styles.subheader}>
-					<h1>
-						I design, animate, <span>&amp;</span> code. Bringing a mixture of
-						diverse skills and experieces to all projects.
-					</h1>
+					<h1>Work</h1>
+					<h2>Design, Animate, <span>&amp;</span> Code</h2>
 				</div>
 			</div>
 			<div className={styles.mainContainer}>

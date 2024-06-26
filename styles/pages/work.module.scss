@@ -6,35 +6,51 @@
 	flex-direction: column;
 	width: 100%;
 	background-color: variables.$color-pink;
+	padding-top: 22px;
 
 	.top {
 		display: flex;
-		align-items: flex-end;
 		align-self: flex-end;
-		padding-bottom: 0.5vw;
-		height: 6vw;
-		width: 97vw;
-		max-height: 63px;
-		min-height: 40px;
+		// padding-bottom: 0.5vw;
+		// height: 6vw;
+		// width: 97vw;
+		// max-height: 63px;
+		// min-height: 40px;
+
+
 
 		.subheader {
 			display: flex;
-			align-items: flex-end;
+			align-items: center;
+			justify-content: center;
 			height: 100%;
-			margin-left: 1.5vw;
+			margin-right: 1.5vw;
+			width: 378px;
+			height: 47px;
+			background-color: variables.$color-button-yellow;
+			border-radius: 10px 10px 0 0;
 
 			h1 {
-				@include fluid-type(
-					variables.$MQ-large-laptop,
-					variables.$MQ-large-desktop,
-					14px,
-					20px
-				);
-				padding-bottom: 2px;
-				font-weight: 400;
+				// @include fluid-type(
+				// 	variables.$MQ-large-laptop,
+				// 	variables.$MQ-large-desktop,
+				// 	14px,
+				// 	20px
+				// );
+				font-size: 34px;
+				font-family: variables.$font-family-blankRiver;
+				font-weight: normal;
+				color: black;
+				margin: 3px 14px 0 0;
+				}
+
+			h2 {
+				letter-spacing: -0.2px;
+				font-size: 22px;
+				font-weight: 700;
 				font-family: variables.$font-family-amatic;
-				color: variables.$color-pink;
-				margin: 0;
+				color: black;
+				margin-top: 1px;
 			}
 		}
 
@@ -58,13 +74,22 @@
 		}
 	}
 
+
+
 	.mainContainer {
+
+		// Need to see when view height is small to adjust container height.
+		// Maybe function or just media query
+		//height: calc(  ( 764px/ 934px) * 100%);
+
+
 		position: relative;
 		display: flex;
 		align-self: flex-end;
-		width: 97vw;
+		width: 100%; //97vw;
 		height: 79vh;
-		border-radius: 10px 0 0 10px;
+		max-height: 764px;;
+		border-radius: 0;
 		// background-color: variables.$color-textGrey;
 		background-color: #F7F3E7;;
 		overflow: hidden;
