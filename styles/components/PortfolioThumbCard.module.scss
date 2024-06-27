@@ -1,36 +1,38 @@
-// @use '../util/variables';
-@use '../util/variables.module.scss';
+@use '../util/variables';
 @import '../util/mixins.scss';
 
-// .workThumb {
-// 	display: inline-flex;
-// 	flex-direction: column;
-// 	align-items: flex-start;
-// 	width: 370px;
-// 	height: 232px;
 
-// .thumbImage {
-// 	width: 100%;
-// 	height: 100%;
-// 	max-height: 200px;
-// 	border: 2px solid variables.$color-teal;
-// 	background-color: black;
-// }
+.cardContainer {
+    cursor: pointer;
+	display: inline-flex;
+	flex: 0.5 0 250px;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 450px;
+	margin-bottom: 30px;
 
-// h1 {
-// 	font-size: 16px;
-// 	font-family: variables.$font-family-amatic;
-// 	letter-spacing: 0.5px;
-// 	color: variables.$color-pink;
-// 	margin: 0;
-// 	margin-bottom: 2px;
-// }
+    h1 {
+        pointer-events: none;
+	font-size: 18px;
+	font-family: variables.$font-family-amatic;
+	letter-spacing: 0.6px;
+	color: variables.$color-button-pink;
+	margin: 0 0 0 5px;
+    }
 
-// p {
-// 	font-size: 9px;
-// 	font-family: variables.$font-family-heavitas;
-// 	letter-spacing: 0.5px;
-// 	color: variables.$color-textOffWhite;
-// 	margin: 10px 0 0;
-// }
-// }
+    img {
+        pointer-events: none;
+        width: 100%;
+        max-height: 280px;
+        background-color: black;
+    }
+
+    h2 {
+    pointer-events: none;
+	font-size: 9px;
+	font-family: variables.$font-family-heavitas;
+	letter-spacing: 0.6px;
+	color: variables.$color-textGrey;
+	margin: 5px 0 0 5px;
+    }
+}

@@ -16,7 +16,8 @@ $color-teal: #42605c;
 $color-pink: #FF6978;
 $color-yellow: #f7d54e;
 $color-blue: #8db4b7;
-$color-textGrey: #363636;
+// $color-textGrey: #363636;
+$color-textGrey: #3B3B3B;
 $color-btnTextGrey: #161616;
 $color-textOffWhite: #f7f7f7;
 
@@ -77,7 +78,7 @@ $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 
 	// Exports for Styled-Components ------------------------//
 :export {
-	ColorPink: $color-pink;
+	ColorPink: $color-button-pink; //$color-pink;
 	FfAkira: $font-family-akira;
 	FfAmatic: $font-family-amatic;
 	FfHeavitas: $font-family-heavitas;
