@@ -1,6 +1,9 @@
 @use '../util/variables';
 @import '../util/mixins.scss';
 
+$shadow-color-subheader: hsla(0, 0%, 0%, 0.4);
+$shadow-color: hsla(220, 14%, 17%, 0.3);
+
 .workPage {
 	display: flex;
 	flex-direction: column;
@@ -29,6 +32,7 @@
 			height: 47px;
 			background-color: variables.$color-button-yellow;
 			border-radius: 10px 10px 0 0;
+			filter: drop-shadow(0px 0px 5px $shadow-color-subheader);
 
 			h1 {
 				// @include fluid-type(
@@ -93,6 +97,18 @@
 		// background-color: variables.$color-textGrey;
 		background-color: #F7F3E7;;
 		overflow: hidden;
+		filter:
+      drop-shadow(
+        -4px 6px 4px $shadow-color
+      )
+      drop-shadow(
+        -2px 6px 6px $shadow-color
+      )
+	  drop-shadow(
+        0px 4px 10px $shadow-color
+      )
+	;
+		
 
 		// .infoBorder {
 		// 	pointer-events: none;
@@ -112,10 +128,12 @@
 			scroll-behavior: smooth;
 			-ms-overflow-style: none; /* IE and Edge */
 			scrollbar-width: none;
-			margin-left: 4vw;
-			margin-right: 3vw;
-			margin-top: 2vw;
-			margin-bottom: 2.2vw;
+			// margin-left: 4vw;
+			// margin-right: 3vw;
+			// margin-top: 2vw;
+			// margin-bottom: 2.2vw;
+			// padding-left: 6px;
+			margin: 2vw 3vw;
 
 			&::-webkit-scrollbar {
 				display: none;
@@ -138,6 +156,7 @@
 				column-gap: 4vw;
 				row-gap: 2vw;
 				flex-flow: row wrap;
+				margin-left: 10px;
 			}
 		}
 	}

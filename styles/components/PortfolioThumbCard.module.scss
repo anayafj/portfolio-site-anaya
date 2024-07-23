@@ -1,6 +1,7 @@
 @use '../util/variables';
 @import '../util/mixins.scss';
 
+$shadow-color-projectCard: hsla(0, 0%, 0%, 0.6);
 
 .cardContainer {
     cursor: pointer;
@@ -17,7 +18,7 @@
 	font-family: variables.$font-family-amatic;
 	letter-spacing: 0.6px;
 	color: variables.$color-button-pink;
-	margin: 0 0 0 5px;
+	margin: 0 0 2px 5px;
     }
 
     img {
@@ -25,14 +26,17 @@
         width: 100%;
         max-height: 280px;
         background-color: black;
+		filter: drop-shadow(-1px 1px 3px $shadow-color-projectCard);
     }
 
     h2 {
     pointer-events: none;
 	font-size: 9px;
 	font-family: variables.$font-family-heavitas;
+	font-weight: normal;
 	letter-spacing: 0.6px;
 	color: variables.$color-textGrey;
-	margin: 5px 0 0 5px;
+	margin: 7px 0 0 2px;
+	-webkit-font-smoothing: antialiased;
     }
 }

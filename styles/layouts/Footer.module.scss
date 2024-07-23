@@ -2,19 +2,20 @@
 @import '../../styles/util/mixins.scss';
 
 $footer-text-color : #2F2F2F;
+$headline-max-screen-width : 960px;
+$ctaBtn-max-screen-width : 930px;
 
 .footer {
 	display: flex;
 	position: absolute;
 	width: 55%;
-	// max-width: 600px;
-	// min-width: 400px;
+	max-width: 570px;
+	min-width: 450px;
 	bottom: 0;
 	min-height: 50px;
 	border-radius: 0 10px 0 0;
 	flex-wrap: wrap;
 	background-color: #B1E1F8;
-	// background-color: variables.$color-button-white;
 
 
 	.ctaContent {
@@ -29,25 +30,15 @@ $footer-text-color : #2F2F2F;
 			font-family: variables.$font-family-heavitas;
 			font-size: 12px;
 			color: $footer-text-color;
-			@include fluid-type(
-					1000px,
-					1284px,
-					10px,
+			-webkit-font-smoothing: antialiased;
+
+			@media screen and (max-width: $headline-max-screen-width) {
+				@include fluid-type(
+					60px,
+					960px,
+					8px,
 					12px
 				);
-			// letter-spacing: .05em;
-			-webkit-font-smoothing: antialiased;
-			// transition: all .2s ease-out;
-
-			@media screen and (max-width: 1000px) {
-				@include fluid-type(
-					840px,
-					1000px,
-					8px,
-					10px
-				);
-				// letter-spacing: 0em;
-				// transition: all .2s ease-out;
 			}
 		}
 
@@ -62,19 +53,9 @@ $footer-text-color : #2F2F2F;
 			overflow: hidden;
 			transition: width .3s ease;
 
-			// @media screen and (max-width: 1080px) {
-			// 	width: 120px;
-			// 	transition: all .2s ease-out;
-			// }
-
-			// @media screen and (max-width: 1000px) {
-			// 	margin: 0 8px;
-			// }
-
-			@media screen and (max-width: 1000px) {
+			@media screen and (max-width: $ctaBtn-max-screen-width ) {
 				width: 130px;
-				// margin: 0 8px;
-				transition: all .3s ease;
+				transition: all .3s ease-out;
 			}
 
 			.ctaBg {
@@ -127,17 +108,12 @@ $footer-text-color : #2F2F2F;
 				color: variables.$color-textGrey;
 				margin: 0;
 				transition: all .3s ease;
+				-webkit-font-smoothing: antialiased;
 
-					@media screen and (max-width: 1000px) {
-					// @include fluid-type(
-					// 	1080px,
-					// 	1284px,
-					// 	17px,
-					// 	20px
-					// );
+				@media screen and (max-width: $ctaBtn-max-screen-width ) {
 					font-size: 17px;
 					transform: translate(15px, 5px);
-					transition: all .3s ease;
+					transition: all .3s ease-out;
 				}
 			}
 		}

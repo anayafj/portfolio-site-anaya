@@ -16,7 +16,7 @@ export default function PorfolioThumbCard({
 	return (
 		<div onClick={(e) => handleClick(id, e)} className={styles.cardContainer}>
 			<h1>{type}</h1>
-			<img src={thumbnailPath} alt={title}/>
+			<img src={thumbnailPath} priority="true" alt={title}/>
 			<h2>{titleText}</h2>
 		</div>
 	);
