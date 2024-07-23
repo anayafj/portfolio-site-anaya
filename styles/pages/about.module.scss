@@ -22,7 +22,6 @@ $infoBox_height: 430px;
 	}
 
 	.background {
-		// height: $infoBox_height;
 		height: 70%;
 		background-color: variables.$color-textGrey;
 		display: inline-flex;
@@ -68,10 +67,6 @@ $infoBox_height: 430px;
 
 		.linkedIn {
 			cursor: pointer;
-			// display: flex;
-			// align-self: flex-end;
-			// margin-bottom: 2.5%;
-
 			height: fit-content;
 			max-width: 60px;
 			margin-top: auto;
@@ -89,17 +84,12 @@ $infoBox_height: 430px;
 	.aboutText {
 		display: flex;
 		justify-content: center;
-		// align-items: center;
 		width: 100%;
 		height: 380px;
 		padding-left: 50px;
 		padding-right: 25px;
 		margin-top: 30px;
 		overflow: auto;
-
-		// @media screen and (max-width: 900px) {
-		// 	// overflow-y: scroll;
-		// }
 
 		.textContent {
 			@include fluid-type(
@@ -149,21 +139,16 @@ $infoBox_height: 430px;
 		.tabLogo {
 			display: flex;
 			flex-direction: column;
-			// width: calc((70px / 90px) * 100%);
 			width: 9%;
 			max-height: 42px;
-			// min-width: 56px;
 
 			img {
-				// max-width: 70px;
-				// margin-left: auto;
 				width: 100%;
 				padding-left: 20px;
 			}
 
 			.lines {
 				width: 100%;
-				// max-width: 90px;
 				border-top: 1px solid variables.$color-pink;
 				margin-top: 4px;
 			}
