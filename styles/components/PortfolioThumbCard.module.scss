@@ -14,7 +14,7 @@ $shadow-color-projectCard: hsla(0, 0%, 0%, 0.6);
 
     h1 {
         pointer-events: none;
-	font-size: 18px;
+	font-size: 14px;
 	font-family: variables.$font-family-amatic;
 	letter-spacing: 0.6px;
 	color: variables.$color-button-pink;
@@ -24,6 +24,7 @@ $shadow-color-projectCard: hsla(0, 0%, 0%, 0.6);
     img {
         pointer-events: none;
         width: 100%;
+		height: max-content;
         max-height: 280px;
         background-color: black;
 		filter: drop-shadow(-1px 1px 3px $shadow-color-projectCard);
@@ -31,11 +32,12 @@ $shadow-color-projectCard: hsla(0, 0%, 0%, 0.6);
 
     h2 {
     pointer-events: none;
-	font-size: 9px;
+	font-size: 8px;
 	font-family: variables.$font-family-heavitas;
-	font-weight: normal;
+	// font-weight: 400;
 	letter-spacing: 0.6px;
-	color: variables.$color-textGrey;
+	text-transform: uppercase;
+	color: variables.$color-btnTextGrey;
 	margin: 7px 0 0 2px;
 	-webkit-font-smoothing: antialiased;
     }

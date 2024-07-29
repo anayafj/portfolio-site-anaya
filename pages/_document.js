@@ -25,6 +25,9 @@ export default function Document() {
 					href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
 					rel="stylesheet"
 				></link>
+				<link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet"></link>
+				<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet"></link>
+				<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lilita+One&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet"></link>
 				<link
 					href="http://fonts.cdnfonts.com/css/avenir"
 					rel="stylesheet"

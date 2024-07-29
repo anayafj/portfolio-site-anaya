@@ -1,6 +1,7 @@
 import styles from '../../styles/components/PortfolioThumbCard.module.scss';
+import Image from 'next/image';
 
-const pathToThumbs = 'work/_thumbs/';
+const pathToThumbs = '/work/_thumbs/';
 
 export default function PorfolioThumbCard({
 	handleClick,
@@ -16,7 +17,13 @@ export default function PorfolioThumbCard({
 	return (
 		<div onClick={(e) => handleClick(id, e)} className={styles.cardContainer}>
 			<h1>{type}</h1>
-			<img src={thumbnailPath} priority="true" alt={title}/>
+			<Image
+				src={thumbnailPath}
+				priority
+				alt={title}
+				width={450}
+                height={280}
+			/>
 			<h2>{titleText}</h2>
 		</div>
 	);

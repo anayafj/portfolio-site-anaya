@@ -41,6 +41,7 @@ export default function Dashboard() {
 					alt="illustrated person"
 					width={100}
                 	height={100}
+					priority
 				/>
 			</div>
 			<div className={styles['homeCard']}>
