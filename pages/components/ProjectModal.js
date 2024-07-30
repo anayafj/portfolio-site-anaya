@@ -15,17 +15,18 @@ export default function ProjectModal({
 		<div className={styles.mainContainer}>
 			<header>
 				<div className={styles.logoContainer}>
-					<div className={styles.logo}>
+					{/* <div className={styles.logo}>
 						<img src="/svg/logo_initials.svg" alt="Logo initials" />
-					</div>
+					</div> */}
+					<h1>{type}</h1>
 					<div className={styles.subheaderContainer}>
 						<h1>{client}</h1>
 						<span></span>
 						<h1>{title}</h1>
-						<span></span>
+						{/* <span></span> */}
 					</div>
 				</div>
-				<h1>{type}</h1>
+				
 				<button onClick={onCloseModal}>X</button>
 			</header>
 			<div className={styles.content}>
@@ -35,7 +36,7 @@ export default function ProjectModal({
 				<div className={styles.info}>
 					<hr />
 					<h1>{headline}</h1>
-					<h2>{details}</h2>
+					{/* <h2>{details}</h2> */}
 				</div>
 			</div>
 		</div>

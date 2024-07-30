@@ -1,30 +1,35 @@
 @use '../util/variables';
+@import '../util/mixins.scss';
+
+$shadow-color-subheader: hsla(0, 0%, 0%, 0.3);
 
 .mainContainer {
 	max-width: 1080px;
-	min-width: 500px;
+	min-width: 640px;
 
 	header {
 		display: flex;
 		align-items: center;
 		width: 100%;
-		max-height: 55px;
-		background-color: variables.$color-bgGray;
+		min-height: 50px;
+		// max-height: 55px;
+		background-color: variables.$color-button-green;
 		border-radius: 6px 6px 0 0;
 
 		h1 {
 			pointer-events: none;
-			font-size: 18px;
+			font-size: 22px;
 			font-family: variables.$font-family-blankRiver;
-			letter-spacing: 2px;
-			color: variables.$color-pink;
+			letter-spacing: 1px;
+			font-weight: normal;
+			color: variables.$color-textOffWhite;
 			margin: 0;
 			padding: 0 4px;
 		}
 
 		.logoContainer {
 			display: flex;
-			margin: 10px 0 10px 20px;
+			margin: 10px 0 10px 10px;
 
 			.logo {
 				width: 1.5vw;
@@ -49,9 +54,8 @@
 				h1 {
 					font-size: 8px;
 					font-family: variables.$font-family-akira;
-					font-style: normal;
-					color: #fff;
-					letter-spacing: 1.4px;
+					letter-spacing: 1px;
+					color: variables.$color-btnTextGrey;
 					margin: 0;
 					padding: 0;
 				}
@@ -60,8 +64,13 @@
 					width: 3px;
 					height: 3px;
 					border-radius: 50%;
-					background: variables.$color-pink;
-					margin: 0 5px;
+					background: variables.$color-button-yellow;
+					margin: 0 6px 2px;
+				}
+
+				h1:last-child {
+					margin-left: 2px;
+
 				}
 			}
 		}
@@ -72,7 +81,7 @@
 			font-family: variables.$font-family-blankRiver;
 			text-decoration: none;
 			border: none;
-			color: variables.$color-textOffWhite;
+			color: variables.$color-btnTextGrey;
 			background-color: transparent;
 			padding: 0 10px;
 			margin-right: 10px;
@@ -93,39 +102,41 @@
 		.main {
 			display: flex;
 			justify-content: center;
-			margin-top: 40px;
+			margin-top: 80px;
 		}
 
 		.info {
 			display: flex;
-			width: 88%;
+			width: 92%;
 			flex-direction: column;
-			margin-top: 10px;
+			margin-top: 80px;
 			margin-bottom: 40px;
 
 			hr {
 				width: 100%;
 				border: 0;
-				height: 2px;
-				background-color: variables.$color-pink;
+				height: 8px;
+				background-color: variables.$color-button-pink;
+				filter: drop-shadow(-2px 2px 1px $shadow-color-subheader);
 			}
 
 			h1,
 			h2 {
 				font-family: variables.$font-family-avenir;
-				font-size: 12px;
-				font-weight: 900;
-				color: variables.$color-textGrey;
-				margin: 0;
+				font-size: 11px;
+				font-style: italic;
+				// font-weight: 900;
+				color: variables.$color-btnTextGrey;
+				margin: 8px 0 0 1px;
 			}
 
-			h2 {
-				font-size: 10px;
-				font-weight: 500;
-				letter-spacing: 0.6px;
-				color: #686868;
-				white-space: pre-line;
-			}
+			// h2 {
+			// 	font-size: 10px;
+			// 	font-weight: 500;
+			// 	letter-spacing: 0.6px;
+			// 	color: variables.$color-btnTextGrey;
+			// 	white-space: pre-line;
+			// }
 		}
 	}
 }
