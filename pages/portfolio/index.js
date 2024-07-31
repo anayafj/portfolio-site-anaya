@@ -10,7 +10,7 @@ const myStyles = classNames.bind(styles);
 
 // Custom variables for Style properties
 const TitleColor = '';
-const ImageBorderColor = '';
+// const ImageBorderColor = '';
 const DescriptionColor = '';
 
 export default function PortfolioPage() {
@@ -81,9 +81,9 @@ export default function PortfolioPage() {
 				</div>
 			</div>
 			<div className={styles.mainContainer}>
-				<div className={styles.infoBorder}></div>
+				{/* <div className={styles.bg}></div> */}
+				{/* <div className={styles.infoBorder}></div> */}
 				<div className={styles.projectContainer}>
-					{/* <div className={styles.fade}></div> */}
 					<div className={styles.projects}>{renderProjects()}</div>
 				</div>
 			</div>
