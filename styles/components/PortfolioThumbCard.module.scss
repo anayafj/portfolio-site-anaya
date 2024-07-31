@@ -1,44 +1,47 @@
 @use '../util/variables';
 @import '../util/mixins.scss';
 
-$shadow-color-projectCard: hsla(0, 0%, 0%, 0.6);
+$shadow-color-projectCard: hsla(0, 0%, 0%, 0.4);
+$campaign-color : #40bf91;
 
 .cardContainer {
-    cursor: pointer;
+	cursor: pointer;
 	display: inline-flex;
 	flex: 0.5 0 250px;
 	flex-direction: column;
 	align-items: flex-start;
-	max-width: 450px;
+	max-width: 330px;
 	margin-bottom: 30px;
 
-    h1 {
-        pointer-events: none;
-	font-size: 14px;
-	font-family: variables.$font-family-amatic;
-	letter-spacing: 0.6px;
-	color: variables.$color-button-pink;
-	margin: 0 0 2px 5px;
-    }
+	h1 {
+		pointer-events: none;
+		font-size: 16px;
+		font-family: variables.$font-family-amatic;
+		letter-spacing: 0.6px;
+		color: variables.$color-button-pink;
+		margin: 0 0 2px 5px;
+	}
 
-    img {
-        pointer-events: none;
-        width: 100%;
+	img {
+		pointer-events: none;
+		width: 100%;
 		height: max-content;
-        max-height: 280px;
-        background-color: black;
-		filter: drop-shadow(-1px 1px 3px $shadow-color-projectCard);
-    }
+		max-height: 280px;
+		background-color: black;
+		filter: drop-shadow(0 0 2px $shadow-color-projectCard);
+	}
 
-    h2 {
-    pointer-events: none;
-	font-size: 8px;
-	font-family: variables.$font-family-heavitas;
-	// font-weight: 400;
-	letter-spacing: 0.6px;
-	text-transform: uppercase;
-	color: variables.$color-btnTextGrey;
-	margin: 7px 0 0 2px;
-	-webkit-font-smoothing: antialiased;
-    }
+	h2 {
+		pointer-events: none;
+		font-size: 10px;
+		// font-family: variables.$font-family-heavitas;
+		font-family: variables.$font-family-lilita;
+		font-weight: lighter;
+		letter-spacing: 0.4px;
+		text-transform: uppercase;
+		// color: variables.$color-button-green;
+		color: $campaign-color;
+		margin: 5px 0 0 2px;
+		-webkit-font-smoothing: antialiased;
+	}
 }

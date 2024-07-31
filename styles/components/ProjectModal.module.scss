@@ -17,63 +17,73 @@ $shadow-color-subheader: hsla(0, 0%, 0%, 0.3);
 		border-radius: 6px 6px 0 0;
 
 		h1 {
+			position: relative;
+			top: 1px;
 			pointer-events: none;
-			font-size: 22px;
+			font-size: 24px;
 			font-family: variables.$font-family-blankRiver;
-			letter-spacing: 1px;
+			letter-spacing: 1.2px;
 			font-weight: normal;
 			color: variables.$color-textOffWhite;
-			margin: 0;
-			padding: 0 4px;
+			margin: 0 0 0 10px;
+			padding: 0 5px;
 		}
 
-		.logoContainer {
-			display: flex;
-			margin: 10px 0 10px 10px;
+		// .logoContainer {
+		// 	display: flex;
+		// 	margin: 10px 0 10px 10px;
 
-			.logo {
-				width: 1.5vw;
-				min-width: 15px;
-				max-width: 22px;
+			// .logo {
+			// 	width: 1.5vw;
+			// 	min-width: 15px;
+			// 	max-width: 22px;
 
-				img {
-					width: 100%;
-					max-width: 23px;
-					max-height: 31px;
-					margin: 0 auto;
-				}
-			}
+			// 	img {
+			// 		width: 100%;
+			// 		max-width: 23px;
+			// 		max-height: 31px;
+			// 		margin: 0 auto;
+			// 	}
+			// }
 
-			.subheaderContainer {
-				display: flex;
-				justify-content: flex-end;
-				align-items: center;
-				width: fit-content;
-				margin-left: 10px;
+						.subheaderContainer {
+							display: flex;
+							justify-content: flex-end;
+							align-items: center;
+							width: fit-content;
+							margin-left: 4px;
+							margin-right: 8px;
+			
+							h1 {
+								position:unset;
+								top: null;
 
-				h1 {
-					font-size: 8px;
-					font-family: variables.$font-family-akira;
-					letter-spacing: 1px;
-					color: variables.$color-btnTextGrey;
-					margin: 0;
-					padding: 0;
-				}
+								font-size: 14px;
+								// font-family: variables.$font-family-akira;
+								// letter-spacing: 1px;
+								font-family: variables.$font-family-lilita;
+								font-weight: lighter;
+								letter-spacing: 0.3px;
+								text-transform: uppercase;
+								color: variables.$color-btnTextGrey;
+								margin: 0;
+								padding: 0;
+							}
 
 				span {
-					width: 3px;
-					height: 3px;
+					width: 4px;
+					height: 4px;
 					border-radius: 50%;
 					background: variables.$color-button-yellow;
-					margin: 0 6px 2px;
+					margin: 0 6px;
 				}
 
-				h1:last-child {
-					margin-left: 2px;
+				// h1:last-child {
+				// 	margin-left: 1px;
 
-				}
+				// }
 			}
-		}
+		// }
 
 		button {
 			cursor: pointer;
@@ -81,14 +91,16 @@ $shadow-color-subheader: hsla(0, 0%, 0%, 0.3);
 			font-family: variables.$font-family-blankRiver;
 			text-decoration: none;
 			border: none;
-			color: variables.$color-btnTextGrey;
+			// color: variables.$color-btnTextGrey;
+			color: variables.$color-button-yellow;
 			background-color: transparent;
 			padding: 0 10px;
-			margin-right: 10px;
+			margin-right: 20px;
 			margin-left: auto;
 
 			&:hover {
-				color: variables.$color-yellow;
+				// color: variables.$color-yellow;
+				color: variables.$color-btnTextGrey;
 			}
 		}
 	}

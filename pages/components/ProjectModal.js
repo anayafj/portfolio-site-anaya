@@ -14,7 +14,7 @@ export default function ProjectModal({
 	return (
 		<div className={styles.mainContainer}>
 			<header>
-				<div className={styles.logoContainer}>
+				{/* <div className={styles.logoContainer}> */}
 					{/* <div className={styles.logo}>
 						<img src="/svg/logo_initials.svg" alt="Logo initials" />
 					</div> */}
@@ -25,7 +25,7 @@ export default function ProjectModal({
 						<h1>{title}</h1>
 						{/* <span></span> */}
 					</div>
-				</div>
+				{/* </div> */}
 				
 				<button onClick={onCloseModal}>X</button>
 			</header>
