@@ -2,7 +2,7 @@
 @import '../util/mixins.scss';
 
 $shadow-color-projectCard: hsla(0, 0%, 0%, 0.4);
-$campaign-color : #40bf91;
+$campaign-color : #39ac82;
 
 .cardContainer {
 	cursor: pointer;
@@ -16,7 +16,8 @@ $campaign-color : #40bf91;
 	h1 {
 		pointer-events: none;
 		font-size: 16px;
-		font-family: variables.$font-family-amatic;
+		font-family: variables.$font-family-blankRiver;
+		font-weight: normal;
 		letter-spacing: 0.6px;
 		color: variables.$color-button-pink;
 		margin: 0 0 2px 5px;
@@ -34,14 +35,12 @@ $campaign-color : #40bf91;
 	h2 {
 		pointer-events: none;
 		font-size: 10px;
-		// font-family: variables.$font-family-heavitas;
 		font-family: variables.$font-family-lilita;
-		font-weight: lighter;
+		font-weight: normal;
 		letter-spacing: 0.4px;
 		text-transform: uppercase;
-		// color: variables.$color-button-green;
-		color: $campaign-color;
-		margin: 5px 0 0 2px;
+		color: #161616;
+		margin: 6px 0 0 2px;
 		-webkit-font-smoothing: antialiased;
 	}
 }
