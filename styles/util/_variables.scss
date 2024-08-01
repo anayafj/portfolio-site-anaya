@@ -46,9 +46,28 @@ $color-white: #fff;
 // MEDIA QUERIES ----------------------------->
 
 $MQ-large-desktop: 1284px;
+$MQ-desktop: 1024px;
 $MQ-large-laptop: 992px;
-$MQ-large-tablet: 768px;
+$MQ-laptop-max-width : 768px;
+$MQ-tablet-min-width: 768px;
+$MQ-tablet-max-width: 1023px;
+$MQ-smartphone-max-width: 767px;
 $MQ-large-phone-portrait: 576px;
+
+
+// Break points
+//----------------------------------------------->
+
+// Mobile: 360 x 640
+// Mobile: 375 x 667
+// Mobile: 360 x 720
+// iPhone X: 375 x 812
+// Pixel 2: 411 x 731
+// Tablet: 768 x 1024
+// Laptop: 1366 x 768
+// High-res laptop or desktop: 1920 x 1080
+
+
 
 // FONTS ------------------------------------>
 

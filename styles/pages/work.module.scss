@@ -9,18 +9,11 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 	flex-direction: column;
 	width: 100%;
 	background-color: variables.$color-pink;
-	padding-top: 14px;
+	margin-top: 14px;
 
 	.top {
 		display: flex;
 		align-self: flex-end;
-		// padding-bottom: 0.5vw;
-		// height: 6vw;
-		// width: 97vw;
-		// max-height: 63px;
-		// min-height: 40px;
-
-
 
 		.subheader {
 			display: flex;
@@ -97,7 +90,7 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 		// height: calc( 764px/1024px * 100%);
 		// height: 0;
 		// padding-top: calc( 764px / 1440px *  100% ); /* (img-height / img-width * container-width) */
-		max-height: 764px;;
+		max-height: 764px;
 		border-radius: 0;
 		background-color: #F7F3E7;;
 		overflow: hidden;
@@ -112,6 +105,17 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
         0px 4px 10px $shadow-color
       )
 	;
+
+	@media (max-height: 768px) {
+		height: 71vh;
+		max-height: 547px;
+	}
+
+	@media (min-height: 769px) {
+		// height: 71vh;
+		min-height: 548px;
+	}
+	
 
 	.bg {
 		position: absolute;
