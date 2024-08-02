@@ -8,11 +8,6 @@ import Modal from '../components/Modal';
 
 const myStyles = classNames.bind(styles);
 
-// Custom variables for Style properties
-const TitleColor = '';
-// const ImageBorderColor = '';
-const DescriptionColor = '';
-
 export default function PortfolioPage() {
 	const [projects, setProjects] = useState([]);
 	const [selectedProject, setSelectedProject] = useState(null);
@@ -54,11 +49,8 @@ export default function PortfolioPage() {
 							type={type}
 							title={title}
 							client={client}
-							titleColor={TitleColor}
-							// imgBorderColor={ImageBorderColor}
 							thumbnail={thumb}
 							description={description}
-							descriptionColor={DescriptionColor}
 						/>
 					);
 				},
@@ -71,18 +63,12 @@ export default function PortfolioPage() {
 	return (
 		<div className={styles.workPage}>
 			<div className={styles.top}>
-				{/* <div className={styles.tabLogo}>
-					<img src="/svg/homeNav_work.svg" alt="About Me Logo" />
-					<div className={styles.lines}></div>
-				</div> */}
 				<div className={styles.subheader}>
 					<h1>Work</h1>
 					<h2>Design, Animate, <span>&amp;</span> Code</h2>
 				</div>
 			</div>
 			<div className={styles.mainContainer}>
-				{/* <div className={styles.bg}></div> */}
-				{/* <div className={styles.infoBorder}></div> */}
 				<div className={styles.projectContainer}>
 					<div className={styles.projects}>{renderProjects()}</div>
 				</div>

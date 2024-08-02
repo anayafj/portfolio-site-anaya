@@ -122,12 +122,12 @@ $infoBox_height: 430px;
 			min-width: 424px;
 
 			h1 {
-				@include fluid-type(
-					variables.$MQ-large-tablet,
-					variables.$MQ-large-laptop,
-					14px,
-					20px
-				);
+				// @include fluid-type(
+				// 	variables.$MQ-large-tablet,
+				// 	variables.$MQ-large-laptop,
+				// 	14px,
+				// 	20px
+				// );
 				text-align: center;
 				font-weight: 400;
 				font-family: variables.$font-family-amatic;
