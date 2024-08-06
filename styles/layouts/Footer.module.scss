@@ -53,9 +53,17 @@ $ctaBtn-max-screen-width : 930px;
 			overflow: hidden;
 			transition: width .3s ease;
 
+			&:hover {
+				h2 {
+					transform: translate(35px, 3px);
+					transition: all .2s ease-out;
+				}
+			}
+
 			@media screen and (max-width: $ctaBtn-max-screen-width ) {
 				width: 130px;
 				transition: all .3s ease-out;
+				-webkit-font-smoothing: antialiased;
 			}
 
 			.ctaBg {
