@@ -137,7 +137,7 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 		// }
 
 		.infoContainer {
-			// position: relative;
+			position: absolute;
 			margin: 10px;
 			color: #3B3B3B;;
 
@@ -147,9 +147,9 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 
 			}
 
-			.infoBody {
+			// .infoBody {
 
-			}
+			// }
 		}
 
 		.backgroundImage {
@@ -169,7 +169,7 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 		// 	align-self: flex-end;
 		// }
 	
-		.projectContainer {
+		// .projectContainer {
 		//   display: flex;
 		//   flex-flow: column wrap;
 		//   overflow: auto;
@@ -205,7 +205,7 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 		// 	  column-gap: 6vw;
 		// 	}
 		//   }
-		}
+		// }
 	}
 
 	.bottom {
