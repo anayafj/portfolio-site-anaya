@@ -7,11 +7,14 @@ export default function About() {
 
 			<div className={styles.top}>
 				<div className={styles.subheader}>
-					<h1>Work</h1>
-					<h2>Design, Animate, <span>&amp;</span> Code</h2>
+					<h1> About Me</h1>
+					<h2>Let me introduce myselfe</h2>
 				</div>
 			</div>
 			<div className={styles.mainContainer}>
+				<div className={styles.backgroundImage}>
+					<img src="/images/nopal_large.png" alt="Close-up of a nopal" />
+				</div>
 				<div className={styles.projectContainer}>
 					{/* <div className={styles.projects}>{renderProjects()}</div> */}
 				</div>
