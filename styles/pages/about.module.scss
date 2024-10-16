@@ -39,9 +39,6 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 	// }
 
 	.top {
-		// display: inline-flex;
-		// justify-content: space-between;
-		// margin: 25px 50px 10px 22vw;
 		display: flex;
 		align-self: flex-end;
 
@@ -76,52 +73,21 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 			}
 		  }
 
-		// .lockup {
-		// 	display: flex;
-		// 	align-items: flex-end;
-		// 	max-width: 530px;
 
-		// 	.photo {
-		// 		background-color: white;
-		// 		border-radius: 55px;
+		// .linkedIn {
+		// 	cursor: pointer;
+		// 	height: fit-content;
+		// 	max-width: 60px;
+		// 	margin-top: auto;
+		// 	margin-left: auto;
 
-		// 		img {
-		// 			width: 100%;
-		// 			max-width: 55px;
-		// 			max-height: 55px;
-		// 			min-width: 35px;
-		// 			margin: auto;
-		// 		}
-		// 	}
-
-		// 	.name {
-		// 		position: relative;
-		// 		padding: 0 12px;
-		// 		max-width: 370px;
-
-		// 		img {
-		// 			width: 100%;
-		// 			max-width: 447px;
-		// 			max-height: 38px;
-		// 			margin: 0 auto;
-		// 		}
+		// 	img {
+		// 		width: 100%;
+		// 		max-width: 85px;
+		// 		min-width: 45px;
+		// 		margin: 0 auto;
 		// 	}
 		// }
-
-		.linkedIn {
-			cursor: pointer;
-			height: fit-content;
-			max-width: 60px;
-			margin-top: auto;
-			margin-left: auto;
-
-			img {
-				width: 100%;
-				max-width: 85px;
-				min-width: 45px;
-				margin: 0 auto;
-			}
-		}
 	}
 
 	// .aboutText {
@@ -156,19 +122,34 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 		position: relative;
 		display: flex;
 		align-self: flex-start;
-		width: 96%; //97vw;
+		width: 96%;
 		height: 79vh;
-		// right: 46px;
 		margin: 0 47px 0 0;
 		border-radius: 0 10px 10px 0;
-		background-color: #DFEAE6; //#f7f3e7;
+		background-color: #DFEAE6;
 		overflow: hidden;
 		filter: drop-shadow(-4px 6px 4px $shadow-color)
 		  drop-shadow(-2px 6px 6px $shadow-color)
 		  drop-shadow(0px 4px 10px $shadow-color);
 	
-		@media (max-height: 799px) {
-		  height: 71vh;
+		// @media (max-height: 799px) {
+		//   height: 71vh;
+		// }
+
+		.infoContainer {
+			// position: relative;
+			margin: 10px;
+			color: #3B3B3B;;
+
+			.infoHeader {
+				font-size: 96px;
+				font-family: variables.$font-family-heavitas;
+
+			}
+
+			.infoBody {
+
+			}
 		}
 
 		.backgroundImage {
@@ -177,7 +158,8 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 			width: 100%;
 
 			img {
-				align-self: flex-end;
+				max-width: 100%;
+    			max-height: 100%;
 			}
 		}
 
