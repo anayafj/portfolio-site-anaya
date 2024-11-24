@@ -15,7 +15,7 @@ $campaign-color : #39ac82;
 
 	h1 {
 		pointer-events: none;
-		font-size: 20px;
+		font-size: 18px;
 		font-family: variables.$font-family-blankRiver;
 		font-weight: normal;
 		letter-spacing: 0.6px;
@@ -34,11 +34,10 @@ $campaign-color : #39ac82;
 
 	h2 {
 		pointer-events: none;
-		font-size: 12px;
+		font-size: 10px;
 		font-family: variables.$font-family-lilita; //$font-family-heavitas;
 		font-weight: 400;
 		font-style: normal;
-		// font-weight: normal;
 		letter-spacing: 0.4px;
 		text-transform: uppercase;
 		color: #161616;
