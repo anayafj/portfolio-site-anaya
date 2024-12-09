@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 const myStyles = classNames.bind(styles);
 
 export default function MainNavigation({ isPages }) {
+	// console.log("isPages = "+isPages);
 
 	const router = useRouter();
 	const [menu, setMenu] = useState(null);
@@ -250,6 +251,7 @@ export default function MainNavigation({ isPages }) {
 				router.push('/about');
 				break;
 			case 3:
+				router.push('/contact')
 				break;
 			default:
 				break;
@@ -289,6 +291,7 @@ export default function MainNavigation({ isPages }) {
 
 	// Default setup for navigation tab buttons
 	const setNavigation = () => {
+		console.log("Default setup !!!!!! SetNavigation");
 		setTab(0);
 		// setAtHome(true);
 		setTabEventListener();

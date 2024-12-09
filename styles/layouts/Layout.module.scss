@@ -25,7 +25,7 @@ $pages-bg-height : 100px;
 	// 	background-color: variables.$color-overlayDrkGray;
 	// }
 
-	&.portfolio, &.about {
+	&.portfolio, &.about, &.contact {
 		.headerBg {
 			height: $pages-bg-height;
 			transition: height 0.4s ease-out;
