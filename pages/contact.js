@@ -20,17 +20,10 @@ export default function Contact() {
 						width={1403}
 						height={115}
 						style={{
-							width: 'auto',
+							width: '103%',
 							height: 'auto',
 						  }}
-					/>
-				{/* <h1>CONTACT ME</h1> */}
-				{/* <div className={styles.infoHeader}>
-							<h1>CONTACT ME</h1>
-					</div> */}
-					{/* <div className={styles.linkedIn}>
-
-					</div> */}
+					/>				
 					{/* <div className={styles.infoHeader}>
 							<h1>CONTACT ME</h1> */}
 							{/* <h2>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h2> */}
@@ -50,10 +43,7 @@ export default function Contact() {
 						  }}
 					/>
 				</div>
-				
-
 			</div>
-
 			
 			<hr noshade="false" />
 		</div>

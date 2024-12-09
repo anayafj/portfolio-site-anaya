@@ -13,7 +13,10 @@ const myStyles = classNames.bind(styles);
 export default function Layout({ children }) {
   const router = useRouter();
   const [path, setPath] = useState(null);
-//   console.log("path =  "+path);
+
+  console.log("router.pathname = ",router.pathname);
+  console.log("path = ",path);
+
 
 	useEffect(() => {
 		setPath(router.pathname);
@@ -24,9 +27,13 @@ export default function Layout({ children }) {
 		`${path != null ? path.slice(1) : ''}`,
 	);
 
-  let  section = myStyles(
-    
-  );
+	const renderFooter = () => {
+		if (path === '/contact'){
+
+		} else {
+			return <Footer />;
+		}
+	}
 
   return (
     <>
@@ -34,7 +41,7 @@ export default function Layout({ children }) {
 	  	<div className={styles.headerBg}></div>
 	  	<Header />
 		<section>{children}</section>
-		<Footer />
+		{renderFooter()}
 		</div>
     </>
   );
