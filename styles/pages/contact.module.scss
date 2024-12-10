@@ -96,15 +96,24 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 		.pigeonImage {
 			position: relative;
 			display: flex;
-			justify-content: flex-start;
-			width: 100%;
+			// justify-content: flex-start;
+			// width: 100%;
 			left: -14vw;
 
 			img {
 				max-width: 970px;
     			max-height: 818px;
 			}
-		}		
+		}	
+		
+		.contactFormContainer {
+			position: absolute;
+			width: 40%;
+			height: 400px;
+			right: 40px;
+			margin-top: 200px;
+			background-color: rgba(255, 255, 255, 0.582);
+		}
 	}
 
 	.bottom {

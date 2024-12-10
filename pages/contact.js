@@ -43,6 +43,9 @@ export default function Contact() {
 						  }}
 					/>
 				</div>
+				<div className={styles.contactFormContainer}>
+
+				</div>
 			</div>
 			
 			<hr noshade="false" />
