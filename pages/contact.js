@@ -1,7 +1,20 @@
 import styles from '../styles/pages/contact.module.scss';
 import Image from 'next/image';
+// import { useForm } from 'react-hook-form';
 
 export default function Contact() {
+
+	// export type FormData = {
+	// 	name: string;
+	// 	email: string;
+	// 	message: string;
+	//   };
+
+	// function onSubmit() {
+	// 	const { register, handleSubmit } = useForm<FormData>();
+	// 	// sendEmail(data);
+	// 	console.log("Submit Email");
+	//   }
 
 	return (
 		<div className={styles.contactPage}>
@@ -27,7 +40,15 @@ export default function Contact() {
 						<div className={styles.subheader}>
 							<p>Fill out this form and drop me a messege.</p>
 						</div>
-						<div className={styles.contactFormContainer}></div>
+						<div className={styles.contactFormContainer}>
+						{/* <form onSubmit={handleSubmit(onSubmit)}>
+							<div>
+								<button className='hover:shadow-form rounded-md bg-purple-500 py-3 px-8 text-base font-semibold text-white outline-none'>
+								Submit
+								</button>
+							</div>
+							</form> */}
+						</div>
 					</div>
 				</div>
 			</div>
