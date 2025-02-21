@@ -12,7 +12,7 @@ export default function Contact() {
 
 	// function onSubmit() {
 	// 	const { register, handleSubmit } = useForm<FormData>();
-	// 	// sendEmail(data);
+	// 	sendEmail(data);
 	// 	console.log("Submit Email");
 	//   }
 
@@ -34,6 +34,7 @@ export default function Contact() {
 							alt="Cyborg Messenger Pigeon"
 							width={2048}
 							height={2048}
+							priority
 						/>
 					</div>
 					<div className={styles.formContainer}>
@@ -41,13 +42,17 @@ export default function Contact() {
 							<p>Fill out this form and drop me a messege.</p>
 						</div>
 						<div className={styles.contactFormContainer}>
-						{/* <form onSubmit={handleSubmit(onSubmit)}>
-							<div>
+						<form>
+							<div className={styles.inputField}>
+								<label>Email</label>
+								<input></input>
+							</div>		
+							<div className={styles.submitBtn} >
 								<button className='hover:shadow-form rounded-md bg-purple-500 py-3 px-8 text-base font-semibold text-white outline-none'>
 								Submit
 								</button>
 							</div>
-							</form> */}
+						</form>
 						</div>
 					</div>
 				</div>
@@ -57,3 +62,5 @@ export default function Contact() {
 		</div>
 	);
 }
+
+// handleSubmit(onSubmit)
