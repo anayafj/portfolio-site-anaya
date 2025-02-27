@@ -30,10 +30,10 @@ export default function Contact() {
 				<div className={styles.contentContainer}>
 					<div className={styles.pigeonImage}>
 						<Image
-							src="/images/pigeonMessenger.png"
+							src="/images/pigeonMessenger_crop.png"
 							alt="Cyborg Messenger Pigeon"
-							width={2048}
-							height={2048}
+							width={1689}
+							height={1751}
 							priority
 						/>
 					</div>
