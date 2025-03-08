@@ -1,8 +1,21 @@
 import styles from '../styles/pages/contact.module.scss';
 import Image from 'next/image';
-// import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form"
+
+
 
 export default function Contact() {
+
+	const {
+		register,
+		handleSubmit,
+		watch,
+		formState: { errors },
+	  } = useForm()
+
+	const onSubmit = (data) => console.log(data)
+	console.log(watch("example")) // watch input value by passing the name of it
+	
 
 	// export type FormData = {
 	// 	name: string;
@@ -42,16 +55,36 @@ export default function Contact() {
 							<p>Fill out this form and drop me a messege.</p>
 						</div>
 						<div className={styles.contactFormContainer}>
-						<form>
-							<div className={styles.inputField}>
+						{/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
+							<form onSubmit={handleSubmit(onSubmit)}>
+								{/* register your input into the hook by invoking the "register" function */}
+								<label htmlFor="firstName">First Name</label>
+								<input defaultValue="a" {...register("example")} />
+
+								<label htmlFor="lastName">Last Name</label>
+								<input defaultValue="b" {...register("example")} />
+
+								<label htmlFor="email">Email</label>
+								<input defaultValue="@" {...register("example")} />
+								
+								<label htmlFor="message">Message</label>
+								<input defaultValue="Hello!" {...register("example")} />
+
+								{/* include validation with required or other standard HTML validation rules */}
+								<input {...register("exampleRequired", { required: true })} />
+								{/* errors will return when field validation fails  */}
+								{errors.exampleRequired && <span>This field is required</span>}
+
+								<input type="submit" />
+							{/* <div className={styles.inputField}>
 								<label>Email</label>
 								<input></input>
 							</div>		
-							<div className={styles.submitBtn} >
-								<button className='hover:shadow-form rounded-md bg-purple-500 py-3 px-8 text-base font-semibold text-white outline-none'>
+							<div className={styles.submitButton}>
+								<button className={styles.submitBtn}>
 								Submit
 								</button>
-							</div>
+							</div> */}
 						</form>
 						</div>
 					</div>

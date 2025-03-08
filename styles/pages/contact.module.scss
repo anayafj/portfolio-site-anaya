@@ -107,10 +107,20 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 
 			form {
 				width: 100%;
-
-				.submitBtn {
+				color: #333;
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+				font Verdana;
+				.submitButton {
 					display: flex;
 					justify-content: flex-end;
+					color: #333
+			
+				}
+				
+				.submitBtn {
+					
+					background-color: blueviolet;
+			
 				}
 
 				.inputField {
