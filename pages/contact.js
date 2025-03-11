@@ -14,8 +14,10 @@ export default function Contact() {
 	  } = useForm()
 
 	const onSubmit = (data) => console.log(data)
-	console.log(watch("example")) // watch input value by passing the name of it
-	
+	console.log(watch("message")) // watch input value by passing the name of it
+	console.log(watch("fName"))
+	console.log(watch("lName"))
+	console.log(watch("eMail"))
 
 	// export type FormData = {
 	// 	name: string;
@@ -59,19 +61,19 @@ export default function Contact() {
 							<form onSubmit={handleSubmit(onSubmit)}>
 								{/* register your input into the hook by invoking the "register" function */}
 								<label htmlFor="firstName">First Name</label>
-								<input defaultValue="a" {...register("example")} />
-
+								<input defaultValue="Daffy" {...register("fName")} />
+								
 								<label htmlFor="lastName">Last Name</label>
-								<input defaultValue="b" {...register("example")} />
+								<input defaultValue="Duck" {...register("lName")} />
 
 								<label htmlFor="email">Email</label>
-								<input defaultValue="@" {...register("example")} />
+								<input defaultValue="@quack" {...register("eMail")} />
 								
 								<label htmlFor="message">Message</label>
-								<input defaultValue="Hello!" {...register("example")} />
+								<input defaultValue="Hello!" {...register("message")} />
 
 								{/* include validation with required or other standard HTML validation rules */}
-								<input {...register("exampleRequired", { required: true })} />
+								{/* <input {...register("exampleRequired", { required: true })} /> */}
 								{/* errors will return when field validation fails  */}
 								{errors.exampleRequired && <span>This field is required</span>}
 
