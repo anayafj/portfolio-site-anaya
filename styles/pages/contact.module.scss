@@ -1,5 +1,6 @@
 @use '../util/variables';
 @import '../util/mixins.scss';
+// @import "tailwindcss";
 
 $page_height: 709px;
 $infoBox_width: 1182px;
@@ -106,26 +107,87 @@ $shadow-color: hsla(220, 14%, 17%, 0.3);
 			}
 
 			form {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
 				width: 100%;
 				color: #333;
 				font-family: Verdana, Geneva, Tahoma, sans-serif;
 				font-style: Verdana;
-				.submitButton {
-					display: flex;
-					justify-content: flex-end;
-					color: #333
+				// .submitButton {
+				// 	display: flex;
+				// 	justify-content: flex-end;
+				// 	color: #333
 			
-				}
+				// }
 				
-				.submitBtn {
+				// .submitBtn {
 					
-					background-color: blueviolet;
+				// 	background-color: blueviolet;
 			
-				}
+				// }
 
-				.inputField {
-					display: flex;
-				}
+				// .inputField {
+				// 	display: flex;
+					
+				// }
+
+				label, input {
+					display: block;
+					width: 80%;
+					padding: 10px 0 2px 0;
+					border: none;
+					outline: none;
+					box-sizing: border-box;
+				  }
+
+				  label {
+					font-family: 'akira_expandedsuper_bold';
+					margin-bottom: 2px;
+					font-size: 10px;
+					// font-style: normal;
+					letter-spacing: .6px;
+					color: #000;
+				  }
+
+				  label:first-child  {
+					margin-top: 10px;
+				  }
+				  
+				  label:nth-of-type(2) {
+					margin-top: 12px;
+				  }
+				  
+				  input::placeholder {
+					color: gray;
+				  }
+				  input {
+					background: #ecf0f3;
+					padding: 10px;
+					padding-left: 20px;
+					height: 40px;
+					font-size: 14px;
+					border-radius: 12px;
+					box-shadow: inset 2px 2px 4px #cbced1, inset -4px -4px 4px white;					
+				  }
+
+				  .messageBox {
+					height: 300px;
+				  }
+
+				  .formSubmitBtn {
+					font-family: "Blank River", sans-serif;
+    				font-size: 24px;
+    				letter-spacing: 1px;
+					padding: 0;
+					padding-left: 0;
+					margin-top: 12px;
+					margin-bottom: 30px;
+   					color: hsl(0, 0%, 15%);
+					background: #f7d54e;
+					}
+				  
 			}
 
 		}

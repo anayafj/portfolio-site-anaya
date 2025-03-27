@@ -4,8 +4,9 @@ import { useForm } from "react-hook-form"
 
 
 
-export default function Contact() {
 
+export default function Contact() {
+	console.log("Start up")
 	const {
 		register,
 		handleSubmit,
@@ -25,11 +26,6 @@ export default function Contact() {
 	// 	message: string;
 	//   };
 
-	// function onSubmit() {
-	// 	const { register, handleSubmit } = useForm<FormData>();
-	// 	sendEmail(data);
-	// 	console.log("Submit Email");
-	//   }
 
 	return (
 		<div className={styles.contactPage}>
@@ -37,11 +33,11 @@ export default function Contact() {
 				<div className={styles.headerContainer}>
 					<Image
 						src="/svg/contactMe_txt.svg"
-						alt="CONTACT ME - Header text"
+						alt="Header text - CONTACT ME"
 						width={1403}
 						height={115}
-					/>				
-				</div>					
+					/>
+				</div>
 				<div className={styles.contentContainer}>
 					<div className={styles.pigeonImage}>
 						<Image
@@ -57,44 +53,41 @@ export default function Contact() {
 							<p>Fill out this form and drop me a messege.</p>
 						</div>
 						<div className={styles.contactFormContainer}>
-						{/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
+							{/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
 							<form onSubmit={handleSubmit(onSubmit)}>
 								{/* register your input into the hook by invoking the "register" function */}
 								<label htmlFor="firstName">First Name</label>
-								<input defaultValue="Daffy" {...register("fName")} />
-								
+								<input defaultValue="" {...register("fName")} />
+
 								<label htmlFor="lastName">Last Name</label>
-								<input defaultValue="Duck" {...register("lName")} />
+								<input defaultValue="" {...register("lName")} />
 
 								<label htmlFor="email">Email</label>
-								<input defaultValue="@quack" {...register("eMail")} />
-								
+								<input defaultValue="" {...register("eMail")} />
+
 								<label htmlFor="message">Message</label>
-								<input defaultValue="Hello!" {...register("message")} />
+								<input defaultValue="" {...register("message") } className={styles.messageBox}/>
+
 
 								{/* include validation with required or other standard HTML validation rules */}
 								{/* <input {...register("exampleRequired", { required: true })} /> */}
 								{/* errors will return when field validation fails  */}
-								{errors.exampleRequired && <span>This field is required</span>}
+								{/* {errors.exampleRequired && <span>This field is required</span>} */}
 
-								<input type="submit" />
-							{/* <div className={styles.inputField}>
-								<label>Email</label>
-								<input></input>
-							</div>		
-							<div className={styles.submitButton}>
-								<button className={styles.submitBtn}>
-								Submit
-								</button>
-							</div> */}
-						</form>
+								<input type="submit" className={styles.formSubmitBtn} />
+
+								{/* <div className={styles.inputField}>
+									<label>Email</label>
+									<input></input>
+								</div> */}
+							</form>
 						</div>
 					</div>
 				</div>
-			</div>
-			
-			<hr noshade="false" />
-		</div>
+			</div >
+
+		<hr noshade="false" />
+		</div >
 	);
 }
 
