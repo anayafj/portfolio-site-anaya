@@ -6,20 +6,23 @@ import { useForm } from "react-hook-form"
 
 
 export default function Contact() {
+	const emailValidationPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 	const {
 		register,
 		handleSubmit,
 		watch,
 		formState: { errors },
-	  } = useForm()
+	  } = useForm({
+		mode: 'onBlur',
+	  })
 
-	const onSubmit = (data) => console.log(data)
+	const onSubmit = (data) => console.log("On submit hit - ",data)
 	// const onSubmit = (data) => console.log("TEST")
-	console.log(watch("message")) // watch input value by passing the name of it
-	console.log(watch("firstName"))
-	console.log(watch("lastName"))
-	console.log(watch("eMail"))
+	// console.log(watch("message")) // watch input value by passing the name of it
+	// console.log(watch("firstName"))
+	// console.log(watch("lastName"))
+	// console.log(watch("eMail"))
 
 	// watch(["firstName", "number"])
 
@@ -32,11 +35,11 @@ export default function Contact() {
 // const subscription = watch((value, { name, type }) => console.log(value, name, type));
 
 // const navigationRoutes = (route) => {
-const myValidation = (field) => {
-	let myName = field.target.name;
-	console.log("Validation boy! - ",myName)
-	// return {errors.myName && <span>First Name must be 2 characters min</span>}
-}
+// const myValidation = (field) => {
+// 	let myName = field.target.name;
+// 	console.log("Validation boy! - ",myName)
+// 	// return {errors.myName && <span>First Name must be 2 characters min</span>}
+// }
 
 
 	return (
@@ -65,45 +68,24 @@ const myValidation = (field) => {
 							<p>Fill out this form and drop me a messege.</p>
 						</div>
 						<div className={styles.contactFormContainer}>
-							{/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
 							<form onSubmit={handleSubmit(onSubmit)}>
-								{/* register your input into the hook by invoking the "register" function */}
 								<label htmlFor="firstName">First Name</label>
-								<input {...register("firstName", { required: true, minLength: 2, onBlur: myValidation })} />
-								{/* <input
-									defaultValue="" 
-									type="text" 
-          							id="firstName" 
-									{...register("firstName", { required: true, minLength: 2 })}
-									 /> */}
-									 {errors.firstName && <span>First Name must be 2 characters min</span>}
-									 {/* minLength: { value: 2, message: "First name must be more than 2 characters"} */}
-									 {/* {errors.firstName && <p>{errors.firstName.message}</p>} */}
-
-								{/* {errors.exampleRequired && <span>This field is required</span>}  */}
+								<input {...register("firstName", { required: true, minLength: 2})} />
+								{errors.firstName && <span>*Required - Min 2 characters </span>}
 
 								<label htmlFor="lastName">Last Name</label>
-								<input defaultValue="" {...register("lastName", { required: true })} />
-								{errors.lastName && <span>This field is required</span>}
+								<input defaultValue="" {...register("lastName", { required: true, minLength: 2})} />
+								{errors.lastName && <span>*Required - Min 2 characters </span>}
 
-								<label htmlFor="email">Email</label>
-								<input defaultValue="" {...register("eMail", { required: true })} />
+								<label htmlFor="eMail">Email</label>
+								<input defaultValue="" {...register("eMail", { required: true, pattern: emailValidationPattern })} />
+								{errors.eMail && <span>*Required - Incorrect email format </span>}
 
 								<label htmlFor="message">Message</label>
-								<input defaultValue="" {...register("message", { required: true }) } className={styles.messageBox}/>
-
-
-								{/* include validation with required or other standard HTML validation rules */}
-								{/* <input {...register("exampleRequired", { required: true })} /> */}
-								{/* errors will return when field validation fails  */}
-								{/* {errors.exampleRequired && <span>This field is required</span>} */}
+								<input defaultValue="" {...register("message", { required: true, maxLength: 500 }) } className={styles.messageBox}/>
+								{errors.message && <span>*Required - Max 500 characters </span>}
 
 								<input type="submit" className={styles.formSubmitBtn} />
-
-								{/* <div className={styles.inputField}>
-									<label>Email</label>
-									<input></input>
-								</div> */}
 							</form>
 						</div>
 					</div>
