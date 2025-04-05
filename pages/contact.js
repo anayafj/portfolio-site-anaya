@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form"
 
 
 export default function Contact() {
-	console.log("Start up")
+
 	const {
 		register,
 		handleSubmit,
@@ -15,16 +15,28 @@ export default function Contact() {
 	  } = useForm()
 
 	const onSubmit = (data) => console.log(data)
+	// const onSubmit = (data) => console.log("TEST")
 	console.log(watch("message")) // watch input value by passing the name of it
-	console.log(watch("fName"))
-	console.log(watch("lName"))
+	console.log(watch("firstName"))
+	console.log(watch("lastName"))
 	console.log(watch("eMail"))
+
+	// watch(["firstName", "number"])
 
 	// export type FormData = {
 	// 	name: string;
 	// 	email: string;
 	// 	message: string;
 	//   };
+
+// const subscription = watch((value, { name, type }) => console.log(value, name, type));
+
+// const navigationRoutes = (route) => {
+const myValidation = (field) => {
+	let myName = field.target.name;
+	console.log("Validation boy! - ",myName)
+	// return {errors.myName && <span>First Name must be 2 characters min</span>}
+}
 
 
 	return (
@@ -57,16 +69,28 @@ export default function Contact() {
 							<form onSubmit={handleSubmit(onSubmit)}>
 								{/* register your input into the hook by invoking the "register" function */}
 								<label htmlFor="firstName">First Name</label>
-								<input defaultValue="" {...register("fName")} />
+								<input {...register("firstName", { required: true, minLength: 2, onBlur: myValidation })} />
+								{/* <input
+									defaultValue="" 
+									type="text" 
+          							id="firstName" 
+									{...register("firstName", { required: true, minLength: 2 })}
+									 /> */}
+									 {errors.firstName && <span>First Name must be 2 characters min</span>}
+									 {/* minLength: { value: 2, message: "First name must be more than 2 characters"} */}
+									 {/* {errors.firstName && <p>{errors.firstName.message}</p>} */}
+
+								{/* {errors.exampleRequired && <span>This field is required</span>}  */}
 
 								<label htmlFor="lastName">Last Name</label>
-								<input defaultValue="" {...register("lName")} />
+								<input defaultValue="" {...register("lastName", { required: true })} />
+								{errors.lastName && <span>This field is required</span>}
 
 								<label htmlFor="email">Email</label>
-								<input defaultValue="" {...register("eMail")} />
+								<input defaultValue="" {...register("eMail", { required: true })} />
 
 								<label htmlFor="message">Message</label>
-								<input defaultValue="" {...register("message") } className={styles.messageBox}/>
+								<input defaultValue="" {...register("message", { required: true }) } className={styles.messageBox}/>
 
 
 								{/* include validation with required or other standard HTML validation rules */}
