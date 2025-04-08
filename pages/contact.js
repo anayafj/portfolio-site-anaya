@@ -17,29 +17,17 @@ export default function Contact() {
 		mode: 'onBlur',
 	  })
 
-	const onSubmit = (data) => console.log("On submit hit - ",data)
-	// const onSubmit = (data) => console.log("TEST")
-	// console.log(watch("message")) // watch input value by passing the name of it
-	// console.log(watch("firstName"))
-	// console.log(watch("lastName"))
-	// console.log(watch("eMail"))
+	  let sendEmail = (emailValues) => {
+		console.log("send email using this data - ", emailValues);
+	};
 
-	// watch(["firstName", "number"])
+	const onSubmit = (data) => {
+		console.log('On submit hit!');
+		sendEmail(data);
+	}
 
-	// export type FormData = {
-	// 	name: string;
-	// 	email: string;
-	// 	message: string;
-	//   };
+	
 
-// const subscription = watch((value, { name, type }) => console.log(value, name, type));
-
-// const navigationRoutes = (route) => {
-// const myValidation = (field) => {
-// 	let myName = field.target.name;
-// 	console.log("Validation boy! - ",myName)
-// 	// return {errors.myName && <span>First Name must be 2 characters min</span>}
-// }
 
 
 	return (
