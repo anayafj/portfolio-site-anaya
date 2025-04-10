@@ -1,6 +1,7 @@
 const pathToAds = '/work/ads/';
 
-export default function Ad() {
+export default function Ad({file}) {
+	console.log("Data file = ",file);
 	const dataSrc = pathToAds + 'banner_hbo_watchmen/300x250/index.html';
 
 	return (

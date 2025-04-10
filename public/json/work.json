@@ -28,7 +28,8 @@
                 "thumb": "hbo_watchmen_thumb.jpg",
                 "media": {
                     "mediaType": "banner",
-                    "source": "/banner_hbo_watchmen/300x250/index.html"
+                    "source": "iframe",
+                    "fileName": "banner_hbo_watchmen/300x250/index.html"
                 },
                 "modal": {
                     "headline": "300x250 video banner",
@@ -45,7 +46,8 @@
                 "thumb": "bway_bom_thumb.jpg",
                 "media": {
                     "mediaType": "banner",
-                    "source": "iframe"
+                    "source": "iframe",
+                    "fileName": "banner_hbo_watchmen/300x250/index.html"
                 },
                 "modal": {
                     "headline": "Website about the Broadway Musical & Ads",

@@ -25,6 +25,7 @@ export default function PortfolioPage() {
 			})
 			.then(function (myJson) {
 				setProjects(myJson);
+				
 			});
 	};
 
@@ -35,6 +36,8 @@ export default function PortfolioPage() {
 	const handleClick = (id) => {
 		setSelectedProject(projects.projects.projectItems[id - 1]);
 		setModalOpen(true);
+		console.log("handleClick - id = ", id)
+		console.log("handleClick - selectedProject = ", selectedProject)
 	};
 
 	const renderProjects = () => {

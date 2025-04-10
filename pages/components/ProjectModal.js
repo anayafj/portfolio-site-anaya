@@ -7,7 +7,7 @@ export default function ProjectModal({
 		title,
 		client,
 		type,
-		media: { mediaType, source },
+		media: { mediaType, source, fileName },
 		modal: { headline, details },
 	},
 }) {
@@ -31,7 +31,7 @@ export default function ProjectModal({
 			</header>
 			<div className={styles.content}>
 				<main className={styles.main}>
-					<MainContent />
+					<MainContent dataFile={fileName}/>
 				</main>
 				<div className={styles.info}>
 					<hr />
