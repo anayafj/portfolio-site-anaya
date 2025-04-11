@@ -7,10 +7,13 @@ export default function ProjectModal({
 		title,
 		client,
 		type,
-		media: { mediaType, source, fileName },
+		media,
 		modal: { headline, details },
 	},
 }) {
+	const forMedia = media;
+	console.log("project ---- = ", forMedia);
+
 	return (
 		<div className={styles.mainContainer}>
 			<header>
@@ -31,7 +34,7 @@ export default function ProjectModal({
 			</header>
 			<div className={styles.content}>
 				<main className={styles.main}>
-					<MainContent dataFile={fileName}/>
+					<MainContent dataFile={forMedia}/>
 				</main>
 				<div className={styles.info}>
 					<hr />

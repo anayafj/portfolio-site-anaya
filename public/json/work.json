@@ -11,7 +11,8 @@
                 "thumb": "amz_transparent_thumb.jpg",
                 "media": {
                     "mediaType": "video",
-                    "source": "/banner_amazon_transparent/az_transparent.mp4"
+                    "source": "iframe",
+                    "fileName": "banner_amazon_transparent/az_transparent.mp4"
                 },
                 "modal": {
                     "headline": "Ad to promote new season",
