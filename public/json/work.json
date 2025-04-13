@@ -10,7 +10,7 @@
                 "description": "Season Final",
                 "thumb": "amz_transparent_thumb.jpg",
                 "media": {
-                    "mediaType": "video",
+                    "mediaType": "ads",
                     "source": "iframe",
                     "fileName": "banner_amazon_transparent/az_transparent.mp4"
                 },
@@ -28,7 +28,7 @@
                 "description": "New series digital banner campaign",
                 "thumb": "hbo_watchmen_thumb.jpg",
                 "media": {
-                    "mediaType": "banner",
+                    "mediaType": "ads",
                     "source": "iframe",
                     "fileName": "banner_hbo_watchmen/300x250/index.html"
                 },
@@ -46,7 +46,7 @@
                 "description": "Website for client",
                 "thumb": "bway_bom_thumb.jpg",
                 "media": {
-                    "mediaType": "banner",
+                    "mediaType": "ads",
                     "source": "iframe",
                     "fileName": "banner_hbo_watchmen/300x250/index.html"
                 },
@@ -64,8 +64,9 @@
                 "description": "Website for client",
                 "thumb": "tnt_aew_thumb.jpg",
                 "media": {
-                    "mediaType": "banner",
-                    "source": "iframe"
+                    "mediaType": "ads",
+                    "source": "iframe",
+                    "fileName": "banner_tnt_awe/300x250/index.html"
                 },
                 "modal": {
                     "headline": "Multiple size banners, some with video",
@@ -81,8 +82,9 @@
                 "description": "Website for client",
                 "thumb": "bway_TKAM_thumb.jpg",
                 "media": {
-                    "mediaType": "banner",
-                    "source": "iframe"
+                    "mediaType": "motion",
+                    "source": "iframe",
+                    "fileName": "broadway_tkam/TKAM_banners.mp4"
                 },
                 "modal": {
                     "headline": "Multiple size banners, some with video",
@@ -99,8 +101,9 @@
             "description": "Website for client",
             "thumb": "bway_wss_thumb.jpg",
             "media": {
-                "mediaType": "banner",
-                "source": "iframe"
+                "mediaType": "ads",
+                "source": "iframe",
+                "fileName": "broadway_wws/wws_takeover.mp4"
             },
             "modal": {
                 "headline": "Multiple size banners, some with video",
@@ -117,8 +120,9 @@
             "description": "Website for client",
             "thumb": "bway_musicman_thumb.jpg",
             "media": {
-                "mediaType": "banner",
-                "source": "iframe"
+                "mediaType": "ads",
+                "source": "iframe",
+                "fileName": "broadway_mm/mm_970x250.mp4"
             },
             "modal": {
                 "headline": "Website about the Broadway Musical & Ads",
@@ -135,8 +139,9 @@
             "description": "Ads client",
             "thumb": "bway_gary_thumb.jpg",
             "media": {
-                "mediaType": "banner",
-                "source": "iframe"
+                "mediaType": "ads",
+                "source": "iframe",
+                 "fileName": "broadway_gary/gary_ad_970x250.mp4"
             },
             "modal": {
                 "headline": "Ads promoting the Broadway Musical",
@@ -153,8 +158,9 @@
             "description": "Website for client",
             "thumb": "hbo_americanpickle_thumb.jpg",
             "media": {
-                "mediaType": "banner",
-                "source": "iframe"
+                "mediaType": "ads",
+                "source": "iframe",
+                "fileName": "banner_hbomax_ap/ap_ads.mp4"
             },
             "modal": {
                 "headline": "New movie on new network - Variety of Banners",
